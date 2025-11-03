@@ -1,0 +1,322 @@
+[
+  {
+    "sample_id": 1,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nCompute the sum of the positive divisors (including $1$) of $9!$ that have units digit $1$.",
+    "output": "Step 1 \u2014 Factor 9!:\n9! = 2^7 \u00b7 3^4 \u00b7 5 \u00b7 7.\n\nStep 2 \u2014 Characterize divisors with units digit 1:\nA divisor d = 2^a 3^b 5^c 7^e (0 \u2264 a \u2264 7, 0 \u2264 b \u2264 4, c,e \u2208 {0,1}) has units digit 1 iff d \u2261 1 (mod 10). That requires d odd (so a = 0) and d \u2261 1 (mod 5). If c = 1 then d \u2261 0 (mod 5), so c = 0. Thus d = 3^b 7^e with 0 \u2264 b \u2264 4 and e \u2208 {0,1}.\n\nStep 3 \u2014 Solve modulo 5:\nCompute residues mod 5: 3^b \u2261 1,3,4,2,1 for b = 0,1,2,3,4; and 7 \u2261 2 (so 7^e \u2261 1 or 2). We need 3^b\u00b77^e \u2261 1 (mod 5).\n- If e = 0: need 3^b \u2261 1 \u2192 b = 0 or 4 \u2192 divisors 1 and 3^4 = 81.\n- If e = 1: need 2\u00b73^b \u2261 1 \u2192 3^b \u2261 3 \u2192 b = 1 \u2192 divisor 3\u00b77 = 21.\n\nThus the divisors with units digit 1 are 1, 21, 81.\n\nSum = 1 + 21 + 81 = 103.\n\nFinal answer: \\boxed{103}",
+    "ground_truth": "103",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 2,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nMark writes the expression $\\sqrt{\\underline{a b c d}}$ on the board, where $\\underline{a b c d}$ is a four-digit number and $a \\neq 0$. Derek, a toddler, decides to move the $a$, changing Mark's expression to $a \\sqrt{\\underline{b c d}}$. Surprisingly, these two expressions are equal. Compute the only possible four-digit number $\\underline{a b c d}$.",
+    "output": "Let M = \\underline{b c d} (the last three digits). The condition is\nsqrt(1000a + M) = a sqrt(M).\nSquaring both sides gives\n1000a + M = a^2 M,\nso 1000a = (a^2 - 1) M and hence\nM = 1000a / (a^2 - 1).\n\nSince a is a digit 1\u20139 and a \u2260 0, test a = 2,...,9. The only value giving an integer 0 \u2264 M \u2264 999 is a = 3:\nM = 3000 / 8 = 375.\n\nThus the four-digit number is 1000\u00b73 + 375 = 3375. Check: sqrt(3375) = 3\u00b7sqrt(375).\n\nFinal answer: \\boxed{3375}",
+    "ground_truth": "3375",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 3,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nGiven that $x, y$, and $z$ are positive real numbers such that\n\n$$\nx^{\\log _{2}(y z)}=2^{8} \\cdot 3^{4}, \\quad y^{\\log _{2}(z x)}=2^{9} \\cdot 3^{6}, \\quad \\text { and } \\quad z^{\\log _{2}(x y)}=2^{5} \\cdot 3^{10}\n$$\ncompute the smallest possible value of $x y z$.",
+    "output": "Let A = log2 x, B = log2 y, C = log2 z (so x = 2^A, y = 2^B, z = 2^C). Then yz = 2^{B+C}, etc., and the given equations become\n\nA(B + C) = 8 + 4 log2 3,\nB(C + A) = 9 + 6 log2 3,\nC(A + B) = 5 + 10 log2 3.\n\nWrite t = log2 3 and denote \u03b1 = 8+4t, \u03b2 = 9+6t, \u03b3 = 5+10t. From the three equations we have\nAB + AC = \u03b1,\nBC + BA = \u03b2,\nCA + CB = \u03b3.\n\nLet u = AB, v = BC, w = CA. Then\nu + w = \u03b1,\nu + v = \u03b2,\nv + w = \u03b3.\n\nSolving gives\nu = (\u03b1+\u03b2-\u03b3)/2 = 6,\nv = (\u03b2+\u03b3-\u03b1)/2 = 3 + 6t,\nw = (\u03b1+\u03b3-\u03b2)/2 = 2 + 4t.\n\nThus AB = 6, BC = 3+6t, CA = 2+4t. From AB = 6 and CA = 2+4t we get\nC = (CA)/A = (2+4t)/A, and from BC = (3+6t) = B C = B*( (2+4t)/A ), combining with AB = 6 (so A = 6/B) yields\n\nB^2 = (3+6t) / ((2+4t)/6) = 9, hence B = \u00b13.\n\nIf B = 3 then A = 6/B = 2 and C = (2+4t)/A = 1 + 2t, so S = A+B+C = 6 + 2t and\nxyz = 2^{S} = 2^{6+2t} = 2^6 * (2^{t})^2 = 64 * 3^2 = 576.\n\nIf B = \u22123 then A = \u22122 and C = \u2212(1+2t), so S = \u2212(6+2t) and\nxyz = 2^{S} = 2^{-(6+2t)} = 1/576.\n\nAll three logs must have the same sign (since AB, BC, CA > 0), so these are the only possibilities. The smaller value of xyz is 1/576.\n\nTherefore the smallest possible value of xyz is\n\\boxed{\\tfrac{1}{576}}.",
+    "ground_truth": "\\frac{1}{576}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 4,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nLet $\\lfloor z\\rfloor$ denote the greatest integer less than or equal to $z$. Compute\n\n$$\n\\sum_{j=-1000}^{1000}\\left\\lfloor\\frac{2025}{j+0.5}\\right\\rfloor\n$$",
+    "output": "Step 1 \u2014 pair terms. For j in the range, pair j with j' = \u2212j \u2212 1. Then j+0.5 = a, j'+0.5 = \u2212a, and\nfloor(2025/a) + floor(2025/(\u2212a)) = floor(x) + floor(\u2212x),\nwhere x = 2025/a. For noninteger x this equals \u22121, and for integer x it equals 0.\n\nStep 2 \u2014 count pairs. Among j = \u22121000, \u2026, 1000, all indices except j = 1000 pair up inside the range (they form 1000 pairs); j = 1000 is unpaired. So the sum equals\n(sum over 1000 pairs) + term at j = 1000\n= \u22121000 + (number of pairs where 2025/(j+0.5) is integer) + floor(2025/1000.5).\n\nStep 3 \u2014 when is 2025/(j+0.5) an integer? Put 2j+1 = p (odd). Then 2025/(j+0.5) = 4050/p is integer iff p divides 4050. For j running \u22121000..999, p runs over odd integers from \u22121999 to 1999. The odd divisors of 4050 are the divisors of 2025 = 3^4\u00b75^2, of which there are (4+1)(2+1) = 15 positive ones; all are \u22642025, and only 2025 itself is >1999. So the p in range that divide 4050 are the 14 positive odd divisors \u22641999 and their negatives, giving 28 such p. Thus there are 28 pairs with integer x.\n\nStep 4 \u2014 leftover term. floor(2025/1000.5) = floor(4050/2001) = floor(2 + 48/2001) = 2.\n\nStep 5 \u2014 total sum.\nTotal = \u22121000 + 28 + 2 = \u2212970.\n\nFinal answer:\n\\boxed{-970}",
+    "ground_truth": "-984",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 5,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nLet $\\mathcal{S}$ be the set of all nonconstant monic polynomials $P$ with integer coefficients satisfying $P(\\sqrt{3}+\\sqrt{2})=$ $P(\\sqrt{3}-\\sqrt{2})$. If $Q$ is an element of $\\mathcal{S}$ with minimal degree, compute the only possible value of $Q(10)-Q(0)$.",
+    "output": "Step 1 \u2014 show degree \u2265 4.\n\nLet \u03b1 = \u221a3 + \u221a2 and \u03b2 = \u221a3 \u2212 \u221a2. If P(x) = x + b (monic linear) then P(\u03b1) = P(\u03b2) would force \u03b1 = \u03b2, impossible. If P is monic quadratic x^2 + ax + b, then P(\u03b1) = P(\u03b2) gives (\u03b1 \u2212 \u03b2)(\u03b1 + \u03b2 + a) = 0, so a = \u2212(\u03b1 + \u03b2) = \u22122\u221a3 \u2209 Z, impossible. If P is monic cubic x^3 + ax^2 + bx + c, then P(\u03b1) = P(\u03b2) leads to 11 + 2\u221a3\u00b7a + b = 0, impossible with integer a,b. Hence any P \u2208 S must have degree at least 4.\n\nStep 2 \u2014 find a monic degree-4 polynomial in S.\n\nCompute the minimal polynomial of \u03b1 over Q. We have\n\u03b1^2 = 5 + 2\u221a6, so (\u03b1^2 \u2212 5)^2 = 24, hence\n\u03b1^4 \u2212 10\u03b1^2 + 1 = 0.\n\nThus m(x) = x^4 \u2212 10x^2 + 1 is the monic minimal polynomial of \u03b1 (and of \u03b2) over Q. In particular m(\u03b1) = m(\u03b2) = 0, so m \u2208 S. Therefore the minimal possible degree for elements of S is 4, and m(x) is a degree-4 element of S.\n\nStep 3 \u2014 compute Q(10) \u2212 Q(0).\n\nTaking Q(x) = m(x) = x^4 \u2212 10x^2 + 1 we get\nQ(10) \u2212 Q(0) = (10^4 \u2212 10\u00b710^2 + 1) \u2212 (0^4 \u2212 10\u00b70^2 + 1)\n= (10000 \u2212 1000 + 1) \u2212 1\n= 9000.\n\nTherefore the required value is 9000.\n\nFinal answer:\n\\boxed{9000}",
+    "ground_truth": "890",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 6,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nLet $r$ be the remainder when $2017^{2025!}-1$ is divided by 2025!. Compute $\\frac{r}{2025!}$. (Note that $2017$ is prime.)",
+    "output": "Step 1. Let m = 2025!. Write m = 2017\u00b7M, where M = m/2017 (note 2017 is prime and 2017 \u2264 2025 so 2017 | m).\n\nStep 2. For any prime power p^e dividing m with p \u2260 2017, we have gcd(2017,p)=1 and \u03c6(p^e)=p^{e-1}(p-1) divides m (because p^{e-1} | m and p-1 \u2264 p \u2264 2025). Hence 2017^{\u03c6(p^e)} \u2261 1 (mod p^e), so 2017^{m} \u2261 1 (mod p^e). Therefore 2017^{m}-1 \u2261 0 (mod p^e) for every p^e || m with p \u2260 2017.\n\nStep 3. For p = 2017 (with exponent 1), 2017^{m} \u2261 0 (mod 2017), so 2017^{m}-1 \u2261 -1 (mod 2017).\n\nStep 4. Combining these congruences by the Chinese Remainder Theorem, the remainder r = 2017^{m}-1 (mod m) is the unique residue with\n- r \u2261 0 (mod M),\n- r \u2261 \u22121 (mod 2017).\n\nThus r = kM for some k with kM \u2261 \u22121 (mod 2017). Reduce M modulo 2017:\nM \u2261 (2016!)\u00b7(2018\u00b7\u2026\u00b72025) \u2261 (\u22121)\u00b7(1\u00b72\u00b7\u2026\u00b78) \u2261 \u22128! (mod 2017).\nSince 8! = 40320 \u2261 \u221220 (mod 2017), we get M \u2261 20 (mod 2017).\n\nStep 5. Solve 20k \u2261 \u22121 \u2261 2016 (mod 2017). The inverse of 20 modulo 2017 is 706 (since 20\u00b7706 \u2261 1), so\nk \u2261 2016\u00b7706 \u2261 \u2212706 \u2261 1311 (mod 2017).\nThus k = 1311 (the representative in 0,\u2026,2016), and r = 1311\u00b7M.\n\nStep 6. Therefore\nr / m = (1311\u00b7M) / (2017\u00b7M) = 1311 / 2017.\n\nFinal answer:\n\\boxed{\\frac{1311}{2017}}",
+    "ground_truth": "\\frac{1311}{2017}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 7,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nThere exists a unique triple $(a, b, c)$ of positive real numbers that satisfies the equations\n$$\n2\\left(a^{2}+1\\right)=3\\left(b^{2}+1\\right)=4\\left(c^{2}+1\\right) \\quad \\text { and } \\quad a b+b c+c a=1\n$$\n\nCompute $a+b+c$.",
+    "output": "Let m denote the common value:\nm := 2(a^2+1) = 3(b^2+1) = 4(c^2+1).\n\nThen\na^2 = m/2 - 1 = (m-2)/2,  b^2 = m/3 -1 = (m-3)/3,  c^2 = m/4 -1 = (m-4)/4.\n\nCompute a^2+b^2+c^2:\na^2+b^2+c^2 = m(1/2+1/3+1/4) - 3 = m*(13/12) -3.\n\nHence\n(a+b+c)^2 = a^2+b^2+c^2 + 2(ab+bc+ca) = m*(13/12) -3 + 2 = m*(13/12) -1.\nSo\n(1) s^2 = (a+b+c)^2 = (13/12)m - 1.\n\nIntroduce angles \u03b1,\u03b2,\u03b3 with a = tan\u03b1, b = tan\u03b2, c = tan\u03b3 (0<\u03b1,\u03b2,\u03b3<\u03c0/2). Then\ncos^2\u03b1 = 1/(1+a^2) = 2/m,  cos^2\u03b2 = 3/m,  cos^2\u03b3 = 4/m,\nso\nsin\u03b1 = \u221a((m-2)/m), sin\u03b2 = \u221a((m-3)/m), sin\u03b3 = \u221a((m-4)/m),\nand\ncos\u03b1 cos\u03b2 cos\u03b3 = \u221a(2\u00b73\u00b74)/m^{3/2} = \u221a24 / m^{3/2}.\n\nThe given ab+bc+ca = 1 is tan\u03b1 tan\u03b2 + tan\u03b2 tan\u03b3 + tan\u03b3 tan\u03b1 = 1. The tangent-sum formula\ntan(\u03b1+\u03b2+\u03b3) = (tan\u03b1+tan\u03b2+tan\u03b3 - tan\u03b1 tan\u03b2 tan\u03b3)/(1 - (tan\u03b1 tan\u03b2 + tan\u03b2 tan\u03b3 + tan\u03b3 tan\u03b1))\nshows the denominator is 0, so \u03b1+\u03b2+\u03b3 = \u03c0/2. Using the sine addition formula,\nsin(\u03b1+\u03b2+\u03b3) = 1 = sin\u03b1 cos\u03b2 cos\u03b3 + cos\u03b1 sin\u03b2 cos\u03b3 + cos\u03b1 cos\u03b2 sin\u03b3 - sin\u03b1 sin\u03b2 sin\u03b3,\nhence\ntan\u03b1+tan\u03b2+tan\u03b3 = (1 + sin\u03b1 sin\u03b2 sin\u03b3)/(cos\u03b1 cos\u03b2 cos\u03b3).\n\nTherefore\ns = a+b+c = (1 + sin\u03b1 sin\u03b2 sin\u03b3)/(cos\u03b1 cos\u03b2 cos\u03b3).\n\nCompute the factor sin\u03b1 sin\u03b2 sin\u03b3:\nsin\u03b1 sin\u03b2 sin\u03b3 = \u221a((m-2)(m-3)(m-4))/m^{3/2}.\n\nThus\ns = [ m^{3/2} + \u221a((m-2)(m-3)(m-4)) ] / \u221a24.\n\nSquare this and equate with (1). Let q := \u221a((m-2)(m-3)(m-4)). Then\n( m^{3/2} + q )^2 / 24 = (13/12)m - 1.\nMultiply by 24 and substitute q^2 = (m-2)(m-3)(m-4) = m^3 -9m^2 +26m -24 to get\nm^3 + 2 m^{3/2} q + q^2 = 26m -24.\nSubstitute q^2 and cancel terms; after simplification one finds\n2m^3 - 9m^2 + 2 m^{3/2} q = 0,\nso q = m^{1/2}(9-2m)/2.\n\nSquaring this equality and using q^2 = m^3 -9m^2 +26m -24 gives a linear equation for m:\n4(m^3 -9m^2 +26m -24) = m(9-2m)^2,\nwhich simplifies to 23m = 96, hence\nm = 96/23.\n\nFinally from (1),\ns^2 = (13/12)m - 1 = (13/12)*(96/23) - 1 = 81/23,\nso\ns = a+b+c = 9/\u221a23.\n\nAnswer:\n\\boxed{\\dfrac{9}{\\sqrt{23}}}",
+    "ground_truth": "\\frac{9 \\sqrt{23}}{23}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 8,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nDefine $\\operatorname{sgn}(x)$ to be $1$ when $x$ is positive, $-1$ when $x$ is negative, and $0$ when $x$ is $0$. Compute\n\n$$\n\\sum_{n=1}^{\\infty} \\frac{\\operatorname{sgn}\\left(\\sin \\left(2^{n}\\right)\\right)}{2^{n}}\n$$\n(The arguments to sin are in radians.)",
+    "output": "Step 1. Let \u03b2 = 1/\u03c0. For n \u2265 1 put\n\u03b8_n = fractional part of 2^{n}/(2\u03c0). Since 2^{n}/(2\u03c0) = 2^{n-1}\u03b2, we have \u03b8_n = {2^{n-1}\u03b2} and the map \u03b8_{n+1} = {2\u03b8_n} is the binary doubling map.\n\nStep 2. sin(2^n) > 0 iff 2^n (mod 2\u03c0) lies in (0,\u03c0), i.e. iff \u03b8_n \u2208 (0,1/2). Thus s_n := sgn(sin(2^n)) equals 1 if the first binary digit of \u03b8_n is 0, and equals \u22121 if it is 1. If \u03b2 = 0.b_1 b_2 b_3\u2026 (binary), then \u03b8_n = 0.b_n b_{n+1}\u2026, so s_n = 1 \u2212 2b_n.\n\n(There is no n with sin(2^n)=0 since \u03c0 is irrational, so the sign is never 0.)\n\nStep 3. Now\n\u03a3_{n\u22651} s_n/2^n = \u03a3_{n\u22651} (1\u22122b_n)/2^n = \u03a3_{n\u22651} 1/2^n \u2212 2 \u03a3_{n\u22651} b_n/2^n\n= 1 \u2212 2\u03b2 = 1 \u2212 2/\u03c0.\n\nTherefore the sum equals\n\\boxed{1 - \\frac{2}{\\pi}}.",
+    "ground_truth": "1-\\frac{2}{\\pi}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 9,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nLet $f$ be the unique polynomial of degree at most $2026$ such that for all $n \\in\\{1,2,3, \\ldots, 2027\\}$,\n$$\nf(n)= \\begin{cases}1 & \\text { if } n \\text { is a perfect square } \\\\ 0 & \\text { otherwise }\\end{cases}\n$$\n\nSuppose that $\\frac{a}{b}$ is the coefficient of $x^{2025}$ in $f$, where $a$ and $b$ are integers such that $\\operatorname{gcd}(a, b)=1$. Compute the unique integer $r$ between $0$ and $2026$ (inclusive) such that $a-r b$ is divisible by $2027$. (Note that $2027$ is prime.)",
+    "output": "Let p = 2027. The unique interpolating polynomial f of degree \u22642026 through the points (n, f(n)) for n = 1,...,p has the Lagrange form\nf(x) = \u03a3_{i=1}^{p} f(i) L_i(x), where L_i(x) = \u220f_{j\u2260i} (x-j)/(i-j).\n\nWrite D_i = \u220f_{j\u2260i} (i-j). Then L_i(x) has degree 2026 with leading coefficients\ncoef_{x^{2026}}(L_i) = 1/D_i,\ncoef_{x^{2025}}(L_i) = \u2212(sum of roots)/D_i = \u2212(\u03a3_{j\u2260i} j)/D_i.\n\nLet S_total = \u03a3_{j=1}^{p} j = p(p+1)/2 \u2261 0 (mod p). For our f we only have f(i)=1 when i is a perfect square \u22642027, i.e. i = k^2 for k = 1,...,45. Thus the coefficient c of x^{2025} in f is\nc = \u03a3_{s\u2208S} [ \u2212(S_total \u2212 s)/D_s ] = \u03a3_{s\u2208S} s/D_s  (since S_total \u2261 0 (mod p)).\n\nCompute D_s modulo p. For 1\u2264s\u2264p,\nD_s = \u220f_{j\u2260s} (s-j) = (s\u22121)! \u00b7 \u220f_{k=1}^{p\u2212s} (\u2212k) = (\u22121)^{p\u2212s} (s\u22121)! (p\u2212s)!.\nThus 1/D_s \u2261 (\u22121)^{p\u2212s} \u00b7 inv((s\u22121)! (p\u2212s)!) (mod p).\n\nBut for 0\u2264k\u2264p\u22121 we have C(p\u22121,k) = (p\u22121)!/(k!(p\u22121\u2212k)!) \u2261 (\u22121)^k (mod p). Taking k = s\u22121 gives\n1/((s\u22121)! (p\u2212s)!) \u2261 \u2212C(p\u22121,s\u22121) \u2261 \u2212(\u22121)^{s\u22121} = (\u22121)^s (mod p).\nHence\n1/D_s \u2261 (\u22121)^{p\u2212s}\u00b7(\u22121)^s = (\u22121)^p = \u22121 (mod p),\nbecause p is odd. So 1/D_s \u2261 \u22121 for every s.\n\nTherefore\nc \u2261 \u03a3_{s\u2208S} s\u00b7(\u22121) \u2261 \u2212\u03a3_{k=1}^{45} k^2 (mod p).\n\nCompute \u03a3_{k=1}^{45} k^2 = 45\u00b746\u00b791/6 = 31395. Reduce modulo 2027:\n31395 \u2261 990 (mod 2027), so\nc \u2261 \u221231395 \u2261 \u2212990 \u2261 2027\u2212990 = 1037 (mod 2027).\n\nThus the required integer r in [0,2026] with a \u2212 r b \u2261 0 (mod 2027) is 1037.\n\n\\boxed{1037}",
+    "ground_truth": "1037",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 10,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nLet $a, b$, and $c$ be pairwise distinct complex numbers such that\n$$\na^{2}=b+6, \\quad b^{2}=c+6, \\quad \\text { and } \\quad c^{2}=a+6\n$$\n\nCompute the two possible values of $a+b+c$. In your answer, list the two values in a comma-separated list of two valid \\LaTeX expressions.",
+    "output": "Step 1. From the given equations\na^2=b+6,\\quad b^2=c+6,\\quad c^2=a+6\nwe get\na^2-b=6,\\quad b^2-c=6,\\quad c^2-a=6.\nSumming gives\na^2+b^2+c^2-(a+b+c)=18,\nso with S=a+b+c we have\na^2+b^2+c^2=S+18.    (1)\n\nStep 2. Multiply the three original equations:\n(a^2)(b^2)(c^2)=(b+6)(c+6)(a+6).\nThus\n(abc)^2=abc+6(ab+bc+ca)+36S+216.    (2)\n\nAlso from b=a^2-6 etc we get\nab=a(a^2-6)=a^3-6a, etc., so\nab+bc+ca=(a^3+b^3+c^3)-6S.\nBut a^3+b^3+c^3=S^3-3S(ab+bc+ca)+3abc, hence\nab+bc+ca(1+3S)=S^3-6S+3abc.    (3)\n\nStep 3. Express ab+bc+ca in terms of S using (1):\nS^2=(a^2+b^2+c^2)+2(ab+bc+ca)=S+18+2(ab+bc+ca),\nso\n2(ab+bc+ca)=S^2-S-18,\nab+bc+ca=\\frac{S^2-S-18}{2}.    (4)\n\nFrom (3) solve for abc:\n3abc = (ab+bc+ca)(1+3S) - (S^3-6S),\nso\nabc=\\frac{S^3-2S^2-43S-18}{6}.    (5)\n\nStep 4. Substitute (4) and (5) into (2). After simplifying one obtains the degree-6 polynomial for S:\nS^6-4S^5-82S^4+130S^3+1825S^2+618S-5400=0.\nThis factors as\n(S-9)(S+6)(S^2+S-4)(S^2-2S-25)=0.\n\nStep 5. The cases S=9 and S=-6 correspond to a=b=c (the fixed points 3 and -2 of x^2-6), which are excluded by the condition that a,b,c are pairwise distinct. The remaining possible S are the roots of the two quadratics. The two sums corresponding to 3-cycles come from the pair whose sum is -1 (see the relation p+s=1 in the cubic factorization argument), i.e. the roots of S^2+S-4=0. Hence\nS=\\frac{-1\\pm\\sqrt{17}}{2}.\n\nFinal answer:\n\\boxed{\\frac{-1+\\sqrt{17}}{2},\\frac{-1-\\sqrt{17}}{2}}",
+    "ground_truth": "\\frac{-1+\\sqrt{17}}{2}, \\frac{-1-\\sqrt{17}}{2}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 11,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nCompute the number of ways to arrange the numbers $1,2,3,4,5,6$, and $7$ around a circle such that the product of every pair of adjacent numbers on the circle is at most 20. (Rotations and reflections count as different arrangements.)",
+    "output": "Step 1 \u2014 list forbidden adjacencies.\nFor numbers 1,\u2026,7, a pair is forbidden iff their product > 20. The forbidden unordered pairs are\n{3,7}, {4,6}, {4,7}, {5,6}, {5,7}, {6,7}.\nSo 7 can only be adjacent to 1 or 2.\n\nStep 2 \u2014 locate 7.\nSince 7 has degree 2 (only neighbors 1 and 2), in any valid circular arrangement the two neighbors of 7 must be exactly 1 and 2. Thus 7 sits between 1 and 2 (in one of the two orders 1\u20137\u20132 or 2\u20137\u20131).\n\nStep 3 \u2014 reduce to arranging 3,4,5,6.\nFix 7 in a specific position (there are 7 choices for that position; we will multiply by 7 at the end). With 7 fixed, its two neighbors must be 1 and 2 in one of two orders. The remaining four positions between 1 and 2 must be filled by 3,4,5,6 in a sequence in which every adjacent pair among them is allowed. Within the subgraph on {3,4,5,6} the allowed edges are\n3\u20144, 3\u20145, 3\u20146, 4\u20145\n(4\u20146 and 5\u20146 are forbidden). Note 6 is adjacent only to 3 in this subgraph, so 6 must be at an end of the four-term sequence and adjacent to 3.\n\nCount sequences of 3,4,5,6 with allowed adjacencies:\n- If 6 is at the left end, the sequence must start 6,3, then the remaining two can be 4,5 or 5,4 (both OK) \u2014 2 ways.\n- If 6 is at the right end, the sequence must end \u2026,3,6, and the first two can be 4,5 or 5,4 \u2014 2 ways.\nSo there are 4 valid orders of 3,4,5,6 for a given choice of whether the neighbors of 7 are (1,2) or (2,1).\n\nStep 4 \u2014 total count.\nFor 7 fixed in a given position there are 2 orders for (1,2) around 7 and 4 orders for 3,4,5,6, giving 8 valid arrangements with 7 in that position. Since there are 7 possible positions of 7, total number of circular arrangements (with rotations and reflections counted as different) is\n7 \u00d7 8 = 56.\n\nFinal answer: \\boxed{56}",
+    "ground_truth": "56",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 12,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nKevin the frog in on the bottom-left lily pad of a $3 \\times 3$ grid of lily pads, and his home is at the topright lily pad. He can only jump between two lily pads which are horizontally or vertically adjacent. Compute the number of ways to remove $4$ of the lily pads so that the bottom-left and top-right lily pads both remain, but Kelvin cannot get home.",
+    "output": "Step 1. After fixing the bottom-left (S) and top-right (G) pads to remain, we must choose 3 of the other 7 pads to keep. So there are C(7,3)=35 total choices of which 5 pads remain.\n\nStep 2. If S can reach G in the kept graph, any path from S to G must have length at least the Manhattan distance 4, and with only 5 kept pads any connecting path must be a shortest (length-4) path using exactly the 3 intermediate pads. Thus S and G are connected iff the three kept intermediate pads are exactly the interior nodes of one of the shortest monotone paths from (1,1) to (3,3).\n\nStep 3. The number of monotone shortest paths (2 rights and 2 ups in some order) is C(4,2)=6, so exactly 6 choices of the 3 intermediate pads give a connection from S to G.\n\nStep 4. Therefore the number of choices that prevent Kelvin from getting home is 35\u22126=29.\n\nFinal answer: \\boxed{29}",
+    "ground_truth": "29",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 13,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nBen has $16$ balls labeled $1,2,3, \\ldots, 16$, as well as $4$ indistinguishable boxes. Two balls are \\emph{neighbors} if their labels differ by $1$. Compute the number of ways for him to put $4$ balls in each box such that each ball is in the same box as at least one of its neighbors. (The order in which the balls are placed does not matter.)",
+    "output": "Step 1 \u2014 characterize allowable blocks.\nIf a box contains 4 balls, and every ball must share a neighbor (label differing by 1) in that same box, then each box\u2019s 4 labels must split into components (with respect to adjacency edges i\u2014(i+1)) of size at least 2. The only possibilities for 4 labels are:\n- one consecutive run of 4 (a P4: four consecutive integers), or\n- two disjoint adjacent pairs (two K2\u2019s).\n\nStep 2 \u2014 translate to an edge-tiling of the path 1\u20132\u2013\u2026\u201316.\nMark an edge i\u2014(i+1) whenever both endpoints are put into the same box. The marked edges form a spanning subgraph whose components must be either isolated edges (K2) or 3-edge paths (P4), and these components must cover all 16 vertices. Thus the 16 vertices are tiled (in order) by tiles of length 2 (for a K2) and length 4 (for a P4).\n\nIf there are k P4-tiles, they cover 4k vertices, and the remaining 16\u22124k vertices are covered by (8\u22122k) K2-tiles. The total number of tiles is (k + (8\u22122k)) = 8\u2212k, and k can be 0,1,2,3,4.\n\nStep 3 \u2014 count tilings and groupings for each k.\n- The number of tilings of length 16 with k tiles of length 4 and (8\u22122k) tiles of length 2 is\n  C(8\u2212k, k) (choose positions of the k fours among the total 8\u2212k tiles).\n\n- After fixing such a tiling, each P4-tile becomes one box. The (8\u22122k) K2-tiles (distinct by position) must be grouped two per box into (4\u2212k) boxes; the number of ways to partition these (8\u22122k) distinct edges into unordered pairs is\n  (8\u22122k)! / (2^{4\u2212k}(4\u2212k)!).\n\nSo for a fixed k the number of valid partitions is\nC(8\u2212k, k) * (8\u22122k)! / (2^{4\u2212k}(4\u2212k)!).\n\nStep 4 \u2014 sum over k = 0..4.\nCompute each term:\n- k=0: C(8,0)*8!/(2^4*4!) = 1 * 105 = 105\n- k=1: C(7,1)*6!/(2^3*3!) = 7 * 15 = 105\n- k=2: C(6,2)*4!/(2^2*2!) = 15 * 3 = 45\n- k=3: C(5,3)*2!/(2^1*1!) = 10 * 1 = 10\n- k=4: C(4,4)*0!/(2^0*0!) = 1 * 1 = 1\n\nTotal = 105 + 105 + 45 + 10 + 1 = 266.\n\nFinal answer:\n\\boxed{266}",
+    "ground_truth": "105",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 14,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nSophie is at $(0,0)$ on a coordinate grid and would like to get to $(3,3)$. If Sophie is at $(x, y)$, in a single step she can move to one of $(x+1, y),(x, y+1),(x-1, y+1)$, or $(x+1, y-1)$. She cannot revisit any points along her path, and neither her $x$-coordinate nor her $y$-coordinate can ever be less than $0$ or greater than 3. Compute the number of ways for Sophie to reach $(3,3)$.",
+    "output": "I'll reason layer-by-layer (by x+y), then count paths with a simple recurrence.\n\n1. Observe that each allowed step either increases x+y by 1 (steps (x+1,y) or (x,y+1)) or leaves x+y unchanged (steps (x-1,y+1) or (x+1,y-1)). So the path goes from layer k (points with x+y=k) to layer k+1 only by the E or N steps, while diagonal steps move inside a fixed layer. Starting at (0,0) (layer 0) we must reach (3,3) (layer 6).\n\n2. For each layer k the valid nodes (by x coordinate) are:\n- k=0: indices {0}\n- k=1: {0,1}\n- k=2: {0,1,2}\n- k=3: {0,1,2,3}\n- k=4: {1,2,3}\n- k=5: {2,3}\n- k=6: {3}\n\nInside a layer nodes are arranged in order by x and diagonal moves allow moving between adjacent nodes in that order. When entering a layer at x-index i, one may move along that layer (left or right) visiting a contiguous block of nodes from the entry index to some exit index s_k (no revisits allowed), and then move up to the next layer to index e_{k+1} which must equal s_k or s_k+1 (N or E).\n\n3. Let f_k(i) be the number of ways to enter layer k at index i. From an entry i at layer k one may choose an exit s_k anywhere in that layer (any index in the layer), and then e_{k+1} must be s_k or s_k+1 (if that e_{k+1} is a valid index in layer k+1). The number of possible s_k that lead to a given e_{k+1}=j depends only on j and the indices available in layer k, not on i (every s in the layer is reachable from any entry i by moving along the layer). Hence the transition matrix from layer k to layer k+1 has column-wise identical entries, and we have the simple recurrence\nf_{k+1}(j) = (sum_{i in layer k} f_k(i)) * t_k(j),\nwhere t_k(j) = number of s in layer k with s=j or s=j-1 (i.e., t_k(j) \u2208 {1,2} depending on boundary).\n\n4. Compute t_k(j) and the sum m_k = sum_j t_k(j) (the total multiplicative factor from layer k to k+1):\n\n- k=0 \u2192 layer1 indices j=0,1: t0 = [1,1], so m0 = 2.\n- k=1 \u2192 layer2 j=0,1,2: t1 = [1,2,1], so m1 = 4.\n- k=2 \u2192 layer3 j=0,1,2,3: t2 = [1,2,2,1], so m2 = 6.\n- k=3 \u2192 layer4 j=1,2,3: t3 = [2,2,2], so m3 = 6.\n- k=4 \u2192 layer5 j=2,3: t4 = [2,2], so m4 = 4.\n- k=5 \u2192 layer6 j=3: t5(3) = 2.\n\n5. Start with f_0(0)=1 and let S_k = sum_{i in layer k} f_k(i). Then S_{k+1} = S_k * m_k. Thus\nS_5 = m0 * m1 * m2 * m3 * m4 = 2 * 4 * 6 * 6 * 4 = 1152.\n\nFinally f_6(3) = S_5 * t5(3) = 1152 * 2 = 2304.\n\nTherefore the number of nonrevisiting paths from (0,0) to (3,3) with the given moves is\n\\boxed{2304}.",
+    "ground_truth": "2304",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 15,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nIn an $11 \\times 11$ grid of cells, each pair of edge-adjacent cells is connected by a door. Karthik wants to walk a path in this grid. He can start in any cell, but he must end in the same cell he started in, and he cannot go through any door more than once (not even in opposite directions). Compute the maximum number of doors he can go through in such a path.",
+    "output": "Step 1 \u2014 count doors (edges).\nAn 11\u00d711 array of cells has 11\u00b710 = 110 horizontal adjacencies and 10\u00b711 = 110 vertical adjacencies, for 220 doors in total.\n\nStep 2 \u2014 reformulate the walk constraint.\nA closed walk that never uses an edge more than once is an Eulerian trail in the subgraph of edges it uses; hence every vertex (cell) in that used subgraph must have even degree. So the set R of doors NOT used is some set of edges whose deletion from the grid makes every vertex degree even. Equivalently we must delete a T\u2011join that pairs up the 36 boundary non\u2011corner vertices (these are exactly the vertices of odd degree in the original grid).\n\nStep 3 \u2014 a lower bound on deleted edges.\nThere are 36 boundary non\u2011corner vertices (9 on each side). Along any single side at most floor(9/2)=4 disjoint adjacent pairs can be made using a single edge per pair; so pairing 9 vertices on a side by using only side\u2011adjacent edges leaves at least one leftover vertex per side. Those four leftovers must be paired with vertices on other sides, and any path joining vertices on different sides uses at least 2 edges. Thus a minimum solution must use at least 4\u00b74 = 16 edges for the within\u2011side pairings plus at least 2\u00b72 = 4 edges to pair the four leftovers across sides, for a total of at least 20 deleted edges. Hence one cannot delete fewer than 20 doors, so any closed trail must omit at least 20 doors, so it can use at most 220 \u2212 20 = 200 doors.\n\nStep 4 \u2014 construction showing 20 deletions suffice.\nOn each side pair up 8 of the 9 boundary non\u2011corner cells into 4 adjacent pairs and delete the 4 edges joining those pairs (4\u00b74 = 16 deleted). On each corner, delete the two edges joining the two remaining (unpaired) boundary cells of the adjacent sides through that corner (2 edges per two corners, total 4). This deletes 20 edges; every boundary non\u2011corner vertex is incident to exactly one deleted edge (making its final degree even), each corner is incident to 0 deleted edges or 2 deleted edges (so its parity stays even), and every interior vertex is untouched (degree stays even). The remaining graph is Eulerian, so there is a closed trail that uses all its edges. Thus 20 deletions are achievable, so a closed trail of length 220 \u2212 20 = 200 exists.\n\nTherefore the maximum number of doors Karthik can go through is\n\\boxed{200}.",
+    "ground_truth": "200",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 16,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nCompute the number of ways to pick two rectangles in a $5 \\times 5$ grid of squares such that the edges of the rectangles lie on the lines of the grid and the rectangles do not overlap at their interiors, edges, or vertices. The order in which the rectangles are chosen does not matter.",
+    "output": "Step 1 \u2014 count rectangles in the grid.\nA rectangle is determined by choosing 2 of the 6 vertical grid lines and 2 of the 6 horizontal grid lines, so the total number of rectangles is C(6,2)^2 = 15^2 = 225.\n\nWe want the number of unordered pairs of distinct rectangles whose closures are disjoint (they do not meet at interiors, edges, or vertices). Two rectangles have disjoint closures iff either their x-intervals (vertical line choices) are strictly separated or their y-intervals (horizontal line choices) are strictly separated (or both). Let\n- A = number of unordered pairs with x-intervals strictly separated,\n- B = number of unordered pairs with both x- and y-intervals strictly separated.\n\nBy inclusion\u2013exclusion, the number of unordered pairs with disjoint closures is 2A \u2212 B (count pairs separated in x plus pairs separated in y minus those counted twice).\n\nStep 2 \u2014 compute A.\nFor x-separated pairs, order the pair left-to-right to avoid double-counting: the left rectangle uses a vertical interval (i1,j1) and the right one (i2,j2) with i1<j1<i2<j2. Choosing such ordered x-intervals is equivalent to choosing 4 distinct vertical lines in increasing order, which can be done in C(6,4)=15 ways. For each rectangle the horizontal interval can be any of C(6,2)=15 choices independently, so\nA = 15 * 15^2 = 15^3 = 3375.\n\nStep 3 \u2014 compute B.\nIf both x and y are strictly separated, choose 4 distinct vertical lines (C(6,4)=15 ways) and 4 distinct horizontal lines (C(6,4)=15 ways). For each such choice there are 2 ways to pair the two vertical intervals with the two horizontal intervals to form the two rectangles. Thus\nB = 15 * 15 * 2 = 450.\n\nStep 4 \u2014 apply inclusion\u2013exclusion.\nNumber of unordered disjoint pairs = 2A \u2212 B = 2\u00b73375 \u2212 450 = 6750 \u2212 450 = 6300.\n\nFinal answer:\n\\boxed{6300}",
+    "ground_truth": "6300",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 17,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nCompute the number of ways to arrange $3$ copies of each of the $26$ lowercase letters of the English alphabet such that for any two distinct letters $x_{1}$ and $x_{2}$, the number of $x_{2}$ 's between the first and second occurrences of $x_{1}$ equals the number of $x_{2}$ 's between the second and third occurrences of $x_{1}$.",
+    "output": "Step 1 \u2014 order of occurrences is the same for all three copies.  \nLet x have occurrences at a1<a2<a3 and y at b1<b2<b3. If a1<b1 but b2<a2 then both b1 and b2 lie between a1 and a2, so the number of y's between a1 and a2 is at least 2, while only one y remains for between a2 and a3 \u2014 contradicting the given equality. Hence a1<b1 implies a2<b2 (and similarly a3<b3). Thus the relative order of the letters is the same among the first occurrences, the second occurrences and the third occurrences. So there is a permutation \u03c0 of the 26 letters such that the sequence is an interleaving (shuffle) of three copies of \u03c0, preserving the order within each copy.\n\nStep 2 \u2014 counting interleavings for a fixed \u03c0.  \nFix \u03c0 (26! choices). Now we must count the number of ways to interleave three ordered copies of \u03c0 while preserving the order in each copy. This is equivalent to choosing a 3\u00d726 array of positions 1,\u2026,78 filled increasingly along each row and each column \u2014 equivalently a standard Young tableau of rectangular shape (26,26,26). The number of such tableaux depends only on the shape, not on \u03c0.\n\nStep 3 \u2014 apply the hook-length formula.  \nFor the 3\u00d7n rectangle (here n=26) the hook lengths are, for column c = 1..n and row r = 1..3,\nh(r,c) = n\u2212c + 4 \u2212 r. Hence\n\u03a0 h(r,c) = \u03a0_{t=1}^n t(t+1)(t+2) = n! (n+1)! (n+2)! / 2.\nBy the hook-length formula, the number of standard Young tableaux of shape (n,n,n) is\nf = (3n)! / [n!(n+1)!(n+2)!/2] = 2(3n)! / [n!(n+1)!(n+2)!].\n\nStep 4 \u2014 total count and simplification.  \nTotal number = (number of choices of \u03c0) \u00d7 f = n! \u00d7 2(3n)! / [n!(n+1)!(n+2)!] = 2(3n)! / [(n+1)!(n+2)!].\n\nPut n = 26:\nTotal = 2\u00b778! / (27! \u00b7 28!).\n\nFinal answer:\n\\boxed{\\displaystyle \\frac{2\\cdot 78!}{27!\\,28!}}",
+    "ground_truth": "2^{25} \\cdot 26!",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 18,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nAlbert writes $2025$ numbers $a_{1}, \\ldots, a_{2025}$ in a circle on a blackboard. Initially, each of the numbers is uniformly and independently sampled at random from the interval $[0,1]$. Then, each second, he \\emph{simultaneously} replaces $a_{i}$ with $\\max \\left(a_{i-1}, a_{i}, a_{i+1}\\right)$ for all $i=1,2, \\ldots, 2025$ (where $a_{0}=a_{2025}$ and $a_{2026}=a_{1}$ ). Compute the expected value of the number of distinct values remaining after $100$ seconds.",
+    "output": "Step 1 \u2014 what the process does after 100 seconds.\nAfter 100 seconds each entry a_i has become the maximum of the 201 initial entries in the contiguous block of radius 100 around i:\na_i(100) = max{ a_{i-100}, a_{i-99}, \u2026, a_i, \u2026, a_{i+100} }.\nThus the final array entries are exactly the maxima of the 2025 sliding windows of length L = 201. A particular initial position j \u201csurvives\u2019\u2019 (its value appears among the final values) iff there exists a length-201 circular block containing j in which a_j is the largest initial value.\n\nStep 2 \u2014 reduce to a one-point probability and use symmetry.\nBy symmetry the expected number of surviving distinct values is 2025 times the probability p that a fixed given index (say index 1) survives. So we need p = P(index 1 is the maximum of at least one length-201 window that contains it).\n\nStep 3 \u2014 condition on a_1 = x and approximate the neighborhood by a Poisson process.\nCondition on a_1 = x. Each of the other 2024 entries is independently < x with probability x and > x with probability 1 \u2212 x. For the 401-length block centered at 1 (from 1\u2212200 to 1+200), the event \u201cindex 1 is the maximum of some length-201 window that contains it\u2019\u2019 is equivalent to \u201camong the 400 neighbors in that block there exists a run of 200 consecutive entries all < x\u2019\u2019. For large but finite block lengths, the locations of entries > x in that 401-block can be very well approximated by a Poisson process of intensity \u03bb = 1 \u2212 x, and the size of the gap (the contiguous run of < x values) containing a uniformly chosen site has the size-biased exponential (Gamma(2)) law with rate \u03bb. Under this approximation\nP( gap length \u2265 201 | a_1 = x ) \u2248 e^{-(1-x)\u00b7201} (1 + (1-x)\u00b7201).\n\nStep 4 \u2014 integrate over x \u223c Uniform[0,1].\nUnconditioning on x (a_1 is uniform on [0,1]) gives\np \u2248 \u222b_0^1 e^{-(1-x)201} (1 + (1-x)201) dx.\nLet u = 1 \u2212 x. Then\np \u2248 \u222b_0^1 e^{-201 u} (1 + 201 u) du\n= 2(1 \u2212 e^{-201})/201 \u2212 e^{-201}.\nFor L = 201 the term e^{-201} is astronomically small (practically zero), so to extremely high accuracy\np \u2248 2/201.\n\nStep 5 \u2014 expected number of survivors.\nHence the expected number of distinct final values is\n2025 \u00b7 p \u2248 2025 \u00b7 (2/201) = 4050/201 = 1350/67 \u2248 20.1492537.\n\nBecause e^{-201} is negligible, the value 1350/67 is the practically exact expected value to any reasonable precision. Therefore\n\n\\boxed{\\dfrac{1350}{67}}",
+    "ground_truth": "\\frac{2025}{101}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 19,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nTwo points are selected independently and uniformly at random inside a regular hexagon. Compute the probability that a line passing through both of the points intersects a pair of opposite edges of the hexagon.",
+    "output": "Step 1 \u2014 setup and parameterization of chords.\n\nPlace the regular hexagon centered at the origin with side length 1 and vertices\n(1,0), (1/2, \u221a3/2), (\u22121/2, \u221a3/2), (\u22121,0), (\u22121/2, \u2212\u221a3/2), (1/2, \u2212\u221a3/2).\nIts area is A = 3\u221a3/2.\n\nEvery (nondegenerate) line \u2113 that meets the hexagon can be written by its unit normal n = (cos \u03b1, sin \u03b1) (\u03b1 \u2208 [0,\u03c0)) and signed distance s from the origin, i.e. \u2113 = {x : x\u00b7n = s}. For fixed (\u03b1,s) the line meets the hexagon in a segment of length L(\u03b1,s). Points on that segment can be parameterized by the coordinate u along the direction t = (\u2212sin \u03b1, cos \u03b1), with u ranging over an interval of length L(\u03b1,s).\n\nStep 2 \u2014 change of variables for ordered pairs.\n\nTwo independent uniformly chosen points (ordered) in the hexagon correspond to picking \u03b1, s and two parameters u1,u2 in the chord segment. The Jacobian computation (standard in this chord parametrization) gives\ndx dy = |u1 \u2212 u2| d\u03b1 ds du1 du2.\nHence the total area of ordered pairs (the measure of all ordered pairs of points) equals\nA^2 = \u222b_{\u03b1} \u222b_{s} \u222b_{u1,u2\u2208segment} |u1 \u2212 u2| du1 du2 ds d\u03b1.\nFor a segment of length L, \u222b_{0}^{L} \u222b_{0}^{L} |u1 \u2212 u2| du1 du2 = L^3/3. Thus\nA^2 = (1/3) \u222b_{\u03b1} \u222b_{s} L(\u03b1,s)^3 ds d\u03b1,\nor equivalently\n\u222b_{\u03b1} \u222b_{s} L(\u03b1,s)^3 ds d\u03b1 = 3 A^2.   (*)\n\nStep 3 \u2014 contribution of one opposite pair (top and bottom edges).\n\nFix the top and bottom horizontal edges (y = \u00b1\u221a3/2). For those lines \u2113 that meet both the top and bottom edges the normal angle \u03b1 must satisfy |\u03b1| \u2264 \u03c0/6 (mod \u03c0), and for such \u03b1 the s-values for which \u2113 meets both top and bottom form the interval of length\n\u2113_s(\u03b1) = cos \u03b1 \u2212 \u221a3 sin \u03b1  (here cos \u03b1 > 0 in the interval).\n\nFor such a line the chord endpoints are at (x_t, \u221a3/2) and (x_b, \u2212\u221a3/2), and a simple calculation shows that the chord length does not depend on s:\nL(\u03b1) = \u221a3 / cos \u03b1.\nTherefore the contribution (integral of L^3 over \u03b1,s) for this opposite pair is\nC_pair = \u222b_{\u03b1 = \u2212\u03c0/6}^{\u03c0/6} (L(\u03b1))^3 \u00b7 \u2113_s(\u03b1) d\u03b1\n= \u222b_{\u2212\u03c0/6}^{\u03c0/6} ( (\u221a3 / cos \u03b1)^3 ) (cos \u03b1 \u2212 \u221a3 sin \u03b1) d\u03b1\n= \u222b_{\u2212\u03c0/6}^{\u03c0/6} [3\u221a3 (cos \u03b1 \u2212 \u221a3 sin \u03b1)/cos^3 \u03b1] d\u03b1.\n\nCompute this integral:\nwrite (cos \u2212 \u221a3 sin)/cos^3 = sec^2 \u03b1 \u2212 \u221a3 (sin / cos^3) = sec^2 \u03b1 \u2212 \u221a3 tan \u03b1 sec^2 \u03b1.\nSo\nC_pair = \u222b_{\u2212\u03c0/6}^{\u03c0/6} [3\u221a3 sec^2 \u03b1 \u2212 9 tan \u03b1 sec^2 \u03b1] d\u03b1\n= [3\u221a3 tan \u03b1 \u2212 (9/2) sec^2 \u03b1]_{\u2212\u03c0/6}^{\u03c0/6} = 6.\n(One may check the arithmetic of the elementary antiderivatives.)\n\nSo the three opposite pairs together contribute\nC_opposite_total = 3 \u00b7 C_pair = 18\nto the integral \u222b\u222b L^3 ds d\u03b1.\n\nStep 4 \u2014 probability.\n\nFrom (*) we have \u222b\u222b L^3 ds d\u03b1 = 3 A^2. Compute A^2 = (3\u221a3/2)^2 = 27/4, so 3 A^2 = 81/4 = 20.25.\n\nThe measure (in the \u222b L^3 sense) of all lines producing an opposite-pair chord is 18, so the fraction of the total \u222b L^3 accounted for by opposite-pair chords is 18 / (81/4) = 72/81 = 8/9.\n\nTranslating back to the probability for two independent uniformly chosen points (ordered or unordered \u2014 the line does not depend on ordering) we get the same ratio:\n\nProbability = 8/9.\n\nAnswer:\n\n\\boxed{\\tfrac{8}{9}}",
+    "ground_truth": "\\frac{4}{9}",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 20,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nThe circumference of a circle is divided into $45$ arcs, each of length $1$. Initially, there are $15$ snakes, each of length $1$, occupying every third arc. Every second, each snake independently moves either one arc left or one arc right, each with probability $\\frac{1}{2}$. If two snakes ever touch, they merge to form a single snake occupying the arcs of both of the previous snakes, and the merged snake moves as one snake. Compute the expected number of seconds until there is only one snake left.",
+    "output": "Step 1 \u2014 reformulate in continuous time.  \nIt is convenient to work in continuous time: let each snake carry an independent rate-1 Poisson clock and when its clock rings it jumps one arc left or right (each with probability 1/2). Because the discrete synchronous model in the problem has each snake making one \u00b11 move per second in lockstep, the continuous-time model with rate-1 jumps has the same one-step transition probabilities and only differs by randomizing the global clock; in particular the expected time until full coalescence in the continuous-time chain equals the expected time in the discrete-time chain (the two processes are time changes of each other with mean 1 step per unit time). We therefore work with the continuous-time version.\n\nStep 2 \u2014 use rotation symmetry to get the pairwise coalescence rate.  \nAt any time, because the initial configuration is invariant under rotation by 3 arcs and the dynamics is rotation-invariant, the law of the configuration is rotation-invariant. Hence at any time, for any unordered pair of distinct snakes A,B, the chance that A and B are at the same arc (i.e. occupy the same site) is 1/45. When A and B occupy the same site they instantaneously have coalesced; in continuous time a coalescence of that unordered pair can only happen at an instant when one of the two snakes jumps and lands on the other, or vice versa, but the net instantaneous rate at which that unordered pair coalesces equals 1/45. (Intuitively: because of rotation-invariance the two-particle relative position is uniform on 45 sites, so the instantaneous rate of hitting 0 relative displacement is 1/45.)\n\nThus when there are k snakes present, there are C(k,2)=k(k\u22121)/2 unordered pairs, and by symmetry each pair coalesces at rate 1/45, so the total instantaneous rate at which the number of snakes decreases from k to k\u22121 is\nR_k = C(k,2) \u00b7 (1/45) = k(k\u22121)/(2\u00b745) = k(k\u22121)/90.\n\nStep 3 \u2014 compute expected time to go from k snakes to k\u22121 snakes.  \nIf the total coalescence rate is R_k, the waiting time until the next coalescence (when there are k snakes) is exponential with mean 1/R_k = 90/(k(k\u22121)).\n\nStep 4 \u2014 sum the expected waiting times.  \nStarting with k = 15 snakes, the expected total time until only one snake remains is the sum of the mean waiting times over successive reductions of the number of snakes:\nE[T] = sum_{k=2}^{15} 90/(k(k\u22121))\n= 90 \u00b7 sum_{k=2}^{15} (1/(k\u22121) \u2212 1/k)\n= 90 \u00b7 (1 \u2212 1/15)\n= 90 \u00b7 (14/15)\n= 84.\n\nTherefore the expected number of seconds until there is only one snake left is 84.\n\nFinal answer:\n\\boxed{84}",
+    "ground_truth": "\\frac{448}{3}",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  }
+]

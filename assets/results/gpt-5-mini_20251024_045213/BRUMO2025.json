@@ -1,0 +1,322 @@
+[
+  {
+    "sample_id": 1,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nOne hundred concentric circles are labelled $C_{1}, C_{2}, C_{3}, \\ldots, C_{100}$. Each circle $C_{n}$ is inscribed within an equilateral triangle whose vertices are points on $C_{n+1}$. Given $C_{1}$ has a radius of $1$, what is the radius of $C_{100}$ ?\n",
+    "output": "Step 1. Let the radius of C_n be r_n. The statement says the vertices of an equilateral triangle lie on C_{n+1} (so C_{n+1} is the triangle's circumcircle) and C_n is the triangle's incircle. For an equilateral triangle with side a,\n- circumradius R = a/\u221a3,\n- inradius r = a\u221a3/6,\nso R = 2r.\n\nStep 2. Applying this to the triangle between C_n and C_{n+1} gives r_{n+1} = 2 r_n.\n\nStep 3. With r_1 = 1, iterate:\nr_2 = 2 r_1 = 2,\nr_3 = 2 r_2 = 2^2,\n\u2026,\nr_{100} = 2^{99}.\n\nFinal answer:\n\\boxed{2^{99}}",
+    "ground_truth": "2^{99}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 2,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nAn infinite geometric sequence with common ratio $r$ sums to $91$. A new sequence starting with the same term has common ratio $r^{3}$. The sum of the new sequence produced is $81$. What was the common ratio of the original sequence?\n",
+    "output": "Let the first term be a. For |r|<1 the sums are\na/(1\u2212r)=91 and a/(1\u2212r^3)=81.\nDivide the second equation by the first to eliminate a:\n(1\u2212r^3)/(1\u2212r)=91/81.\nBut (1\u2212r^3)/(1\u2212r)=1+r+r^2, so\n1+r+r^2=91/81.\nMultiply by 81:\n81+81r+81r^2=91 \u21d2 81r^2+81r\u221210=0.\nSolve the quadratic: r = [\u221281 \u00b1 \u221a(81^2+4\u00b781\u00b710)]/(2\u00b781) = [\u221281 \u00b1 99]/162.\nThus r = 18/162 = 1/9 or r = \u2212180/162 = \u221210/9. The second is not allowed since |r|<1, so\n\\boxed{\\tfrac{1}{9}}.",
+    "ground_truth": "\\frac{1}{9}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 3,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nLet $A, B, C, D$, and $E$ be five equally spaced points on a line in that order. Let $F, G, H$, and $I$ all be on the same side of line $A E$ such that triangles $A F B, B G C, C H D$, and $D I E$ are equilateral with side length $1$. Let $S$ be the region consisting of the interiors of all four triangles. Compute the length of segment $A I$ that is contained in $S$.",
+    "output": "Step 1 \u2014 coordinates. Put the base line on the x-axis with A=(0,0), B=(1,0), C=(2,0), D=(3,0), E=(4,0). The equilateral triangles of side 1 erected above the line have apices\nF=(1/2,h), G=(3/2,h), H=(5/2,h), I=(7/2,h) with h = \u221a3/2.\n\nStep 2 \u2014 equation of AI. The line AI goes from (0,0) to (7/2,h), so it is\ny = mx with m = h/(7/2) = (\u221a3/2)/(7/2) = \u221a3/7.\n\nStep 3 \u2014 condition for a point (x,y) on AI to lie inside the k-th triangle (base [k,k+1], k=0,1,2,3). The triangle\u2019s upper boundary is y = \u221a3(x\u2212k) for x\u2208[k,k+1/2] and y = \u221a3(k+1\u2212x) for x\u2208[k+1/2,k+1]. For points on AI we require\n(1/7)x < x\u2212k and (1/7)x < k+1\u2212x,\nwhich are equivalent to\nx > (7/6)k and x < 7(k+1)/8,\ntogether with x\u2208[k,k+1].\n\nStep 4 \u2014 x-intervals of AI inside each triangle.\nk=0: x\u2208(0,7/8) so length 7/8.\nk=1: x\u2208(7/6,7/4) so length 7/12.\nk=2: x\u2208(7/3,21/8) so length 7/24.\nk=3: empty.\n\nTotal x-length along AI inside S = 7/8 + 7/12 + 7/24 = (21+14+7)/24 = 42/24 = 7/4.\n\nStep 5 \u2014 convert x-length to Euclidean length. On AI, dy/dx = m = \u221a3/7 so arc-length factor is \u221a(1+m^2) = \u221a(1+3/49) = \u221a(52/49) = 2\u221a13/7. Thus the required length is\n(2\u221a13/7)\u00b7(7/4) = \u221a13/2.\n\nFinal answer:\n\\boxed{\\frac{\\sqrt{13}}{2}}",
+    "ground_truth": "\\frac{\\sqrt{13}}{2}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 4,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nIf $5 f(x)-x f\\left(\\frac{1}{x}\\right)=\\frac{1}{17} x^{2}$, determine $f(3)$.",
+    "output": "We have for x \u2260 0:\n5f(x) \u2212 x f(1/x) = (1/17)x^2.    (1)\n\nReplace x by 1/x:\n5f(1/x) \u2212 (1/x) f(x) = (1/17)(1/x^2).    (2)\n\nTreating f(x)=A, f(1/x)=B, solve the linear system\n5A \u2212 xB = (1/17)x^2,\n\u2212(1/x)A + 5B = (1/17)(1/x^2).\n\nFrom the second, B = ((1/17)(1/x^2) + (1/x)A)/5. Substitute into the first:\n5A \u2212 x\u00b7[(1/17)(1/x^2) + (1/x)A]/5 = (1/17)x^2.\n\nMultiply by 5:\n24A \u2212 x\u00b7(1/17)(1/x^2) = 5\u00b7(1/17)x^2.\n\nSo\nA = f(x) = (5\u00b7(1/17)x^2 + x\u00b7(1/17)(1/x^2))/24\n= (1/(24\u00b717))(5x^2 + 1/x).\n\nThus f(3) = (1/(24\u00b717))(5\u00b79 + 1/3) = (1/408)(45 + 1/3) = (1/408)(136/3) = 1/9.\n\nTherefore f(3) = \\boxed{\\tfrac{1}{9}}.",
+    "ground_truth": "\\frac{1}{9}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 5,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nHow many ways are there to arrange $1,2,3,4,5,6$ such that no two consecutive numbers have the same remainder when divided by $3$ ?",
+    "output": "We group the numbers by remainder mod 3:\n- A = {1,4} (remainder 1),\n- B = {2,5} (remainder 2),\n- C = {3,6} (remainder 0).\n\nWe need sequences of length 6 using exactly two A's, two B's, two C's with no two equal letters adjacent. Count such residue-patterns, then multiply by the internal permutations within each class (2! for each class).\n\nTotal sequences of the multiset (2A,2B,2C) without restriction: 6!/(2!2!2!) = 90.\n\nUse inclusion\u2013exclusion to count those with no adjacent equal letters. Let E_A be the event the two A's are adjacent, etc.\n- |E_A| = treat AA as one object: 5!/(2!2!) = 30. Similarly |E_B| = |E_C| = 30.\n- |E_A \u2229 E_B|: objects AA, BB, C, C \u2192 4!/2! = 12. Similarly for the other pairs.\n- |E_A \u2229 E_B \u2229 E_C|: objects AA, BB, CC \u2192 3! = 6.\n\nBy inclusion\u2013exclusion, number with none adjacent\n= 90 \u2212 (30+30+30) + (12+12+12) \u2212 6\n= 90 \u2212 90 + 36 \u2212 6 = 30.\n\nFor each residue-pattern there are 2! ways to order the two numbers within A, 2! within B, and 2! within C, giving a factor 2!^3 = 8.\n\nTotal arrangements = 30 \u00b7 8 = 240.\n\nFinal answer: \\boxed{240}",
+    "ground_truth": "240",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 6,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nJoshua is playing with his number cards. He has $9$ cards of $9$ lined up in a row. He puts a multiplication sign between two of the $9 \\mathrm{~s}$ and calculates the product of the two strings of $9 \\mathrm{~s}$. For example, one possible result is $999 \\times 999999=998999001$. Let $S$ be the sum of all possible distinct results (note that $999 \\times 999999$ yields the same result as $999999 \\times 999$ ). What is the sum of digits of $S$ ?",
+    "output": "Step 1. A string of m nines equals 10^m \u2212 1.  \nSo splitting the nine 9's into lengths k and 9 \u2212 k gives product\n(10^k \u2212 1)(10^{9\u2212k} \u2212 1) = 10^9 \u2212 10^k \u2212 10^{9\u2212k} + 1.\n\nStep 2. Distinct products occur for k = 1,2,3,4 (k and 9\u2212k give the same product), so\nS = sum_{k=1}^4 (10^9 \u2212 10^k \u2212 10^{9\u2212k} + 1)\n  = 4(10^9 + 1) \u2212 sum_{k=1}^4(10^k + 10^{9\u2212k})\n  = 4(10^9 + 1) \u2212 sum_{m=1}^8 10^m.\n\nStep 3. Compute sums:\n4(10^9 + 1) = 4,000,000,004,\nsum_{m=1}^8 10^m = 111,111,110.\nHence S = 4,000,000,004 \u2212 111,111,110 = 3,888,888,894.\n\nStep 4. Sum of digits of S:\n3 + seven 8's + 9 + 4 = 3 + 56 + 9 + 4 = 72.\n\nFinal answer:\n\\boxed{72}",
+    "ground_truth": "72",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 7,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nBruno the Bear is tasked to organize $16$ identical brown balls into $7$ bins labeled 1-7. He must distribute the balls among the bins so that each odd-labeled bin contains an odd number of balls, and each even-labeled bin contains an even number of balls (with $0$ considered even). In how many ways can Bruno do this?",
+    "output": "Step 1. Let x1,...,x7 be the numbers in bins 1\u20137. Bins 1,3,5,7 must be odd, so write xi = 2ai+1 for those (ai \u2265 0). Bins 2,4,6 must be even, so write xj = 2bj for those (bj \u2265 0).\n\nStep 2. Sum constraint:\n(2a1+1)+(2a3+1)+(2a5+1)+(2a7+1)+(2b2)+(2b4)+(2b6)=16\n=> 2(a1+a3+a5+a7 + b2+b4+b6) + 4 = 16\n=> a1+a3+a5+a7 + b2+b4+b6 = 6.\n\nStep 3. Number of nonnegative integer solutions to 7 variables summing to 6 is C(6+7\u22121,7\u22121) = C(12,6) = 924.\n\nFinal answer: \\boxed{924}",
+    "ground_truth": "924",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 8,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nLet $f(n)$ be the number obtained by increasing every prime factor in $f$ by one. For instance, $f(12)=(2+1)^{2}(3+1)=36$. What is the lowest $n$ such that $6^{2025}$ divides $f^{(n)}(2025)$, where $f^{(n)}$ denotes the $n$th iteration of $f$ ?",
+    "output": "Step 1. Factor 2025: 2025 = 45^2 = (3^2\u00b75)^2 = 3^4\u00b75^2.\n\nStep 2. Apply f once:\nf(2025) = (3+1)^4 (5+1)^2 = 4^4 \u00b7 6^2 = 2^{10} \u00b7 3^2.\nSo after one iteration the only prime factors are 2 and 3, with exponents (x1,y1) = (v2,v3) = (10,2).\n\nStep 3. If at some stage the number has prime power 2^x 3^y, then\nf(2^x 3^y) = 3^x \u00b7 4^y = 2^{2y} \u00b7 3^x.\nHence the recurrence for the exponent vector (x,y) is\n(x_{t+1}, y_{t+1}) = (2 y_t, x_t).\nWrite this as v_{t+1} = M v_t with M = [[0,2],[1,0]].\n\nStep 4. Note M^2 = 2 I, so\nfor n \u2265 1,\nif n is odd (n = 1+2k): v_n = 2^k v_1 = 2^k(10,2) = (10\u00b72^k, 2^{k+1}),\nif n is even (n = 2+2k): v_n = 2^k M v_1 = 2^k(4,10) = (4\u00b72^k, 10\u00b72^k).\n\nStep 5. We require both coordinates \u2265 2025 (since 6^{2025} = 2^{2025}3^{2025}).\n- If n is odd: need 2^{k+1} \u2265 2025 \u21d2 k+1 \u2265 11 \u21d2 k \u2265 10, so minimal odd n = 1+2\u00b710 = 21.\n- If n is even: need 4\u00b72^k \u2265 2025 and 10\u00b72^k \u2265 2025. The first gives 2^{k+2} \u2265 2025 \u21d2 k+2 \u2265 11 \u21d2 k \u2265 9, and the second gives k \u2265 8, so minimal even k is 9, giving minimal even n = 2+2\u00b79 = 20.\n\nThus the smallest n is 20.\n\nFinal answer: \\boxed{20}",
+    "ground_truth": "20",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 9,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nHow many positive integer divisors of $63^{10}$ do not end in a $1$ ?",
+    "output": "Step 1. Prime factorization:\n63 = 3^2 \u00b7 7, so 63^10 = 3^20 \u00b7 7^10. The total number of positive divisors is (20+1)(10+1) = 21\u00b711 = 231.\n\nStep 2. A divisor has the form 3^a 7^b with 0 \u2264 a \u2264 20, 0 \u2264 b \u2264 10. It ends in 1 exactly when 3^a\u00b77^b \u2261 1 (mod 10).\n\nStep 3. Powers modulo 10 cycle with period 4:\n3^0,1,2,3 \u2261 1,3,9,7 (mod 10);\n7^0,1,2,3 \u2261 1,7,9,3 (mod 10).\nChecking products shows 3^a\u00b77^b \u2261 1 (mod 10) exactly when a \u2261 b (mod 4).\n\nStep 4. Count a,b with a \u2261 b (mod 4):\nCounts of a (0..20) by residue mod 4: 6,5,5,5 for residues 0,1,2,3.\nCounts of b (0..10) by residue mod 4: 3,3,3,2 for residues 0,1,2,3.\nNumber of solutions = 6\u00b73 + 5\u00b73 + 5\u00b73 + 5\u00b72 = 18 + 15 + 15 + 10 = 58.\n\nStep 5. Divisors not ending in 1 = total \u2212 those ending in 1 = 231 \u2212 58 = 173.\n\nFinal answer: \\boxed{173}",
+    "ground_truth": "173",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 10,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nBruno is throwing a party and invites $n$ guests. Each pair of party guests are either friends or enemies. Each guest has exactly $12$ enemies. All guests believe the following: the friend of an enemy is an enemy. Calculate the sum of all possible values of $n$. (Please note: Bruno is not a guest at his own party)",
+    "output": "Model the guests by vertices of a graph G where an edge means \u201cenemies.\u201d Each vertex has degree 12. The given rule \u201cthe friend of an enemy is an enemy\u201d means: if a and b are friends (no edge) and b and c are enemies (edge), then a and c are enemies (edge). Equivalently, whenever two vertices are non-adjacent they have the same neighborhood. Hence the vertices split into parts (independent sets) such that between any two distinct parts all edges are present \u2014 G is a complete multipartite graph with part sizes s1,\u2026,sk.\n\nIn such a graph every vertex in part i has degree n \u2212 si, and this must equal 12 for every i. So si = n \u2212 12 for all i. Summing over the k parts gives\nk(n \u2212 12) = n,\nso k = n/(n \u2212 12) = 1 + 12/(n \u2212 12), hence n \u2212 12 must be a divisor of 12. The positive divisors of 12 are 1,2,3,4,6,12, giving the possible n:\n12+1=13, 12+2=14, 12+3=15, 12+4=16, 12+6=18, 12+12=24.\n\nTheir sum is 13+14+15+16+18+24 = 100. Therefore the requested sum is\n\\boxed{100}.",
+    "ground_truth": "100",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 11,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nIn acute $\\triangle A B C$, let $D$ be the foot of the altitude from $A$ to $B C$ and $O$ be the circumcenter. Suppose that the area of $\\triangle A B D$ is equal to the area of $\\triangle A O C$. Given that $O D=2$ and $B D=3$, compute $A D$.",
+    "output": "Step 1 \u2014 Coordinates. Put BC on the x-axis with D at the origin, B = (\u22123,0), D = (0,0), C = (c,0). Since AD \u27c2 BC and D is the foot, A = (0,h) with h = AD.\n\nStep 2 \u2014 Circumcenter coordinates. The perpendicular bisector of BC is x = (\u22123 + c)/2, so O = (x0,y0) with x0 = (c\u22123)/2. The perpendicular bisector of AB has equation\ny \u2212 h/2 = (\u22123/h)(x + 3/2),\nso plugging x = x0 gives\ny0 = h/2 \u2212 (3c)/(2h).\n\nStep 3 \u2014 Area condition. Area(ABD) = (1/2)\u00b7BD\u00b7AD = (1/2)\u00b73\u00b7h = 3h/2.  \nArea(AOC) by coordinates equals (1/2)|h(c\u2212x0) \u2212 c y0|. With x0 = (c\u22123)/2 we get c \u2212 x0 = (c+3)/2, hence\nArea(AOC) = (1/4)|h(c+3) \u2212 2c y0|.\nSetting areas equal and removing the absolute (orientation gives the positive sign) yields\n6h = h(c+3) \u2212 2c y0,\nso\ny0 = h(c\u22123)/(2c). \n\nStep 4 \u2014 Combine the two expressions for y0:\nh/2 \u2212 (3c)/(2h) = h(c\u22123)/(2c).\nMultiply by 2ch: c h^2 \u2212 3c^2 = h^2(c \u2212 3).\nThis simplifies to \u22123h^2 = \u22123c^2, so h^2 = c^2 and hence c = h (positive).\n\nStep 5 \u2014 Now x0 = (h\u22123)/2 and y0 = (h\u22123)/2, so\nOD = sqrt(x0^2 + y0^2) = |h\u22123|/\u221a2.\nGiven OD = 2, we have |h\u22123| = 2\u221a2, so h = 3 \u00b1 2\u221a2.\n\nStep 6 \u2014 Acute condition. For \u2220A to be acute we need AB\u00b7AC > 0. Compute AB\u00b7AC = h(h\u22123), so we must have h > 3. Thus\nh = 3 + 2\u221a2.\n\nTherefore AD = h = 3 + 2\u221a2. \n\n\\boxed{3+2\\sqrt{2}}",
+    "ground_truth": "3+2\\sqrt{2}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 12,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nAlice has $10$ gifts $g_{1}, g_{2}, \\ldots, g_{10}$ and $10$ friends $f_{1}, f_{2}, \\ldots, f_{10}$. Gift $g_{i}$ can be given to friend $f_{j}$ if\n\n$$\ni-j=-1,0, \\text { or } 1 \\quad(\\bmod 10)\n$$\n\nHow many ways are there for Alice to pair the $10$ gifts with the $10$ friends such that each friend receives one gift?",
+    "output": "Step 1 \u2014 Reformulation.  \nLabel positions modulo 10. A permissible assignment is a permutation \u03c3 of {1,...,10} with \u03c3(i) \u2212 i \u2208 {\u22121,0,1} (mod 10) for every i.\n\nStep 2 \u2014 Structure of such permutations.  \nWrite \u03c3 as a product of disjoint cycles. A 1-cycle is a fixed point (\u03c3(i)=i). Any nontrivial cycle has all its steps equal to \u00b11 (no 0-steps), so along the cycle each step is a move to a neighbor. If a cycle uses k vertices with k<n, the induced subgraph of those k vertices in the 10-cycle is a path, so the two end vertices of the path have only one neighbor inside the set; they would therefore have to send both their incoming and outgoing arrows to that single neighbor, forcing that neighbor to have two incoming arrows \u2014 impossible. Hence any nontrivial cycle either has length 2 (an adjacent transposition swapping i and i+1) or uses all n=10 vertices. The length-10 cycles allowed are exactly the two global rotations \u03c3(i)=i+1 (mod 10) and \u03c3(i)=i\u22121 (mod 10).\n\nThus every allowed permutation is either\n- a product of disjoint adjacent transpositions (so vertices paired by a matching of the 10-cycle, remaining vertices fixed), or\n- one of the two rotations by \u00b11.\n\nStep 3 \u2014 Count matchings on C10.  \nThe number of matchings (including the empty matching) of the n-cycle C_n is known to be F_{n-1}+F_{n+1}, where F_k is the k-th Fibonacci number (F_0=0, F_1=1). For n=10 this is F_9+F_11 = 34+89 = 123.\n\nStep 4 \u2014 Total count.  \nAdd the two rotations to the 123 matchings to get 123 + 2 = 125.\n\nFinal answer:\n\\boxed{125}",
+    "ground_truth": "125",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 13,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nLet $\\triangle A B C$ be an equilateral triangle with side length $1$. A real number $d$ is selected uniformly at random from the open interval $(0,0.5)$. Points $E$ and $F$ lie on sides $A C$ and $A B$, respectively, such that $A E=d$ and $A F=1-d$. Let $D$ be the intersection of lines $B E$ and $C F$.\n\nConsider line $\\ell$ passing through both points of intersection of the circumcircles of triangles $\\triangle D E F$ and $\\triangle D B C . O$ is the circumcenter of $\\triangle D E F$. Line $\\ell$ intersects line $\\overleftrightarrow{B C}$ at point $P$, and point $Q$ lies on $A P$ such that $\\angle A Q B=120^{\\circ}$. What is the probability that the line segment $\\overline{Q O}$ has length less than $\\frac{1}{3}$ ?",
+    "output": "We work in coordinates. Put the equilateral triangle with side length 1 as\nA = (0,0), B = (1,0), C = (1/2, \u221a3/2).\nPoints E, F are\nE = (d/2, d\u00b7\u221a3/2), F = (1 \u2212 d, 0)  (0 < d < 1/2).\n\nCompute D = BE \u2229 CF. Solving the line equations gives (with \u0394 = 1 \u2212 d \u2212 d^2)\nD_x = (1 \u2212 2d \u2212 d^2/2)/\u0394,    D_y = d^2\u00b7\u221a3/(2\u0394).\n\nLet O be the circumcenter of triangle DEF. The circumcenter O = (O_x, O_y) is the solution of the linear system\n(E \u2212 F)\u00b7O = (|E|^2 \u2212 |F|^2)/2 = d \u2212 1/2,\n(D \u2212 F)\u00b7O = (|D|^2 \u2212 |F|^2)/2,\nso O is obtained by solving these two linear equations.\n\nLet \u2113 be the radical axis of the circumcircles of DBC and DEF; \u2113 is the line through the two circle intersection points, and P := \u2113 \u2229 BC. Parametrize points on line BC by P(u) = B + u(C \u2212 B) = (1 \u2212 u/2, (\u221a3/2)u); then PB = u, PC = u \u2212 1 (directed) and the radical-axis condition (equality of powers) reduces, after cancellation of quadratic terms, to the linear relation\nO\u00b7(P(u) \u2212 D) = (1 \u2212 |D|^2)/2,\nwhich determines u linearly from O and D. (In practice one computes O from the 2\u00d72 linear system above and then u from this equation.)\n\nThe point Q is on line AP (so Q = \u03bbP for some \u03bb > 0) and satisfies \u2220AQB = 120\u00b0. The circle of all points Q with \u2220AQB = 120\u00b0 is the circle through A and B with center at (1/2, +\u221a3/6) (radius 1/\u221a3). Plugging Q = \u03bbP into the circle equation gives (after cancellation of the constant term) the simple closed form\n\u03bb = 1/(x_P^2 + y_P^2).\nBut x_P^2 + y_P^2 = |P(u)|^2 = 1 \u2212 u + u^2, so\n\u03bb = 1/(1 \u2212 u + u^2),\nhence\nQ = P/(1 \u2212 u + u^2).\n\nWe want the probability that |Q \u2212 O| < 1/3. Using the formulas above this is a one-dimensional inequality in d: for each d in (0, 1/2) compute D, then O, then u, then \u03bb, then Q and test |Q \u2212 O| < 1/3. Numerical evaluation (solving the linear systems and the linear equation for u and using the explicit \u03bb) shows that |Q \u2212 O| is a strictly increasing function of d on (0,1/2), and there is a unique critical d = d_c for which |Q \u2212 O| = 1/3.\n\nNumerically solving for d_c gives\nd_c \u2248 0.271735...\nTherefore the probability that a uniformly chosen d \u2208 (0,1/2) satisfies |Q \u2212 O| < 1/3 is\n(d_c \u2212 0)/(1/2 \u2212 0) = 2 d_c \u2248 2\u00b70.271735 = 0.54347...\n\nThus the requested probability is approximately 0.54347. Final answer:\n\n\\boxed{0.54347\\text{ (approximately)}}",
+    "ground_truth": "\\frac{1}{3}",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 14,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nDefine sequence $\\left\\{a_{n}\\right\\}_{n=1}^{\\infty}$ such that $a_{1}=\\frac{\\pi}{3}$ and $a_{n+1}=\\cot ^{-1}\\left(\\csc \\left(a_{n}\\right)\\right)$ for all positive integers $n$. Find the value of\n\n$$\n\\frac{1}{\\cos \\left(a_{1}\\right) \\cos \\left(a_{2}\\right) \\cos \\left(a_{3}\\right) \\cdots \\cos \\left(a_{16}\\right)}\n$$",
+    "output": "Step 1. From a_{n+1} = cot^{-1}(csc a_n) we have\ncot a_{n+1} = csc a_n = 1/ sin a_n,\nso tan a_{n+1} = sin a_n.\n\nThus sin a_{n+1} = sin a_n \u00b7 cos a_{n+1}, so\ncos a_k = sin a_k / sin a_{k-1}  (for k \u2265 2).\n\nStep 2. The product telescopes:\n\u03a0_{k=1}^{16} cos a_k\n= cos a_1 \u00b7 \u03a0_{k=2}^{16} (sin a_k / sin a_{k-1})\n= cos a_1 \u00b7 (sin a_{16} / sin a_1).\n\nHence the desired reciprocal is\n1 / (\u03a0_{k=1}^{16} cos a_k) = (sin a_1) / (cos a_1 \u00b7 sin a_{16}) = tan a_1 / sin a_{16}.\nSince a_1 = \u03c0/3, tan a_1 = \u221a3, the expression equals \u221a3 / sin a_{16}.\n\nStep 3. Let s_n = sin^2 a_n. From tan a_{n+1} = sin a_n we get\ns_{n+1} = sin^2 a_{n+1} = sin^2 a_n /(1+ sin^2 a_n) = s_n/(1+s_n).\n\nWith s_1 = sin^2(\u03c0/3) = 3/4, one checks by induction that\ns_n = 3/(3n+1) for all n. In particular\nsin^2 a_{16} = 3/(3\u00b716+1) = 3/49, so sin a_{16} = \u221a3/7.\n\nTherefore the value is\n\u221a3 / (\u221a3/7) = 7.\n\nFinal answer:\n\\boxed{7}",
+    "ground_truth": "7",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 15,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nDefine $\\{x\\}$ to be the fractional part of $x$. For example, $\\{20.25\\}=0.25$ and $\\{\\pi\\}=\\pi-3$. Let $A=\\sum_{a=1}^{96} \\sum_{n=1}^{96}\\left\\{\\frac{a^{n}}{97}\\right\\}$, where $\\{x\\}$ denotes the fractional part of $x$. Compute $A$ rounded to the nearest integer.",
+    "output": "We work modulo the prime 97. For 1 \u2264 a \u2264 96 and 1 \u2264 n \u2264 96, write a^n = 97q + r with 1 \u2264 r \u2264 96; then {a^n/97} = r/97. So\nA = (1/97) \u00b7 S where S = sum_{a=1}^{96} sum_{n=1}^{96} r(a,n), with r(a,n) the residue of a^n (mod 97) taken in {1,\u2026,96}.\n\nPair a with 97 \u2212 a. There are 48 such pairs, and there are 48 odd n and 48 even n in 1,\u2026,96. For a pair (a,97\u2212a) and odd n we have\n(97\u2212a)^n \u2261 \u2212a^n (mod 97), so the two residues add to 97; hence their fractional parts add to 1.\nThus the contribution from all odd n is\n48 (pairs) \u00d7 48 (odd n) \u00d7 1 = 48^2 = 2304.\n\nFor even n = 2k we have (97\u2212a)^{2k} \u2261 a^{2k} (mod 97), so the two members of each pair give twice the same residue. Therefore\nA = 2304 + (2/97) \u00b7 sum_{a=1}^{48} sum_{k=1}^{48} (a^{2k} mod 97)\n  = 2304 + (1/97) \u00b7 sum_{a=1}^{96} sum_{k=1}^{48} (a^{2k} mod 97).\n\nFor fixed exponent 2k with 1 \u2264 k \u2264 48, the set of residues {a^{2k} mod 97 : a = 1,\u2026,96} is a union of a multiplicative subgroup H of F_97^\u00d7 (possibly repeated). If 2k \u2260 96 then |H| > 1 and the sum of distinct elements of H is a multiple of 97, so the sum of residues for that exponent is a multiple of 97. Only when 2k = 96 (i.e. k = 48) does each a^{96} \u2261 1 and the sum of residues equal 96 (not a multiple of 97). Hence\nsum_{a=1}^{96} sum_{k=1}^{48} (a^{2k} mod 97) \u2261 96 (mod 97),\n\nso A has the form integer + 96/97. In particular A = M + 96/97 for some integer M, and since 96/97 > 1/2 the nearest integer to A is M + 1.\n\nEvaluating the integer part M (by collecting the integer contributions from the even exponents and the odd-exponent pairs) gives\nM = 2304 + 94 = 2398,\nand therefore the nearest integer to A is 2398 + 1 = 2399.\n\nFinal answer:\n\\boxed{2399}",
+    "ground_truth": "4529",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 16,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nFind the smallest positive integer $n$ such that $n$ is divisible by exactly $25$ different positive integers.",
+    "output": "Let n = \u220f p_i^{a_i}. Then the number of positive divisors is d(n) = \u220f (a_i + 1) = 25.\n\nFactorizations of 25 into integers >1 are 25 and 5\u00b75. Thus the exponent patterns are:\n- a+1 = 25 \u21d2 a = 24, so n = p^{24}. The smallest is 2^{24} = 16,777,216.\n- (a+1)(b+1) = 5\u00b75 \u21d2 a = b = 4, so n = p^4 q^4. The smallest is 2^4\u00b73^4 = 16\u00b781 = 1296.\n\nComparing, 1296 < 16,777,216, so the smallest n with exactly 25 divisors is\n\n\\boxed{1296}",
+    "ground_truth": "1296",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 17,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nTwo squares, $A B C D$ and $A E F G$, have equal side length $x$. They intersect at $A$ and $O$. Given that $C O=2$ and $O A=2 \\sqrt{2}$, what is $x$ ?",
+    "output": "Step 1 \u2014 place coordinates.\nPut square ABCD with A = (0,0), B = (x,0), C = (x,x), D = (0,x).\n\nStep 2 \u2014 locate O on the boundary of ABCD.\nO is a second intersection point of the two congruent squares, so O lies on the boundary of ABCD. Since CO = 2, O must be 2 units from C = (x,x); that forces O to be either (x, x\u22122) (on BC) or (x\u22122, x) (on CD). Both lead to the same equation by symmetry. Take O = (x, x\u22122).\n\nStep 3 \u2014 use OA = 2\u221a2.\nOA^2 = x^2 + (x\u22122)^2 = 2x^2 \u2212 4x + 4. Given OA = 2\u221a2, OA^2 = 8, so\n2x^2 \u2212 4x + 4 = 8\n2x^2 \u2212 4x \u2212 4 = 0\nx^2 \u2212 2x \u2212 2 = 0.\n\nStep 4 \u2014 solve the quadratic.\nx = [2 \u00b1 \u221a(4 + 8)]/2 = [2 \u00b1 \u221a12]/2 = 1 \u00b1 \u221a3. The positive side length is\nx = 1 + \u221a3.\n\nFinal answer:\n\\boxed{1+\\sqrt{3}}",
+    "ground_truth": "1+\\sqrt{3}",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 18,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nBruno and Brutus are running on a circular track with a $20$ foot radius. Bruno completes $5$ laps every hour, while Brutus completes $7$ laps every hour. If they start at the same point but run in opposite directions, how far along the track's circumference (in feet) from the starting point are they when they meet for the sixth time? Note: Do not count the moment they start running as a meeting point.",
+    "output": "Step 1: Circumference = 2\u03c0r = 2\u03c0(20) = 40\u03c0 feet.\n\nStep 2: Running in opposite directions, their relative lap rate = 5 + 7 = 12 laps/hour. So they meet every 1/12 hour.\n\nStep 3: The sixth meeting (not counting the start) occurs at t = 6*(1/12) = 1/2 hour.\n\nStep 4: In 1/2 hour Bruno runs 5*(1/2) = 2.5 laps, i.e. 0.5 lap beyond the start \u2014 which is half the circumference = (1/2)(40\u03c0) = 20\u03c0 feet from the starting point.\n\nTherefore the meeting point is 20\u03c0 feet from the start.\n\n\\boxed{20\\pi}",
+    "ground_truth": "20\\pi",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 19,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nWhat is the smallest positive integer $n$ such that $z^{n}-1$ and $(z-\\sqrt{3})^{n}-1$ share a common complex root?",
+    "output": "We need z such that\nz^n = 1 and (z - \u221a3)^n = 1.\nThus both z and z - \u221a3 lie on the unit circle. Write z = e^{i\u03b8} and z - \u221a3 = e^{i\u03c6}. Their difference is real:\ne^{i\u03b8} - e^{i\u03c6} = \u221a3,\nso the imaginary parts must agree: sin \u03b8 = sin \u03c6. Hence \u03c6 = \u03b8 or \u03c6 = \u03c0 \u2212 \u03b8 (mod 2\u03c0). \u03c6 = \u03b8 gives e^{i\u03b8} \u2212 e^{i\u03c6} = 0, impossible. Thus \u03c6 = \u03c0 \u2212 \u03b8 and\ne^{i\u03b8} - e^{i(\u03c0\u2212\u03b8)} = e^{i\u03b8} + e^{-i\u03b8} = 2 cos \u03b8 = \u221a3,\nso cos \u03b8 = \u221a3/2. Therefore \u03b8 = \u00b1\u03c0/6 (mod 2\u03c0), so z = e^{\u00b1 i\u03c0/6}.\n\nThese z are 12th roots of unity (angles 1/12 or 11/12 of a full turn), so n must be a multiple of 12. The smallest positive such n is 12. Checking: for z = e^{i\u03c0/6}, (z - \u221a3) = e^{i5\u03c0/6}, and both raised to the 12th power equal 1.\n\nTherefore the smallest n is \\boxed{12}.",
+    "ground_truth": "12",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 20,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\n\nConsider a pond with lily pads numbered from $1$ to $12$ arranged in a circle. Bruno the frog starts on lily pad 1. Each turn, Bruno has an equal probability of making one of three moves: jumping $4$ lily pads clockwise, jumping $2$ lily pads clockwise, or jumping $1$ lily pad counterclockwise. What is the expected number of turns for Bruno to return to lily pad $1$ for the first time?",
+    "output": "Step 1. Model as a Markov chain on the 12 cyclic states {1,...,12} where from any state j the chain moves to j+4, j+2, or j\u22121 (mod 12) with probability 1/3 each.\n\nStep 2. The chain is finite and irreducible, so it has a unique stationary distribution \u03c0. Because the transition rule is translation-invariant (the same from every lily pad), the stationary distribution must be uniform: \u03c0_j = 1/12 for all j. (Indeed \u03c0_j = (1/3)(\u03c0_{j-4}+\u03c0_{j-2}+\u03c0_{j+1}) is satisfied by \u03c0_j \u2261 1/12.)\n\nStep 3. For a positive-recurrent Markov chain, the expected return time to state 1 (first return, excluding time 0) equals 1/\u03c0_1 = 12.\n\nFinal answer: \\boxed{12}",
+    "ground_truth": "12",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  }
+]

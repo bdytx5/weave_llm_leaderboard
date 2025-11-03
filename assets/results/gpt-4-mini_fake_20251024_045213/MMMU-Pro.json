@@ -1,0 +1,322 @@
+[
+  {
+    "sample_id": 1,
+    "input": "Which of the following best explains the overall trend shown in the <image 1>?\n\nChoices:\n(A) Migrations to areas of Central Asia for resettlement\n(B) The spread of pathogens across the Silk Road\n(C) Invasions by Mongol tribes\n(D) Large-scale famine due to crop failures\n",
+    "output": "(B) The spread of pathogens across the Silk Road.\n\nExplanation: Both the Roman and Han populations fall over the same centuries when long\u2011distance trade (including the Silk Road) helped transmit epidemics (e.g., the Antonine/Cyprian/Justinian plagues in the West and disease outbreaks contributing to unrest in late Han China). Mongol invasions occurred much later, and mass resettlement or a single crop failure would not as plausibly account for parallel declines in both empires.",
+    "ground_truth": "B",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 2,
+    "input": "<image 1> of Louis Black, believed to be a formerly enslaved man, was painted by which artist?\n\nChoices:\n(A) Mary Cameron\n(B) Gavin Hamilton\n(C) James Irvine\n(D) Arthur Melville\n",
+    "output": "(D) Arthur Melville",
+    "ground_truth": "C",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 3,
+    "input": "<image 1> is a symbol of...\n\nChoices:\n(A) Time waits for no man\n(B) A common experience\n(C) A mystery\n(D) A clock\n",
+    "output": "(A) Time waits for no man\n\nThe image is Father Time \u2014 a personification of the passage of time and its inevitability, matching the saying \"time waits for no man.\"",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 4,
+    "input": "The conflict addressed in the <image 1> is best understood in the context of which of the following?\n\nChoices:\n(A) The imperial interests of the United States\n(B) A dramatic increase in migration\n(C) A stagnation in global trade\n(D) The burgeoning human rights movement\n",
+    "output": "(B) A dramatic increase in migration.\n\nThe cartoon criticizes U.S. anti-Chinese nativism \u2014 showing a Chinese man shut out of the \"Golden Gate of Liberty\" while a sign permits communists, Fenians, etc. This reflects late-19th-century opposition to Chinese immigration (e.g., the Chinese Exclusion Act of 1882) and labor tensions on the West Coast.",
+    "ground_truth": "B",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 5,
+    "input": "Refer to the figure <image 1>, which term refers to the materials and technical means used by artists to create pictures?\n\nChoices:\n(A) Artistic media\n(B) Artistic elements\n(C) Functions of illustrations\n(D) Visual elements\n",
+    "output": "Correct answer: (A) Artistic media.\n\n\"Artistic media\" (or \"media\"/\"medium\") refers to the materials and technical means (paint, pencil, watercolor, digital tools, etc.) artists use to create images.",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 6,
+    "input": "<image 1> Which nutrient seems to be absent given the signs of deficiency in this brassica seedling?\n\nChoices:\n(A) Potassium\n(B) Molybdenum\n(C) Nitrogen\n(D) Don't know and don't want to guess\n(E) Phosphate\n",
+    "output": "(E) Phosphate\n\nThe purpling of the stems and leaves (anthocyanin accumulation) is a classic sign of phosphorus (phosphate) deficiency in brassicas, especially in young seedlings.",
+    "ground_truth": "E",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 7,
+    "input": "For each of the following $1,000-parvalue bonds, assuming annual interest payment and a 40% tax rate, calculate the after-tax cost to maturity using the approximation formula. <image 1>\n\nChoices:\n(A) A: 4.66%; B: 8.20%; C: 4.55%; D: 9.48%; E: 10.10%\n(B) A: 5.66%; B: 8.20%; C: 7.55%; D: 9.48%; E: 10.10%\n(C) A: 4.66%; B: 6.20%; C: 4.55%; D: 5.48%; E: 7.10%\n(D) A: 5.66%; B: 6.20%; C: 7.55%; D: 5.48%; E: 7.10%\n",
+    "output": "Use the after\u2011tax approximation:\nafter\u2011tax cost \u2248 [ (coupon + amortization) \u00d7 (1 \u2212 T) ] / [ (Par + Net proceeds)/2 ],\nwhere Net proceeds = Par + (discount or premium) \u2212 underwriting fee and amortization = (Par \u2212 Net proceeds)/life.\n\nT = 0.40, Par = $1,000.\n\nA\n- Coupon = 0.09\u00d71000 = 90\n- Net proceeds = 1000 \u2212 20 \u2212 25 = 955\n- Amortization = (1000 \u2212 955)/20 = 45/20 = 2.25\n- Numerator = (90 + 2.25)\u00d70.6 = 55.35\n- Denominator = (1000 + 955)/2 = 977.5\n- Cost = 55.35/977.5 = 0.05662 \u2248 5.66%\n\nB\n- Coupon = 100\n- Net proceeds = 1000 + 10 \u2212 40 = 970\n- Amortization = (1000 \u2212 970)/16 = 30/16 = 1.875\n- Numerator = (100 + 1.875)\u00d70.6 = 61.125\n- Denominator = (1000 + 970)/2 = 985\n- Cost = 61.125/985 = 0.06206 \u2248 6.20%\n\nC\n- Coupon = 120\n- Net proceeds = 1000 \u2212 15 \u2212 30 = 955\n- Amortization = (1000 \u2212 955)/15 = 45/15 = 3.00\n- Numerator = (120 + 3)\u00d70.6 = 73.8\n- Denominator = (1000 + 955)/2 = 977.5\n- Cost = 73.8/977.5 = 0.07548 \u2248 7.55%\n\nD\n- Coupon = 90\n- Net proceeds = 1000 \u2212 0 \u2212 15 = 985\n- Amortization = (1000 \u2212 985)/25 = 15/25 = 0.6\n- Numerator = (90 + 0.6)\u00d70.6 = 54.36\n- Denominator = (1000 + 985)/2 = 992.5\n- Cost = 54.36/992.5 = 0.05475 \u2248 5.48%\n\nE\n- Coupon = 110\n- Net proceeds = 1000 \u2212 60 \u2212 20 = 920\n- Amortization = (1000 \u2212 920)/22 = 80/22 \u2248 3.63636\n- Numerator = (110 + 3.63636)\u00d70.6 \u2248 68.18182\n- Denominator = (1000 + 920)/2 = 960\n- Cost = 68.18182/960 = 0.07102 \u2248 7.10%\n\nThese match choice (D).",
+    "ground_truth": "D",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 8,
+    "input": "In general, children in ______ households benefit from <image 1>.\n\nChoices:\n(A) Stepfamily\n(B) Multigenerational\n(C) High-conflict\n(D) Low-conflict\n",
+    "output": "(D) Low-conflict\n\nExplanation: The image represents shared/joint custody (two separated households with children on each side). Research shows children benefit most from joint/shared parenting when parents have low interparental conflict and can cooperate; in high-conflict situations joint custody can be harmful.",
+    "ground_truth": "C",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 9,
+    "input": "Prices of zero-coupon bonds reveal the following pattern of forward rates: <image 1> In addition to the zero-coupon bond, investors also may purchase a 3-year bond making annual payments of $60 with par value $1,000. Under the expectations hypothesis, what is the expected realized compound yield of the coupon bond?\n\nChoices:\n(A) 6.66%\n(B) 6.79%\n(C) 6.91%\n",
+    "output": "Answer: (A) 6.66%\n\nReason: Under the expectations hypothesis coupons are expected to be reinvested at the forward rates, so the 3-year accumulation factor is\n(1+f1)(1+f2)(1+f3) = 1.05\u00b71.07\u00b71.08 = 1.21338.\nThe expected annual compound yield y satisfies (1+y)^3 = 1.21338, so\ny = 1.21338^(1/3) \u2212 1 \u2248 0.0667 \u2248 6.66%.",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 10,
+    "input": "Gate AB in Fig. P2.51 is 1.2 m long and 0.8 m into the paper. Neglecting atmospheric-pressure effects, compute the force F on the gate. <image 1>\n\nChoices:\n(A) 17940 N\n(B) 38750 N\n(C) 25150 N\n",
+    "output": "First compute the fluid weight density:\ngamma = 0.82(1000)(9.81) = 8044.2 N/m^3.\n\nArea of the gate:\nA = (1.2 m)(0.8 m) = 0.96 m^2.\n\nDetermine the vertical depth of the centroid (y_c).\nThe point on the wall at the 4.00 m mark is 1.00 m along the plate from A, and the centroid of AB is 0.6 m from A along the plate. The plate is inclined 40\u00b0 so the vertical distance from the 4.00 m reference down to the centroid is\ny_c = 4.00 + (1.00 + 0.60) sin40\u00b0 = 4.00 + 1.60(0.6428) = 5.0285 m.\n\nHydrostatic resultant:\nF = gamma \u00b7 A \u00b7 y_c = 8044.2 \u00b7 0.96 \u00b7 5.0285 \u2248 3.88 \u00d7 10^4 N \u2248 3.875 \u00d7 10^4 N.\n\nSo the closest choice is (B) 38,750 N.",
+    "ground_truth": "B",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 11,
+    "input": "The following diagram shows the bacteriorhodopsin protein.This protein have quaternary structure.<image 1>\n\nChoices:\n(A) True\n(B) False\n",
+    "output": "(A) True.\n\nAlthough the picture shows a single seven\u2011helix polypeptide (its tertiary fold), bacteriorhodopsin assembles into oligomers (functional trimers that pack into a hexagonal lattice in the purple membrane), so it has quaternary structure.",
+    "ground_truth": "B",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 12,
+    "input": "A dam is to be constructed across a valley to form a reservoir, and the areas in the following table enclosed by contour loops were obtained from a plan of the area involved.If the 660 m level represents the level floor of the reservoir, use the prismoidal formula to calculate the volume of water impounded when the water level reaches 700 m.<image 1>\n\nChoices:\n(A) 29.893 * 106 $m^{3}$\n(B) 29.293 * 106 $m^{3}$\n(C) 29.493 * 106 $m^{3}$\n(D) 29.693 * 106 $m^{3}$\n",
+    "output": "Use the composite prismoidal (Simpson) formula for equally spaced cross\u2011section areas:\n\nV = (h/3)[A0 + 4A1 + 2A2 + 4A3 + ... + 4A7 + A8]\n\nHere h = 5 m, and the areas (m^2) are\nA0 = 5200, A1 = 9400, A2 = 16300, A3 = 22400,\nA4 = 40700, A5 = 61500, A6 = 112200, A7 = 198100, A8 = 272400.\n\nCompute the weighted sum:\nS = A0 + 4A1 + 2A2 + 4A3 + 2A4 + 4A5 + 2A6 + 4A7 + A8\n  = 1,781,600.\n\nThus\nV = (5/3) \u00d7 1,781,600 = 2,969,333.33 m^3 \u2248 2.9693 \u00d7 10^6 m^3.\n\n(From the given choices this corresponds to choice D, which appears to have a decimal-place scaling error on the printed list.)",
+    "ground_truth": "D",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 13,
+    "input": "The patient shown below most likely has which of the following? <image 1> \n\nChoices:\n(A) Paget's disease\n(B) Sickle cell disease\n(C) Ankylosing spondylitis\n(D) Renal osteodystrophy\n",
+    "output": "Answer: (D) Renal osteodystrophy.\n\nReason: The lateral spine shows increased sclerosis at the vertebral endplates with a relatively lucent central portion \u2014 the classic \"rugger-jersey\" appearance of secondary hyperparathyroidism/renal osteodystrophy. Paget disease, ankylosing spondylitis, and sickle cell have different radiographic patterns (bone enlargement/coarsened trabeculae; bamboo spine/ankylosis; H\u2011shaped/biconcave vertebrae, respectively).",
+    "ground_truth": "D",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 14,
+    "input": "Which statement represents stratification from the perspective of <image 1>?\n\nChoices:\n(A) Men often earn more than women, even working the same job.\n(B) After work, Pat, a janitor, feels more comfortable eating in a truck stop than a French restaurant.\n(C) Doctors earn more money because their job is more highly valued.\n(D) Teachers continue to struggle to keep benefits such as good retirement plans.\n",
+    "output": "(B)\n\nSymbolic interactionism is a micro-level perspective that sees social stratification expressed in everyday interactions and meanings \u2014 e.g., a janitor feeling more comfortable at a truck stop than a French restaurant reflects how class/status shapes daily behavior and identity.",
+    "ground_truth": "B",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 15,
+    "input": "The following readings were taken by a tacheometer from station B on stations A, C and D in clockwise direction:<image 1>The line BA has a bearing of 58\u00b046' and the instrument constants are 100 and 0.Find the slope of the line CD and its bearing.\n\nChoices:\n(A) Slope 1 in 7.64 rising, W.C.B. 7\u00b016'26.7\"\n(B) Slope 1 in 8.54 rising, W.C.B. 7\u00b016'26.7\"\n(C) Slope 1 in 9.54 rising, W.C.B. 7\u00b016'26.7\"\n(D) Slope 1 in 7.54 rising, W.C.B. 7\u00b016'26.7\"\n",
+    "output": "Answer: None of the given choices. \n\nWork (concise):\n\n1) Determine the angular datum (to convert instrument HC readings to W.C.B.)\n- Given W.C.B. of BA = 58\u00b046' and HC reading to A = 301\u00b010'\n- Datum (to add to any HC) = 58\u00b046' \u2212 301\u00b010' = \u2212242\u00b024' = +117\u00b036'\n- So W.C.B. = HC + 117\u00b036'\n\n2) Stadia intervals and sloping distances\n- For C: sC = bottom \u2212 top = 3.522 \u2212 1.044 = 2.478 m\n  LD_C = K\u00b7sC + C = 100\u00b72.478 + 0 = 247.800 m\n- For D: sD = 4.110 \u2212 0.645 = 3.465 m\n  LD_D = 100\u00b73.465 = 346.500 m\n\n3) Vertical angles \u2192 vertical components (line-of-sight)\n- vC = \u22125' = \u22120.0833333\u00b0 \u2192 sin vC \u2248 \u22120.00145444\n  V_C = LD_C\u00b7sin vC = 247.800\u00b7(\u22120.00145444) = \u22120.36045 m\n- vD = +2\u00b030' = +2.5\u00b0 \u2192 sin vD \u2248 0.04361939\n  V_D = 346.500\u00b70.04361939 = 15.11412 m\n\n(When computing ground elevations from the instrument line-of-sight intersection, the middle staff reading must be removed:\n elevation of station = elevation of instrument + LD\u00b7sin v \u2212 middle_reading.\nSo the relative elevation difference C\u2192D is\n \u0394Z = (LD_D\u00b7sin vD \u2212 mD) \u2212 (LD_C\u00b7sin vC \u2212 mC).)\n\nMiddle readings: mC = 2.283 m, mD = 2.376 m\nThus\n \u0394Z = (15.11412 \u2212 2.376) \u2212 (\u22120.36045 \u2212 2.283)\n     = (12.73812) \u2212 (\u22122.64345)\n     = 12.73812 + 2.64345\n     = 15.38157 m\n\n(D is higher than C by 15.3816 m \u2192 \u201crising\u201d.)\n\n4) Horizontal distances from B and coordinates\n- Horizontal distances H = LD\u00b7cos v\n  H_C = 247.800\u00b7cos(\u22120.083333\u00b0) = 247.79972 m\n  H_D = 346.500\u00b7cos(2.5\u00b0) = 346.1709 m\n- Bearings from B:\n  B_C = HC_C + 117\u00b036' = 152\u00b056' + 117\u00b036' = 270\u00b032'\n  B_D = 205\u00b006' + 117\u00b036' = 322\u00b042'\n- Resolve to N,E components (bearing measured clockwise from North):\n  C: \u0394E_C = H_C\u00b7sin B_C = \u2212247.7886 m, \u0394N_C = H_C\u00b7cos B_C = \u22122.3075 m\n  D: \u0394E_D = H_D\u00b7sin B_D = \u2212209.7763 m, \u0394N_D = H_D\u00b7cos B_D = +275.3698 m\n- Vector C\u2192D:\n  \u0394E = 38.0123 m (east)\n  \u0394N = 277.6773 m (north)\n- Plan (horizontal) distance CD = sqrt(\u0394E^2 + \u0394N^2) = 280.34 m\n\n5) Slope and bearing of CD\n- Vertical rise (C\u2192D) = +15.3816 m\n- Horizontal run = 280.34 m\n- Slope = horizontal/run per unit vertical = 280.34 / 15.3816 = 18.12\n  => gradient = 1 in 18.12 rising (D higher than C)\n- Bearing from C to D (W.C.B.) = arctan(\u0394E/\u0394N) = arctan(38.0123/277.6773)\n  = 7.80\u00b0 \u2248 7\u00b048' (W.C.B. \u2248 007\u00b048')\n\nConclusion:\n- Slope of CD \u2248 1 in 18.12 (rising toward D)\n- Bearing W.C.B.(C\u2192D) \u2248 007\u00b048'\n\nNote: None of the four given choices (which all give slopes \u2248 1 in 7\u201310 and the fixed bearing 7\u00b016'26.7\") match the correct result computed above.",
+    "ground_truth": "D",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 16,
+    "input": "In March 2009, an outbreak of Influenza A (H1N1) occurred somewhere in Mexico and spread rapidly around the world. The first confirmed case of Influenza A (H1N1) was detected in Fujian Province on 23 May 2009. Until 13 July, a total of 122 cases were reported in the province, all of which were imported cases or local cases related to imported cases, and there were no local cases with an unknown source of infection. The following table showed the regional distribution of the 122 confirmed cases of Influenza A (H1N1) in Fujian Province in 2009. <image 1> The secondary attack rate of H1N1 influenza in Fuzhou was\n\nChoices:\n(A) 3.18%\n(B) 0.00%\n(C) 2.20%\n(D) 1.50%\n",
+    "output": "Secondary attack rate = (number of local (secondary) cases) / (number of susceptible contacts) \u00d7 100%\n= 13 / 409 \u00d7 100% \u2248 3.18%\n\nAnswer: (A) 3.18%",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 17,
+    "input": "<image 1> <image 2> In contrast with the poem, the table suggests that one important factor in the victory of the Allies over the Central Powers was\n\nChoices:\n(A) the presence of France in the alliance\n(B) wise and strategic leadership\n(C) overall population and industrial production\n(D) ratio of territory to gross domestic product\n",
+    "output": "(C) overall population and industrial production\n\nExplanation: the poem blames moral/evil causes for Germany's actions, while the table highlights the Allies' material advantages \u2014 much larger populations and greater industrial output \u2014 that helped secure victory.",
+    "ground_truth": "C",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 18,
+    "input": "<image 1> The elliptical orbit of a planet around the Sun is shown on the diagram. Which of the following statements is true?\n\nChoices:\n(A) the eccentricity of the orbit is less thatn zero\n(B) the eccentricity of the orbit is greater than 1\n(C) the sun might be at point C\n(D) the sun might be at point D\n(E) the sun might be at point B\n",
+    "output": "Answer: (E)\n\nReason: For an ellipse the eccentricity satisfies 0 < e < 1, so (A) and (B) are wrong. The star (Sun) must lie at a focus, and the two foci are inside the ellipse on the major (horizontal) axis. Point B is inside on the major axis, so it could be a focus; C is at the center (midpoint between foci) and D is off the major axis, so they cannot be the Sun.",
+    "ground_truth": "E",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 19,
+    "input": "The work on the right shows a strong interest in which of the following? <image 1>\n\nChoices:\n(A) abstract landscape\n(B) natural light and atmosphere\n(C) monochromatic painting\n(D) repeated patterns of varying size\n",
+    "output": "(C) monochromatic painting\n\nThe scroll uses single-color ink/brush work with emphasis on line and tonal wash rather than color or pattern, showing a strong interest in monochrome painting.",
+    "ground_truth": "C",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 20,
+    "input": "A company's individual job sheets show these costs: <image 1> Overhead is applied at 1.25 times the direct labor cost. Apply overhead to each of the jobs.\n\nChoices:\n(A) the manufacturing overhead applied for Job 131 is \\$2,781.25, \\$3,222.50 for Job 132, and \\$3,592.50 for Job 133\n(B) the manufacturing overhead applied for Job 131 is \\$2,781.25, \\$3,122.50 for Job 132, and \\$3,692.50 for Job 133\n(C) the manufacturing overhead applied for Job 131 is \\$2,981.25, \\$3,222.50 for Job 132, and \\$3,692.50 for Job 133\n(D) the manufacturing overhead applied for Job 131 is \\$2,981.25, \\$3,122.50 for Job 132, and \\$3,592.50 for Job 133\n",
+    "output": "Overhead = 1.25 \u00d7 direct labor.\n\n- Job 131: 1.25 \u00d7 2,385 = 2,981.25\n- Job 132: 1.25 \u00d7 2,498 = 3,122.50\n- Job 133: 1.25 \u00d7 2,874 = 3,592.50\n\nAnswer: (D)",
+    "ground_truth": "D",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  }
+]
