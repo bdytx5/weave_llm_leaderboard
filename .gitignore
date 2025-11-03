@@ -32,8 +32,8 @@ migrate_working_dir/
 .packages
 .pub-cache/
 .pub/
-/build/
-# Exception: Allow build/web for GitHub Pages deployment
+# Ignore build artifacts except web deployment
+/build/*
 !/build/web/
 
 # Symbolication related
