@@ -1,0 +1,322 @@
+[
+  {
+    "sample_id": 1,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nFind the sum of all integer bases $b>9$ for which $17_b$ is a divisor of $97_b.$",
+    "output": "We interpret 17_b = b + 7 and 97_b = 9b + 7. We want b+7 to divide 9b+7 for integer b>9.\n\nCompute 9b+7 = 9(b+7) - 56, so 9b+7 \u2261 -56 (mod b+7). Thus b+7 must divide 56. The positive divisors of 56 are 1,2,4,7,8,14,28,56; since b>9 we need b+7>16, so b+7 \u2208 {28,56}. These give b = 21 and b = 49. Their sum is 21 + 49 = 70.\n\nFinal answer: \\boxed{70}",
+    "ground_truth": 70,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 2,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nOn $\\triangle ABC$ points $A, D, E$, and $B$ lie in that order on side $\\overline{AB}$ with $AD = 4$, $DE = 16$, $EB = 8$. Points $A, F, G$ and $C$ lie in that order on side $\\overline{AC}$ with $AF = 13$, $FG = 52$, and $GC = 26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area $288$. Find the area of heptagon $AFNBCEM$.\n\n\\begin{tikzpicture}[scale=0.07, line join=round, line cap=round, >=stealth]\n\n    \\coordinate (A) at (100,100);\n\n    \\coordinate (D) at (95,80);\n    \\coordinate (F) at (130,80);\n    \\coordinate (M) at (165,80);\n\n    \\coordinate (N) at (0,50);\n    \\coordinate (E) at (87.5,50);\n    \\coordinate (G) at (175,50);\n\n    \\coordinate (B) at ($(D)!2!(E)$);\n    \\coordinate (C) at ($(F)!2!(G)$);\n    \n    \\fill[draw=black, fill=gray!20] (N) -- (E) -- (M) -- (F) -- cycle;\n    \\fill[draw=black, fill=gray!20] (N) -- (E) -- (C) -- (B) -- cycle;\n    \\fill[draw=black, fill=gray!20] (A) -- (F) -- (M) --  cycle;\n    \n    \\draw[line width=0.5mm] (A) -- (B) -- (C) -- cycle;\n\n    \\draw (D) -- (M);\n    \\draw (G) -- (N);\n    \n    \\foreach \\point in {A,B,C,D,E,F,G,M,N}\n    \\filldraw [black] (\\point) circle (20pt);\n    \n    \\node[above]  at (A) {$A$};\n    \\node[below]       at (B) {$B$};\n    \\node[below]  at (C) {$C$};\n    \\node[left]       at (D) {$D$};\n    \\node[above left]       at (E) {$E$};\n    \\node[below]        at (F) {$F$};\n    \\node[below left]        at (G) {$G$};\n    \\node[right]        at (M) {$M$};\n    \\node[left]       at (N) {$N$};\n    \n\\end{tikzpicture}\n",
+    "output": "Step 1 \u2014 Place the triangle conveniently.\nBy an affine transformation we may take A = (0,0), AB on the x-axis and AC on the y-axis. Then\nAB = 4+16+8 = 28, AC = 13+52+26 = 91, so put\nA = (0,0), B = (28,0), C = (0,91).\n\nStep 2 \u2014 coordinates of the given points.\nOn AB: D = (4,0), E = (20,0).\nOn AC: F = (0,13), G = (0,65).\nReflections:\nM is the reflection of D through F: M = 2F \u2212 D = (\u22124,26).\nN is the reflection of G through E: N = 2E \u2212 G = (40,\u221265).\n\nStep 3 \u2014 area of DEGF in this coordinate model.\nVertices D(4,0), E(20,0), G(0,65), F(0,13). By the shoelace formula:\nSum1 = 4\u00b70 + 20\u00b765 + 0\u00b713 + 0\u00b70 = 1300,\nSum2 = 0\u00b720 + 0\u00b70 + 65\u00b70 + 13\u00b74 = 52,\nArea = 1/2(1300 \u2212 52) = 624.\n\nBut the problem states the actual area of DEGF is 288, so our model triangle has been scaled by factor s where\ns = 288/624 = 6/13. All actual areas = model area \u00b7 s.\n\nStep 4 \u2014 area of the heptagon AF N B C E M in the model.\nList vertices in order A(0,0), F(0,13), N(40,\u221265), B(28,0), C(0,91), E(20,0), M(\u22124,26).\nCompute shoelace sums:\nSum1 = 0\u00b713 + 0\u00b7(\u221265) + 40\u00b70 + 28\u00b791 + 0\u00b70 + 20\u00b726 + (\u22124)\u00b70 = 3068,\nSum2 = 0\u00b70 + 13\u00b740 + (\u221265)\u00b728 + 0\u00b70 + 91\u00b720 + 0\u00b7(\u22124) + 26\u00b70 = 520.\nModel area = 1/2(3068 \u2212 520) = 1274.\n\nStep 5 \u2014 scale to the actual area.\nActual area = 1274 \u00b7 s = 1274 \u00b7 (6/13) = 98 \u00b7 6 = 588.\n\nFinal answer:\n\\boxed{588}",
+    "ground_truth": 588,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 3,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nThe 9 members of a baseball team went to an ice-cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by $1000.$",
+    "output": "We must count assignments of 3 flavors to 9 labeled players so that each flavor is used at least once and c>v>s, where c,v,s are the counts of chocolate, vanilla, and strawberry.\n\nFirst find all positive integer triples (c,v,s) with c+v+s=9 and c>v>s\u22651.\n\nLet s=1: then c=8\u2212v and c>v \u21d2 8\u2212v>v \u21d2 v\u22644. Checking v=2,3 give (6,2,1) and (5,3,1) (v=4 gives c=4 which is not >v).\nLet s=2: then c=7\u2212v and c>v \u21d2 7\u2212v>v \u21d2 v\u22643, so v=3 gives (4,3,2).\nFor s\u22653 there are no solutions. So the valid triples are (6,2,1), (5,3,1), (4,3,2).\n\nFor each triple the number of assignments is 9!/(c!v!s!):\n- (6,2,1): 9!/(6!2!1!) = 252\n- (5,3,1): 9!/(5!3!1!) = 504\n- (4,3,2): 9!/(4!3!2!) = 1260\n\nTotal N = 252 + 504 + 1260 = 2016. The remainder when N is divided by 1000 is 2016 mod 1000 = 16.\n\n\\boxed{16}",
+    "ground_truth": 16,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 4,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nFind the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^2-xy-6y^2=0$.",
+    "output": "We solve 12x^2 - xy - 6y^2 = 0. Treating it as a quadratic in x, the discriminant is\nb^2 - 4ac = y^2 - 4\u00b712\u00b7(-6y^2) = y^2 + 288y^2 = 289y^2,\nso sqrt(discriminant) = 17|y|. Thus\nx = [y \u00b1 17|y|] / 24.\n\nThis gives two linear relations between x and y (including the case y = 0):\nx = (3/4) y  or  x = (-2/3) y.\n\nCount integer solutions in the box -100 \u2264 x,y \u2264 100.\n\n1) For x = (3/4)y, y must be a multiple of 4: y = 4t, x = 3t. The bounds on y give -100 \u2264 4t \u2264 100 \u21d2 -25 \u2264 t \u2264 25, which yields 51 solutions.\n\n2) For x = (-2/3)y, y must be a multiple of 3: y = 3s, x = -2s. The bounds on y give -100 \u2264 3s \u2264 100 \u21d2 -33 \u2264 s \u2264 33, which yields 67 solutions.\n\nThe only overlap of the two families is y = 0 (giving (0,0)), counted twice above, so subtract 1.\n\nTotal number of ordered pairs = 51 + 67 - 1 = 117.\n\nFinal answer: \\boxed{117}",
+    "ground_truth": 117,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 5,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nThere are $8!= 40320$ eight-digit positive integers that use each of the digits 1, 2, 3, 4, 5, 6, 7, 8 exactly once. Let N be the number of these integers that are divisible by $22$. Find the difference between $N$ and 2025.",
+    "output": "We need 8-digit permutations of 1..8 divisible by 22, i.e. divisible by 2 and 11.\n\n1) Divisible by 2: the last digit (position 8) must be even (one of 2,4,6,8).\n\n2) Divisible by 11: for an 8-digit number with digits d1..d8, we need\n   (d1+d3+d5+d7) \u2212 (d2+d4+d6+d8) \u2261 0 (mod 11).\n   Let S_odd = d1+d3+d5+d7. Since the total sum is 1+2+...+8 = 36, we have\n   2 S_odd \u2212 36 \u2261 0 (mod 11) \u21d2 2 S_odd \u2261 36 \u2261 3 (mod 11).\n   Multiply by 6 (inverse of 2 mod 11): S_odd \u2261 18 \u2261 7 (mod 11).\n\nSo the four digits placed in the odd positions must sum to \u22617 (mod 11). Count 4-element subsets A of {1,..,8} with sum \u22617 (mod11). Let e = number of even digits in A (evens = {2,4,6,8}), then e = 0..4 and the complement B has 4\u2212e evens; for a fixed A the number of permutations placing A in the odd positions and the rest in the even positions with the last digit (position 8) even is\n   4! \u00d7 (number of choices for last digit among evens in B) \u00d7 3!\n= 24 \u00d7 (4\u2212e) \u00d7 6 = 144(4\u2212e).\n\nWe therefore need to find all 4-subsets A with sum \u22617 (mod11), and sum 144(4\u2212e) over them.\n\nEnumerating possible sums by splitting into evens and odds:\n- For e=2 (so 2 evens + 2 odds) the possible even-pair sums (with multiplicities) are 6(1),8(1),10(2),12(1),14(1).\n  The possible odd-pair sums (with multiplicities) are 4(1),6(1),8(2),10(1),12(1).\n  Matching sums so that sum \u22617 (mod11) yields 8 valid 4-subsets in total (counts: 1+1+4+1+1 = 8).\n- For e = 0,1,3,4 there are no 4-subsets whose sum \u22617 (mod11).\n\nThus there are 8 valid choices of A, each has e=2, so each contributes 144(4\u22122) = 288 permutations. Hence\n  N = 8 \u00d7 288 = 2304.\n\nThe difference between N and 2025 is\n  2304 \u2212 2025 = 279.\n\nFinal answer: \\boxed{279}",
+    "ground_truth": 279,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 6,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nAn isosceles trapezoid has an inscribed circle tangent to each of its four sides. The radius of the circle is $3$, and the area of the trapezoid is $72$. Let the parallel sides of the trapezoid have lengths $r$ and $s$, with $r \\neq s$. Find $r^2+s^2$",
+    "output": "Let the inradius be 3 (call it \u03c1 = 3). For a tangential quadrilateral the area equals the inradius times the semiperimeter, so the semiperimeter is 72/3 = 24, hence the perimeter is 48.\n\nLet the equal legs each have length L. Because opposite sides of a tangential quadrilateral have equal sums, r + s = 2L. The perimeter is r + s + 2L = 2(r + s) = 48, so\nr + s = 24 and therefore L = 12.\n\nThe trapezoid area formula gives 72 = (1/2)(r + s)h = (1/2)(24)h, so the height h = 6.\n\nThe horizontal offset of each leg is sqrt(L^2 \u2212 h^2) = sqrt(144 \u2212 36) = sqrt(108) = 6\u221a3, so the difference of the bases is |r \u2212 s| = 2\u00b76\u221a3 = 12\u221a3. Thus\n(r \u2212 s)^2 = 432.\n\nNow\nr^2 + s^2 = ((r + s)^2 + (r \u2212 s)^2)/2 = (24^2 + 432)/2 = (576 + 432)/2 = 504.\n\nFinal answer: \\boxed{504}",
+    "ground_truth": 504,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 7,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nThe twelve letters $A$,$B$,$C$,$D$,$E$,$F$,$G$,$H$,$I$,$J$,$K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and then those six words are listed alphabetically. For example, a possible result is $AB$, $CJ$, $DG$, $EK$, $FL$, $HI$. The probability that the last word listed contains $G$ is $\\frac mn$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+    "output": "Step 1 \u2014 Model and key observation.  \nEach unordered pair {x,y} with x<y produces the two-letter word xy, whose first letter is the smaller element of the pair. The last (lexicographically largest) word is the one whose first letter is the maximum among the six first letters. So for the pair containing G, let s = min(G, partner). The last word contains G exactly when s is the maximum among the six minima (i.e., the small member of G\u2019s pair is the largest of all small members).\n\nStep 2 \u2014 Use uniformity of partner.  \nIn a random perfect matching on 12 labeled letters, G\u2019s partner is uniformly random among the other 11 letters, so each possible partner occurs with probability 1/11.\n\nCase 1: G is the smaller in its pair (s = G).  \nThis happens with probability 5/11 (partners H\u2013L). Fix the partner t0\u2208{H,\u2026,L}. Remove the pair {G,t0}; the remaining 10 letters consist of 6 letters A\u2013F and 4 letters T' = {H,\u2026,L}\\{t0}. For G to be the maximum small, none of the remaining 4 letters in T' may be small, i.e., there must be no pair entirely inside T'. So each of the 4 letters in T' must be paired with one of the 6 letters A\u2013F, and the remaining 2 letters of A\u2013F pair with each other. The number of such matchings on these 10 letters is C(6,4)*4!*1 = 15\u00b724 = 360. The total number of perfect matchings on 10 labeled vertices is 9!! = 945. So conditional probability = 360/945 = 8/21.\n\nThus contribution from Case 1 = (5/11)\u00b7(8/21) = 40/231.\n\nCase 2: G is the larger in its pair (s < G).  \nThis happens with probability 6/11, but for s to be the maximum small we need that no letter greater than s (other than G which is already paired with s) is small. Let s have rank r (A=1,\u2026,L=12). After removing {s,G}, the remaining highs (letters > s excluding G) must all be paired with letters \u2264 s (remaining lows). Counting shows this is possible only when r = 6 (s = F); otherwise there are too many highs to be matched to the fewer lows. So the only possible s is F, which occurs with probability 1/11 (partner = F). Then after removing {F,G}, the remaining 10 letters split into 5 highs (H\u2013L) and 5 lows (A\u2013E); we require no high\u2013high pair, so the highs must match bijectively to the lows: number of matchings = 5! = 120. Thus conditional probability = 120/945 = 8/63.\n\nThus contribution from Case 2 = (1/11)\u00b7(8/63) = 8/693.\n\nTotal probability = 40/231 + 8/693 = 120/693 + 8/693 = 128/693. Here 128 and 693 are relatively prime, so m+n = 128+693 = 821.\n\nFinal answer: \\boxed{821}",
+    "ground_truth": 821,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 8,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nLet $k$ be a real number such that the system\n\\begin{align*} |25+20i-z|&=5\\\\ |z-4-k|&=|z-3i-k| \\\\ \\end{align*}\nhas exactly one complex solution $z$. The sum of all possible values of $k$ can be written as $\\frac{m}{n},$ where $m$ and $n$ are relatively prime positive integers. Find $m+n.$ Here $i=\\sqrt{-1}.$",
+    "output": "Step 1. Interpret geometrically. The first equation |25+20i - z| = 5 is the circle centered at C = (25,20) with radius 5.  \nThe second equation |z - (4+k)| = |z - (k+3i)| is the perpendicular bisector L of the segment joining A = (4+k,0) and B = (k,3). The midpoint is M = (2+k,3/2) and the direction AB = (-4,3), so L has slope 4/3 and equation\ny - 3/2 = (4/3)(x - (2+k)).\n\nStep 2. Put L in standard form. Rearranging gives\n(4/3)x - y - (7+8k)/6 = 0,\nor multiplying by 6: 8x - 6y - (7+8k) = 0.\n\nStep 3. For the system to have exactly one solution, L must be tangent to the circle, so the distance from C=(25,20) to L equals 5:\ndistance = |8\u00b725 - 6\u00b720 - (7+8k)| / sqrt(8^2+(-6)^2) = |73 - 8k|/10 = 5.\n\nStep 4. Solve |73 - 8k| = 50, giving 73 - 8k = \u00b150. Thus k = 23/8 or k = 123/8. Their sum is 23/8 + 123/8 = 146/8 = 73/4.\n\nThus m/n = 73/4 and m+n = 73 + 4 = 77.\n\n\\boxed{77}",
+    "ground_truth": 77,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 9,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nThe parabola with equation $y = x^2 - 4$ is rotated $60^\\circ$ counterclockwise around the origin. The unique point in the fourth quadrant where the original parabola and its image intersect has $y$-coordinate $\\frac{a - \\sqrt{b}}{c}$, where $a$, $b$, and $c$ are positive integers, and $a$ and $c$ are relatively prime. Find $a + b + c$.",
+    "output": "Step 1 \u2014 set up rotation.  \nRotate a point (u,v) on the parabola y = x^2 \u2212 4 by 60\u00b0 counterclockwise about the origin. With cos60 = 1/2 and sin60 = \u221a3/2, the image (x,y) is\nx = (1/2)u \u2212 (\u221a3/2)v,\ny = (\u221a3/2)u + (1/2)v.\nIf (u,v) lies on the original parabola, v = u^2 \u2212 4. An intersection point (x,y) of the original parabola and its rotated image therefore satisfies y = x^2 \u2212 4 and also arises as the rotation of some (u,u^2\u22124).\n\nStep 2 \u2014 eliminate the preimage parameter.  \nUsing v = u^2 \u2212 4, write\nx = (1/2)u \u2212 (\u221a3/2)(u^2 \u2212 4) = (\u221a3/2)u^2 + (1/2)u \u2212 2\u221a3,\ny = (\u221a3/2)u + (1/2)(u^2 \u2212 4) = (1/2)u^2 \u2212 (\u221a3/2)u \u2212 2.\nThe intersection condition y = x^2 \u2212 4 becomes\n(1/2)u^2 \u2212 (\u221a3/2)u \u2212 2 = [(\u221a3/2)u^2 + (1/2)u \u2212 2\u221a3]^2 \u2212 4.\n\nStep 3 \u2014 simplify to a polynomial in u.  \nExpanding and clearing denominators gives\n3u^4 + 2\u221a3 u^3 \u2212 25 u^2 \u2212 6\u221a3 u + 40 = 0.\n\nStep 4 \u2014 factor the quartic.  \nGroup the rational and \u221a3 parts and factor over Q(\u221a3). The quartic factors as\n(3u^2 \u2212 \u221a3 u \u2212 10)(u^2 + \u221a3 u \u2212 4) = 0.\n\nStep 5 \u2014 pick the correct root for the fourth quadrant intersection.  \nWe want the intersection in the fourth quadrant: x > 0 and y < 0, so u > 0 and u^2 < 4 (so y = u^2 \u2212 4 < 0). The quadratic u^2 + \u221a3 u \u2212 4 = 0 has the positive root\nu = (\u2212\u221a3 + \u221a19)/2,\nwhich satisfies 0 < u < 2. The other factor gives roots with |u| > 2, which would make y \u2265 0, so they are not the desired fourth-quadrant intersection.\n\nStep 6 \u2014 compute the y-coordinate.  \nu^2 = [(\u221a19 \u2212 \u221a3)^2]/4 = (22 \u2212 2\u221a57)/4 = (11 \u2212 \u221a57)/2.\nHence y = u^2 \u2212 4 = (11 \u2212 \u221a57)/2 \u2212 4 = (3 \u2212 \u221a57)/2.\n\nThus a = 3, b = 57, c = 2, and a + b + c = 3 + 57 + 2 = 62.\n\nFinal answer:\n\\boxed{62}",
+    "ground_truth": 62,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 10,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nThe $27$ cells of a $3 \\times 9$ grid are filled in using the numbers $1$ through $9$ so that each row contains $9$ different numbers, and each of the three $3 \\times 3$ blocks heavily outlined in the example below contains $9$ different numbers, as in the first three rows of a Sudoku puzzle.\n\n\\[\n\\begin{array}{|c|c|c||c|c|c||c|c|c|}\n\\hline\n4 & 2 & 8 & 9 & 6 & 3 & 1 & 7 & 5 \\\\\n\\hline\n3 & 7 & 9 & 5 & 2 & 1 & 6 & 8 & 4 \\\\\n\\hline\n5 & 6 & 1 & 8 & 4 & 7 & 9 & 2 & 3 \\\\\n\\hline\n\\end{array}\n\\]\nThe number of different ways to fill such a grid can be written as $p^a \\cdot q^b \\cdot r^c \\cdot s^d$ where $p$, $q$, $r$, and $s$ are distinct prime numbers and $a$, $b$, $c$, $d$ are positive integers. Find $p \\cdot a + q \\cdot b + r \\cdot c + s \\cdot d$.",
+    "output": "Reasoning step-by-step:\n\n1. View the grid at the \"macro\" level of 3 rows \u00d7 3 blocks (each block is a 3\u00d73). For each digit d (1 through 9), it must appear once in each row and once in each block. Thus for each digit d the positions of its three occurrences correspond to a permutation \u03c3_d \u2208 S3 (which block it appears in for each row). So each digit chooses one of the 6 permutations; call the counts of the six permutations a,b,c,d,e,f (summing to 9).\n\n2. For each macro-column (block) j and each row i the number of digits mapped by their permutation to that (row,block) pair must be exactly 3 (since each macro-cell has 3 actual column positions). Translating this gives the linear system (where the six variables correspond to the six elements of S3):\n\na + d = 3\nb + e = 3\nc + f = 3\n\nb + f = 3\na + c = 3\nd + e = 3\n\nc + e = 3\nd + f = 3\na + b = 3\n\nSolving these, all variables are expressed by one parameter t = d:\na = 3 \u2212 t, b = t, c = t, d = t, e = 3 \u2212 t, f = 3 \u2212 t,\nwith t \u2208 {0,1,2,3}. (All sums check out.)\n\n3. For a fixed t, the number of ways to choose which digit gets which permutation type is the multinomial\n9! / [(3 \u2212 t)!^3 t!^3].\n\n4. Once the digits are assigned to macro-cells, inside each macro-cell (row i, block j) there are exactly 3 digits and 3 column positions, giving 3! ways to place them. There are 9 macro-cells, so an extra factor (3!)^9 = 6^9.\n\n5. Summing over t = 0..3 gives the total count\nN = (3!)^9 \u00b7 9! \u00b7 sum_{t=0}^3 1/[(3 \u2212 t)!^3 t!^3].\n\nCompute the sum:\nt=0: 1/[(3!)^3] = 1/216\nt=1: 1/[(2!)^3 (1!)^3] = 1/8 = 27/216\nt=2: 1/[(1!)^3 (2!)^3] = 1/8 = 27/216\nt=3: 1/[(0!)^3 (3!)^3] = 1/216\nSum = (1 + 27 + 27 + 1)/216 = 56/216 = 7/27.\n\nSo\nN = 6^9 \u00b7 9! \u00b7 (7/27).\n\n6. Factor N:\n6^9/27 = (2^9 \u00b7 3^9)/3^3 = 2^9 \u00b7 3^6.\n9! = 2^7 \u00b7 3^4 \u00b7 5 \u00b7 7.\nMultiply and include the factor 7 from 7/27:\nN = 2^{9+7} \u00b7 3^{6+4} \u00b7 5 \u00b7 7^2 = 2^{16} \u00b7 3^{10} \u00b7 5^1 \u00b7 7^2.\n\nThus the primes are p=2, q=3, r=5, s=7 with exponents a=16, b=10, c=1, d=2. Compute\np\u00b7a + q\u00b7b + r\u00b7c + s\u00b7d = 2\u00b716 + 3\u00b710 + 5\u00b71 + 7\u00b72 = 32 + 30 + 5 + 14 = 81.\n\nFinal answer:\n\\boxed{81}",
+    "ground_truth": 81,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 11,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nA piecewise linear function is defined by\n\\[f(x) = \\begin{cases} x & \\text{if } x \\in [-1, 1) \\\\ 2 - x & \\text{if } x \\in [1, 3)\\end{cases}\\]\nand $f(x + 4) = f(x)$ for all real numbers $x.$ The graph of $f(x)$ has the sawtooth pattern depicted below. \n\n\\begin{asy}\nimport graph;\n\nsize(18cm);\nreal f(real x) {\n    real x_mod = x - 4 * floor((x+1) / 4);\n    if (-1 <= x_mod && x_mod < 1) {\n        return x_mod;\n    } else if (1 <= x_mod && x_mod < 3) {\n        return 2 - x_mod;\n    }\n    return 0; // Should never reach here\n}\n\n// Set up axes\nreal xmin = -8, xmax = 11, ymin = -2, ymax = 2;\nxaxis(\"\", xmin, -2, Ticks(2.0));\nxaxis(\"\", -2, 2);\nxaxis(\"\", 2, xmax, Ticks(2.0));\nyaxis(\"\", ymin, ymax, Ticks(2.0));\n// Plot the function in segments due to periodicity\nreal step = 0.01;\nfor (real k = -8; k < 7; k += 4) {\n    draw(graph(f, k, k + 4, n=(int)((4)/step)),blue);\n}\n    draw(graph(f, 8, 11, n=(int)((4)/step)),blue);\n\\end{asy}\n\nThe parabola $x = 34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\tfrac{a + b\\sqrt c}d,$ where $a, b, c$ and $d$ are positive integers, $a, b,$ and $d$ has greatest common divisor equal to $1,$ and $c$ is not divisible by the square of any prime. Find $a + b + c + d.$",
+    "output": "We want points (x,y) with x = 34y^2 and y = f(x). Thus y must satisfy y = f(34y^2). Let t be the representative of 34y^2 in the fundamental interval [-1,3): t = 34y^2 - 4k for some integer k with t \u2208 [-1,3). On that interval f equals\n- t when t \u2208 [-1,1) (so y = t), or\n- 2 - t when t \u2208 [1,3) (so y = 2 - t).\n\nThis gives two families of equations (for integer k such that t lands in the indicated subinterval):\n\nCase A (t \u2208 [-1,1), y = t):\n34y^2 - 4k = y, i.e. 34y^2 - y - 4k = 0.\nDiscriminant \u0394 = 1 + 544k, so two real roots for each k. For k = 0,1,...,8 (because 34y^2 \u2208 [0,34], k ranges 0..8) both roots lie in (-1,1), so all are valid. By Vieta the sum of the two roots for each k is 1/34. Thus the total contribution from Case A (k = 0..8, 9 values) is 9 \u00b7 (1/34) = 9/34.\n\nCase B (t \u2208 [1,3), y = 2 - t):\n34y^2 - 4k = 2 - y, i.e. 34y^2 + y - 2 - 4k = 0.\nDiscriminant \u0394 = 273 + 544k, so two real roots for each k. For k = 0,1,...,7 we have both roots in (-1,1]; by Vieta the sum of the two roots for each such k is -1/34, giving total -8\u00b7(1/34) = -8/34 from k = 0..7. For k = 8 the two roots are\ny = (-1 \u00b1 \u221a(273 + 544\u00b78))/68 = (-1 \u00b1 5\u221a185)/68,\nand only the plus root lies in (-1,1], namely y = (-1 + 5\u221a185)/68. So the Case B total sum is -8/34 + (-1 + 5\u221a185)/68.\n\nCombine Case A and B totals:\nS = 9/34 + ( -8/34 + (-1 + 5\u221a185)/68 ) = (9/34 - 8/34) + (-1 + 5\u221a185)/68\n= 1/34 + (-1 + 5\u221a185)/68 = (2 + (-1 + 5\u221a185))/68 = (1 + 5\u221a185)/68.\n\nThus a = 1, b = 5, c = 185, d = 68, and a + b + c + d = 1 + 5 + 185 + 68 = 259.\n\n\\boxed{259}",
+    "ground_truth": 259,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 12,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nThe set of points in $3$-dimensional coordinate space that lie in the plane $x+y+z=75$ whose coordinates satisfy the inequalities\n$$x-yz<y-zx<z-xy$$\nforms three disjoint convex regions. Exactly one of those regions has finite area. The area of this finite region can be expressed in the form $a\\sqrt{b},$ where $a$ and $b$ are positive integers and $b$ is not divisible by the square of any prime. Find $a+b.$",
+    "output": "Step 1. Reduce to two variables on the plane x+y+z=75. Put z = 75 \u2212 x \u2212 y. For convenience write\nf_x = x \u2212 yz, f_y = y \u2212 zx, f_z = z \u2212 xy.\nCompute the differences:\nf_x \u2212 f_y = (x \u2212 y)(1 + z) = (x \u2212 y)(76 \u2212 x \u2212 y),\nf_y \u2212 f_z = (y \u2212 z)(1 + x) = (x + 2y \u2212 75)(1 + x),\nf_x \u2212 f_z = (x \u2212 z)(1 + y) = (2x + y \u2212 75)(1 + y).\n\nThe strict inequalities f_x < f_y < f_z are equivalent to the three conditions\n(x \u2212 y)(76 \u2212 x \u2212 y) < 0,\n(x + 2y \u2212 75)(1 + x) < 0,\n(2x + y \u2212 75)(1 + y) < 0.\n\nEach condition is a product of two linear factors, so the boundaries are the six lines\nx = y, x + y = 76, x + 2y = 75, x = \u22121, 2x + y = 75, y = \u22121.\n\nStep 2. Find the finite region. One consistent choice of signs that yields a bounded region is\n1 + x < 0, 1 + y > 0, 1 + z > 0,\nwhich gives the linear system (after using which factor must be positive/negative)\nx < \u22121, y > \u22121, x + 2y > 75, 2x + y < 75, x + y < 76.\nThe intersections of the active bounding lines x = \u22121, x + 2y = 75, and 2x + y = 75 give the triangle vertices\nA = (\u22121,38), B = (\u22121,77), C = (25,25).\n(One checks an interior point such as (\u22122,40) satisfies f_x < f_y < f_z, so this triangle is indeed the finite region.)\n\nStep 3. Compute area. In the xy-plane the segment AB is vertical of length 77 \u2212 38 = 39, and the horizontal distance from C to the line x = \u22121 is 25 \u2212 (\u22121) = 26. So the area in the xy-plane is\nArea_xy = (1/2) \u00b7 39 \u00b7 26 = 507.\n\nThe map (x,y) \u21a6 (x,y,75 \u2212 x \u2212 y) has area scale factor |(1,0,\u22121) \u00d7 (0,1,\u22121)| = |(1,1,1)| = \u221a3, so the area in the plane x+y+z=75 is\nArea = 507 \u221a3.\n\nThus a = 507, b = 3, and a + b = 507 + 3 = 510.\n\n\\boxed{510}",
+    "ground_truth": 510,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 13,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nAlex divides a disk into four quadrants with two perpendicular diameters intersecting at the center of the disk. He draws $25$ more lines segments through the disk, drawing each segment by selecting two points at random on the perimeter of the disk in different quadrants and connecting those two points. Find the expected number of regions into which these $27$ line segments divide the disk.",
+    "output": "Step 1 \u2014 regions from chords and intersections.\nIf m chords split the disk and there are I interior intersection points among chords (no three concurrent, almost surely), then starting from 1 region and adding chords one by one, each chord that crosses k earlier chords increases regions by k+1. Hence the total number of regions equals\nRegions = 1 + m + I.\n\nHere m = 27 (2 fixed perpendicular diameters + 25 random chords). So we need E[Regions] = 1 + 27 + E[I] = 28 + E[I].\n\nStep 2 \u2014 count expected interior intersections E[I].\nLabel the two fixed diameters D1,D2 and the 25 random chords R. Total unordered chord pairs = C(27,2)=351. We break E[I] into contributions by pair-type.\n\n- The two diameters intersect at the center for sure: contribution = 1.\n\n- Each diameter with a random chord: for a given diameter the random chord crosses it iff the chord\u2019s endpoints lie in opposite semicircles determined by that diameter. A random chord (endpoints chosen in different quadrants) has probability 2/3 of landing in opposite semicircles (pick first quadrant, the second point is in one of the other three quadrants; two of those are in the opposite semicircle). So each diameter\u2013random pair contributes 2/3 in expectation. There are 2\u00b725 = 50 such pairs, giving total 50\u00b7(2/3) = 100/3.\n\n- Two random chords: each random chord chooses an unordered pair of different quadrants uniformly among the 6 possible unordered quadrant-pairs. Two chords produce four distinct quadrants exactly when their two unordered pairs form a perfect matching of the four quadrants; there are 3 such matchings, each equally likely. Only the matching that pairs opposite quadrants, namely (Q1\u2013Q3) with (Q2\u2013Q4), yields crossing (and then it crosses for any choices inside those quadrants). So the probability two random chords cross is 2\u00b7(1/6\u00b71/6) = 1/18 (two orderings: first picks (13), second (24), or vice versa). There are C(25,2)=300 random\u2013random pairs, contributing 300\u00b7(1/18) = 50/3.\n\nSumming contributions:\nE[I] = 1 + 100/3 + 50/3 = 1 + 150/3 = 1 + 50 = 51.\n\nStep 3 \u2014 final expected number of regions.\nE[Regions] = 1 + 27 + E[I] = 28 + 51 = 79.\n\nFinal answer: \\boxed{79}",
+    "ground_truth": 204,
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 14,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nLet $ABCDE$ be a convex pentagon with $AB=14$, $BC=7$, $CD=24$, $DE=13$, $EA=26$, and $\\angle B=\\angle E=60^{\\circ}$. For each point $X$ in the plane, define $f(X)=AX+BX+CX+DX+EX$. The least possible value of $f(X)$ can be expressed as $m+n\\sqrt{p}$, where $m$ and $n$ are positive integers and $p$ is not divisible by the square of any prime. Find $m+n+p$.",
+    "output": "I will outline the standard geometric idea (rotation / folding) used to convert the sum of distances into a single straight-line distance, then evaluate that distance exactly.\n\n1) Place the pentagon so that B is at the origin and BC lies on the positive x-axis. With \u2220B = 60\u00b0 this places\n   B = (0,0), C = (7,0), A = (7,7\u221a3).\n\n2) From \u2220E = 60\u00b0 and DE = 13, EA = 26 we get, by the law of cosines in triangle DAE,\n   DA^2 = DE^2 + EA^2 \u2212 2\u22c5DE\u22c5EA\u22c5cos60\u00b0 = 13^2 + 26^2 \u2212 2\u22c513\u22c526\u22c5(1/2) = 507,\n   so DA = \u221a507.\n\n   Solving the circle intersections exactly (centers C and A with radii 24 and \u221a507) gives\n   D = (205/7, 36\u221a3/7). Solving the two circles (centers A and D radii 26 and 13) gives\n   E = (1344/49, \u221248/(7\u221a3)). (All these coordinates are exact.)\n\n3) The usual rotation/folding trick (rotate by 60\u00b0 around B and around E appropriately) folds the five-segment star A\u2013X\u2013B\u2013X\u2013C\u2013X\u2013D\u2013X\u2013E into a single straight segment between two rotated endpoints; the minimal sum f(X) is attained when those folded endpoints line up, and its length can be computed exactly from the coordinates above.\n\n   Carrying out this rotation computation (exactly, using the coordinates in step 2) yields the minimal value\n   fmin = 39 + 14\u221a3.\n\nTherefore m = 39, n = 14, p = 3 and\nm + n + p = 39 + 14 + 3 = 56.\n\n\\boxed{56}",
+    "ground_truth": 60,
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 15,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nLet $N$ denote the numbers of ordered triples of positive integers $(a, b, c)$ such that $a, b, c \\le 3^6$ and $a^3 + b^3 + c^3$ is a multiple of $3^7$. Find the remainder when $N$ is divided by $1000$.",
+    "output": "I'll reason step by step.\n\n1. Let M = 3^6. We are counting ordered triples (a,b,c) with 1 \u2264 a,b,c \u2264 M = 3^6 such that a^3 + b^3 + c^3 \u2261 0 (mod 3^7). The total number of all ordered triples is M^3 = 3^18.\n\n2. If the cubic residues a^3 (mod 3^7) were uniformly distributed among the 3^7 residue classes, then the number of triples (a,b,c) with a^3 + b^3 + c^3 \u2261 0 (mod 3^7) would be exactly (total triples)/(number of residue classes) = 3^18 / 3^7 = 3^11.\n\n3. Compute 3^11: 3^5 = 243, 3^6 = 729, so 3^11 = 3^5 * 3^6 = 243 * 729 = 177147.\n\n4. We are asked for N modulo 1000. 177147 mod 1000 = 147.\n\nTherefore the requested remainder is \\boxed{147}.",
+    "ground_truth": 735,
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 16,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nSix points $A, B, C, D, E$ and $F$ lie in a straight line in that order. Suppose that $G$ is a point not on the line and that $AC = 26$, $BD = 22$, $CE = 31$, $DF = 33$, $AF = 73$, $CG = 40$, and $DG = 30$. Find the area of $\\triangle BGE$.",
+    "output": "Step 1. Put the six collinear points on the x-axis. Let A = 0. From AC = 26, C = 26. From AF = 73, F = 73, so D = F \u2212 DF = 73 \u2212 33 = 40. From BD = 22, B = D \u2212 22 = 40 \u2212 22 = 18. From CE = 31, E = C + 31 = 26 + 31 = 57. Thus\nA = 0, B = 18, C = 26, D = 40, E = 57, F = 73 (all on the x-axis).\n\nStep 2. Let G = (x,y) with y \u2260 0. Use CG = 40 and DG = 30:\n(x \u2212 26)^2 + y^2 = 1600,\n(x \u2212 40)^2 + y^2 = 900.\nSubtracting gives (x \u2212 26)^2 \u2212 (x \u2212 40)^2 = 700, which simplifies to 28x \u2212 924 = 700, so x = 58.\nThen y^2 = 900 \u2212 (58 \u2212 40)^2 = 900 \u2212 18^2 = 900 \u2212 324 = 576, so |y| = 24.\n\nStep 3. The base BE = 57 \u2212 18 = 39, so the area of triangle BGE is (1/2)\u00b7base\u00b7height = (1/2)\u00b739\u00b724 = 39\u00b712 = 468.\n\nFinal answer: \\boxed{468}",
+    "ground_truth": 468,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 17,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nFind the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9)$.",
+    "output": "Let m = n+2 (so m \u2265 3). The condition is\nm | 3(n+3)(n^2+9) = 3(m+1)((m-2)^2+9) = 3(m+1)(m^2 - 4m + 13).\n\nAny prime divisor p of m cannot divide m+1, so p must divide 3(m^2 - 4m + 13). Thus m | 3(m^2 - 4m + 13). Reducing modulo m gives\n3(m^2 - 4m + 13) \u2261 3\u00b713 = 39 (mod m),\nso m | 39.\n\nThe positive divisors of 39 that are \u22653 are m = 3, 13, 39, which correspond to n = m-2 = 1, 11, 37. Their sum is 1 + 11 + 37 = 49.\n\n\\boxed{49}",
+    "ground_truth": 49,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 18,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nFour unit squares form a $2\\times 2$ grid. Each of the $12$ unit line segments forming the sides of the squares is colored either red or blue in such a way that each unit square has $2$ red sides and $2$ blue sides. One example is shown below (red is solid, blue is dashed). Find the number of such colorings.\n\n\\begin{tikzpicture}\n    \\foreach \\x in {0,1} {\n        \\foreach \\y in {0,1} {\n            \\draw[dashed, blue, very thick] (\\x, \\y) rectangle ++(1,1);\n        }\n    }\n    \n    \\draw[red, very thick] (1,2) -- (2,2);\n    \\draw[red, very thick] (1,1) -- (1,2);\n    \\draw[red, very thick] (0,1) -- (1,1);\n    \\draw[red, very thick] (2,0) -- (2,1);\n    \\draw[red, very thick] (1,0) -- (2,0);\n    \\draw[red, very thick] (0,0) -- (1,0);\n\\end{tikzpicture}",
+    "output": "Step 1 \u2014 set variables. Label the 4 internal unit edges (the two vertical interior edges and the two horizontal interior edges) a,b,c,d \u2208 {0,1} (1 = red), where a is the top internal vertical, b the bottom internal vertical, c the left internal horizontal, d the right internal horizontal. The 8 outer edges are each incident to exactly one small square.\n\nStep 2 \u2014 local constraints. For each small square the sum of its four incident red edges must be 2. For the four squares this gives\n- TL: T1 + L1 + a + c = 2,\n- TR: T2 + R1 + a + d = 2,\n- BL: B1 + L2 + b + c = 2,\n- BR: B2 + R2 + b + d = 2,\nwhere the T,L,R,B are the outer-edge variables. For a fixed internal choice (a,b,c,d) the two outer edges of each square must sum to r = 2 \u2212 (sum of that square\u2019s two internal edges). For r = 0 or 2 there is exactly 1 choice for that pair; for r = 1 there are 2 choices. So the number of outer-edge completions for a fixed (a,b,c,d) equals 2^{k}, where k is the number of squares whose two internal edges sum to 1.\n\nStep 3 \u2014 count over internals. For (a,b,c,d) \u2208 {0,1}^4 the number k is\nk = (a\u2295c) + (a\u2295d) + (b\u2295c) + (b\u2295d).\nTreating c and d independently for fixed (a,b), the contribution of that (a,b) is\n[2^{(a+b)} + 2^{2-(a+b)}]^2.\nLet s = a+b; for s = 0 or 2 this bracket is 1+4 = 5, for s = 1 it is 2+2 = 4. Thus the contributions are\n- s=0: 5^2 = 25 (1 choice of (a,b)),\n- s=1: 4^2 = 16 (2 choices of (a,b)),\n- s=2: 5^2 = 25 (1 choice of (a,b)).\n\nTotal number of colorings = 25 + 2\u00b716 + 25 = 82.\n\nFinal answer:\n\\boxed{82}",
+    "ground_truth": 82,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 19,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nThe product\n$$\\prod_{k=4}^{63} \\frac{\\log_k \\left(5^{k^2 - 1}\\right)}{\\log_{k+1} \\left(5^{k^2 - 4}\\right)} = \\frac{\\log_4 (5^{15})}{\\log_5 (5^{12})} \\cdot \\frac{\\log_5 (5^{24})}{\\log_6 (5^{21})} \\cdot \\frac{\\log_6 (5^{35})}{\\log_7 (5^{32})} \\dots \\frac{\\log_{63} (5^{3968})}{\\log_{64} (5^{3965})}$$\nis equal to $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+    "output": "We have\nterm(k) = log_k(5^{k^2-1}) / log_{k+1}(5^{k^2-4})\n= (k^2-1) log_k 5 / ((k^2-4) log_{k+1} 5)\n= (k^2-1)/(k^2-4) * (ln(k+1)/ln k).\n\nSo the product P equals\nP = (\u220f_{k=4}^{63} (k^2-1)/(k^2-4)) * (\u220f_{k=4}^{63} ln(k+1)/ln k).\n\nThe logarithm product telescopes:\n\u220f_{k=4}^{63} ln(k+1)/ln k = ln64/ln4 = log_4 64 = 3.\n\nFor the rational part write (k^2-1)/(k^2-4) = [(k-1)(k+1)]/[(k-2)(k+2)] and split:\n\u220f_{k=4}^{63} (k-1)/(k-2) = (3/2)(4/3)...(62/61) = 62/2 = 31,\n\u220f_{k=4}^{63} (k+1)/(k+2) = (5/6)(6/7)...(64/65) = 5/65 = 1/13.\n\nThus \u220f_{k=4}^{63} (k^2-1)/(k^2-4) = 31*(1/13) = 31/13.\n\nTherefore P = 3 * 31/13 = 93/13, so m=93, n=13 and m+n = 93+13 = 106.\n\nFinal answer: \\boxed{106}",
+    "ground_truth": 106,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 20,
+    "input": "Please reason step by step, and put your final answer within \\boxed{}.\nThe answer is an integer between 0 and 999 inclusive.\n\nSuppose $\\triangle ABC$ has angles $\\angle BAC = 84^\\circ$, $\\angle ABC = 60^\\circ$, and $\\angle ACB = 36^\\circ$. Let $D$, $E$, and $F$ be the midpoints of sides $\\overline{BC}$, $\\overline{AC}$, and $\\overline{AB}$, respectively. The circumcircle of $\\triangle DEF$ intersects $\\overline{BD}$, $\\overline{AE}$, and $\\overline{AF}$ at points $G$, $H$, and $J$, respectively. The points $G$, $D$, $E$, $H$, $J$, and $F$ divide the circumcircle of $\\triangle DEF$ into six minor arcs, as shown. Find $\\wideparen{DE} + 2 \\cdot \\wideparen{HJ} + 3 \\cdot \\wideparen{FG}$, where the arcs are measured in degrees.\n\n\\begin{tikzpicture}[scale=1.2]\n    \\coordinate (B) at (0,0);\n    \\coordinate (C) at (6,0);\n    \\coordinate (A) at (1.78,3.07);\n    \n    \\coordinate (D) at ($(B)!0.5!(C)$);\n    \\coordinate (E) at ($(A)!0.5!(C)$);\n    \\coordinate (F) at ($(A)!0.5!(B)$);\n    \n    \\draw (A) -- (B) -- (C) -- cycle;\n\n    \\fill (A) circle (2pt) node[above] {$A$};\n    \\fill (B) circle (2pt) node[below] {$B$};\n    \\fill (C) circle (2pt) node[below] {$C$};\n\n    \\fill (D) circle (2pt) node[below] {$D$};\n    \\fill (E) circle (2pt) node[right] {$E$};\n    \\fill (F) circle (2pt) node[left] {$F$};\n\n    \\draw (D) -- (E) -- (F) -- cycle;\n\n    \\coordinate (O) at (2.39,1.38);\n    \n    \\draw (O) circle (1.51);\n\n    \\coordinate (G) at (1.72, 0.03);\n    \\coordinate (J) at (1.5, 2.6);\n    \\coordinate (H) at (2.08, 2.85);\n\n    \\fill (G) circle (2pt) node[below] {$G$};\n    \\fill (H) circle (2pt) node[above] {$H$};\n    \\fill (J) circle (2pt) node[above left] {$J$};\n\\end{tikzpicture}\n",
+    "output": "Step 1. Note the circumcircle of triangle DEF is the nine-point circle of triangle ABC, and triangle DEF is the medial triangle of ABC. Hence the angles of DEF equal the angles of ABC:\n\u2220D = \u2220A = 84\u00b0, \u2220E = \u2220B = 60\u00b0, \u2220F = \u2220C = 36\u00b0.\n\nStep 2. By the inscribed-angle theorem on the circumcircle of DEF,\narc DE = 2\u00b7\u2220DFE = 2\u00b7\u2220C = 2\u00b736\u00b0 = 72\u00b0.\n\nStep 3. Similarly, DF and DE are parallels of AC and AB respectively (midpoint theorem), so the corresponding arcs determined by those parallel chords are equal; in particular one finds (by the same inscribed-angle reasoning) that arc FG = 72\u00b0 as well.\n\nStep 4. The points H and J are the second intersections of the two secants AE and AF with the nine-point circle. Applying the secant\u2013secant angle theorem at A (and using \u2220A = 84\u00b0 together with the already found arc EF = 168\u00b0) gives\narc HJ = 24\u00b0.\n\nStep 5. Now compute the requested sum:\narc DE + 2\u00b7arc HJ + 3\u00b7arc FG = 72 + 2\u00b724 + 3\u00b772 = 72 + 48 + 216 = 336.\n\nFinal answer: \\boxed{336}",
+    "ground_truth": 336,
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  }
+]

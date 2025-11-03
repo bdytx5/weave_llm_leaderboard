@@ -1,0 +1,322 @@
+[
+  {
+    "sample_id": 1,
+    "input": "<image 1> Baxter Company has a relevant range of production between 15,000 and 30,000 units. The following cost data represents average variable costs per unit for 25,000 units of production. If 30,000 units are produced, what are the per unit manufacturing overhead costs incurred?\n\nChoices:\n(A) $6\n(B) $7\n(C) $8\n(D) $9\n",
+    "output": "Answer: (B) $7\n\nWork:\n- Total fixed manufacturing overhead = $6 \u00d7 25,000 = $150,000.\n- At 30,000 units fixed MOH per unit = $150,000 / 30,000 = $5.\n- Variable manufacturing overhead per unit remains $2.\n- Per unit manufacturing overhead = $5 + $2 = $7.",
+    "ground_truth": "B",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 2,
+    "input": "Assume accounts have normal balances, solve for the one missing account balance: Dividends. Equipment was recently purchased, so there is neither depreciation expense nor accumulated depreciation. <image 1>\n\nChoices:\n(A) $194,815\n(B) $182,815\n(C) $12,000\n(D) $9,000\n",
+    "output": "Answer: (C) $12,000.\n\nWork (compressing the trial-balance approach):\n- Credit side total = Accounts payable 9,000 + Notes payable 48,000 + Common stock 24,000 + Retained earnings 31,315 + Service revenue 82,500 = 194,815.\n- Debit side (excluding dividends) = Assets (AR 16,032 + Cash 20,450 + Equipment 29,000 + Prepaid insurance 9,444 + Land 34,000 + Supplies 9,700) + Insurance expense 12,689 + Salaries expense 51,500 = 182,815.\n- Dividends must make debits = credits, so Dividends = 194,815 \u2212 182,815 = 12,000.",
+    "ground_truth": "C",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 3,
+    "input": "Maxwell Software, Inc., has the following mutually exclusive projects.Suppose the company uses the NPV rule to rank these two projects.<image 1> Which project should be chosen if the appropriate discount rate is 15 percent?\n\nChoices:\n(A) Project A\n(B) Project B\n",
+    "output": "(B) Project B\n\nNPV calculations at 15%:\n- Project A: NPV = -20,000 + 13,200/1.15 + 8,300/1.15^2 + 3,200/1.15^3\n  = -20,000 + 11,478.26 + 6,275.99 + 2,104.05 \u2248 -141.70\n- Project B: NPV = -24,000 + 14,100/1.15 + 9,800/1.15^2 + 7,600/1.15^3\n  = -24,000 + 12,260.87 + 7,410.20 + 4,997.12 \u2248 +668.19\n\nSince B has the higher (positive) NPV, choose Project B.",
+    "ground_truth": "B",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 4,
+    "input": "Each situation below relates to an independent company's Owners' Equity. <image 1> Calculate the missing values of company 2.\n\nChoices:\n(A) $1,620\n(B) $12,000\n(C) $51,180\n(D) $0\n",
+    "output": "Ending balance = Beginning + Net Income \u2212 Net Loss + Investments \u2212 Distributions\n= 63,180 + 0 \u2212 12,000 + 0 \u2212 51,180\n= 63,180 \u2212 63,180\n= $0\n\nAnswer: (D) $0.",
+    "ground_truth": "D",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 5,
+    "input": "The following data show the units in beginning work in process inventory, the number of units started, the number of units transferred, and the percent completion of the ending work in process for conversion. Given that materials are added at the beginning of the process, what are the equivalent units for conversion costs for each quarter using the weighted-average method? Assume that the quarters are independent.<image 1>\n\nChoices:\n(A) 132,625\n(B) 134,485\n(C) 135,332\n(D) 132,685\n",
+    "output": "Using the weighted\u2011average method (quarters independent), equivalent units for conversion = units transferred out + (ending WIP units \u00d7 % complete for conversion). Ending WIP = beginning WIP + started \u2212 transferred out.\n\nCompute each quarter:\n\n- Quarter 1\n  - Beginning WIP = 0, Started = 255,000, Transferred out = 235,000\n  - Ending WIP = 0 + 255,000 \u2212 235,000 = 20,000\n  - Conversion % (ending) = 50%\n  - Equivalent units (conversion) = 235,000 + 20,000 \u00d7 50% = 235,000 + 10,000 = 245,000\n\n- Quarter 2\n  - Beginning WIP = 2,500, Started = 275,000, Transferred out = 250,000\n  - Ending WIP = 2,500 + 275,000 \u2212 250,000 = 27,500\n  - Conversion % = 40%\n  - Equivalent units (conversion) = 250,000 + 27,500 \u00d7 40% = 250,000 + 11,000 = 261,000\n\n- Quarter 3\n  - Beginning WIP = 3,600, Started = 290,000, Transferred out = 275,000\n  - Ending WIP = 3,600 + 290,000 \u2212 275,000 = 18,600\n  - Conversion % = 45%\n  - Equivalent units (conversion) = 275,000 + 18,600 \u00d7 45% = 275,000 + 8,370 = 283,370\n\n- Quarter 4\n  - Beginning WIP = 6,500, Started = 300,000, Transferred out = 280,000\n  - Ending WIP = 6,500 + 300,000 \u2212 280,000 = 26,500\n  - Conversion % = 60%\n  - Equivalent units (conversion) = 280,000 + 26,500 \u00d7 60% = 280,000 + 15,900 = 295,900\n\nSo the equivalent units for conversion are:\n- Q1: 245,000\n- Q2: 261,000\n- Q3: 283,370\n- Q4: 295,900\n\n(If you intended a single-number multiple choice answer, none of the provided choices match these results \u2014 let me know if the question meant something else, e.g., FIFO method or a combined total.)",
+    "ground_truth": "B",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 6,
+    "input": "Job cost sheets show the following information: <image 1> What are the balances in the work in process inventory, finished goods inventory, and cost of goods sold for January?\n\nChoices:\n(A) 2,500 4,838 0\n(B) 3,409 6,950 4,838\n(C) 5,728 3,700 3,250\n(D) 5,728 3,409 2,500\n",
+    "output": "Answer: (A) 2,500; 4,838; 0.\n\nExplanation: At Jan 31 WIP contains jobs not yet completed (AA2 = $2,500). Finished goods are jobs completed but not yet sold (AA4 completed in January, cost $4,838). No jobs were sold in January, so COGS = $0.",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 7,
+    "input": "You are a consultant to a large manufacturing orporation that is considering a project with thefollowing net after-tax cash flows (in millions of dollars ): <image 1> The project's beta is 1.8. Assuming that rf = 8% and E(rM) = 16%, what is the highest possible beta estimate for the project before its NPV becomes negative?\n\nChoices:\n(A) 3.31\n(B) 3.47\n(C) 3.65\n",
+    "output": "Set NPV = 0:\n15 * [1 - (1 + r)^(-10)] / r = 40\n=> annuity factor = 40/15 = 2.6666667.\n\nSolve numerically for r: r \u2248 35.74%.\n\nUsing CAPM r = rf + beta*(E(rM) - rf) = 0.08 + 0.08*beta,\nbeta = (r - 0.08)/0.08 = (0.3574 - 0.08)/0.08 \u2248 3.47.\n\nAnswer: (B) 3.47.",
+    "ground_truth": "B",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 8,
+    "input": "Tim-Buck-II rents jet skis at a beach resort. There are three models available to rent: Junior, Adult, and Expert. The rental price and variable costs for these three models are as follows: <image 1> The current product mix is 5:4:1. The three models share total fixed costs of $114,750. Calculate the sales price per composite unit.\n\nChoices:\n(A) $660\n(B) $760\n(C) $650\n(D) $750\n",
+    "output": "Answer: (A) $660\n\nWork:\n- Junior: 5 \u00d7 $50 = $250\n- Adult: 4 \u00d7 $75 = $300\n- Expert: 1 \u00d7 $110 = $110\nTotal sales price per composite unit = $250 + $300 + $110 = $660.",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 9,
+    "input": "Forest Company had the following transactions during the month of December. What is the December 31 cash balance? <image 1>\n\nChoices:\n(A) $6,000\n(B) $6,150\n(C) $6,090\n(D) $6,060\n",
+    "output": "Ending cash = Beginning cash + cash inflows \u2212 cash outflows.\n\nInflows:\n- Cash sales $3,250\n- Investments by owners $3,000\nTotal inflows = $6,250\n\nOutflows:\n- Payments for inventory $1,760\n- Wages paid $2,390\n- Cash withdrawals $260\nTotal outflows = $4,410\n\nNon\u2011cash items (no cash effect): supplies used and inventory received (assumed purchased on account).\n\nEnding cash = $4,250 + $6,250 \u2212 $4,410 = $6,090.\n\nAnswer: (C) $6,090.",
+    "ground_truth": "C",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 10,
+    "input": "Use the following cash flow data for Rocket Transport to find Rocket's (1)net cash provided by or used in investing activities (2)Net increase or decrease in cash for the year. <image 1>\n\nChoices:\n(A) (1)$39,000 ; (2)84,000\n(B) (1)$36,000 ; (2)77,000\n(C) (1)$38,650 ; (2)82,910\n",
+    "output": "Answer: (A)\n\nWork:\n- Investing activities: Sale of equipment $72,000 \u2212 Purchase of bus $33,000 = net inflow $39,000.\n- Operating activities (direct): Cash collections $300,000 \u2212 Cash payments to suppliers $95,000 \u2212 Interest paid $25,000 = $180,000.\n- Financing activities: Dividends $80,000 + Repurchase of stock $55,000 = cash outflow $135,000.\n\nNet increase in cash = 180,000 (operating) + 39,000 (investing) \u2212 135,000 (financing) = $84,000.",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 11,
+    "input": "Donna Donie, CFA, has a client who believes the common stock price of TRT Materials (currently $58 per share) could move substantially in either direction in reaction to an expected court decision involving the company. The client currently owns no TRT shares, but asks Donie for advice about implementing a strangle strategy to capitalize on the possible stock price movement. A strangle is a portfolio of a put and a call with different exercise prices but the same expiration date. Donie gathers the TRT option-pricing data: <image 1> Calculate, at expiration for long strangle strategy, the Maximum possible loss per share.\n\nChoices:\n(A) $9.00\n(B) $5.00\n(C) the Maximum  possible loss is unlimited\n",
+    "output": "Answer: (A) $9.00 per share.\n\nExplanation: Long strangle = long call ($5) + long put ($4) \u2192 total premium paid = $9. The worst case is both options expire worthless (stock finishes between $55 and $60), so maximum loss = total premium = $9 per share.",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 12,
+    "input": "<image 1> Hicks Products produces and sells patio furniture through a national dealership network. They purchase raw materials from a variety of suppliers and all manufacturing, and assembly work is performed at their plant outside of Cleveland, Ohio. They recorded these costs for the year ending December 31, 2017. What is total revenue?\n\nChoices:\n(A) $3,100,000\n(B) $2,616,000\n(C) $2,474,000\n(D) $484,000\n",
+    "output": "Answer: (A) $3,100,000.\n\nExplanation: Total revenue is the sales revenue amount shown ($3,100,000); the other items are expenses or cost of goods sold.",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 13,
+    "input": "Choco's Chocolates incurs the following costs for the month: <image 1> What is the conversion cost?\n\nChoices:\n(A) $52,000\n(B) $62,000\n(C) $72,000\n(D) $82,000\n",
+    "output": "Conversion costs = Direct labor + Manufacturing overhead.\n\nManufacturing overhead here = Factory depreciation ($45,000) + Factory utilities ($2,000). (The payroll staff's salary is not a factory overhead cost as given.)\n\nSo conversion cost = $25,000 + $45,000 + $2,000 = $72,000.\n\nAnswer: (C) $72,000",
+    "ground_truth": "C",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 14,
+    "input": "A new company started production. Job 1 was completed, and Job 2 remains in production. Here is the information from the job cost sheets from their first and only jobs so far: <image 1> Using the information provided, what is the balance in finished goods inventory?\n\nChoices:\n(A) $10,208\n(B) $10,308\n(C) $10,408\n(D) $10,508\n",
+    "output": "Finished goods contains only the completed Job 1. Job 1 total cost = 375 (DM) + 5,313 (DL) + 4,620 (MOH) = $10,308. \n\nAnswer: (B) $10,308.",
+    "ground_truth": "B",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 15,
+    "input": "The cost data for BC Billing Solutions for the year 2020 is as follows: <image 1> Predict the overtime wages if 6,500 invoices are processed.\n\nChoices:\n(A) $4,840\n(B) $4,940\n(C) $5,040\n(D) $5,140\n",
+    "output": "Fit a least-squares line to the data and predict.\n\nUsing the 12 points (invoices x, overtime wages y) I get\n- x\u0304 = 8,000, y\u0304 = 6,817.50\n- slope b = [\u03a3(xy) \u2212 n x\u0304 y\u0304] / [\u03a3(x^2) \u2212 n x\u0304^2] \u2248 0.161944\n- intercept a = y\u0304 \u2212 b x\u0304 \u2248 5,521.94\n\nSo the prediction for x = 6,500 is\ny = 5,521.94 + 0.161944(6,500) \u2248 $6,574.6 (\u2248 $6,575).\n\nNone of the given choices (A\u2013D) match this predicted value. If you must pick the nearest choice, (D) $5,140 is the closest, but it is still far from the regression estimate. If you intended a different estimation method or different units, tell me and I\u2019ll recompute.",
+    "ground_truth": "A",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 16,
+    "input": "Janet Ludlow's firm requires all its analysts to use a two-stage dividend discount model (DDM) and the capital asset pricing model (CAPM) to value stocks. Using the CAPM and DDM, Ludlow has valued QuickBrush Company at $63 per share. She now must value SmileWhite Corporation.  Calculate the required rate of return for SmileWhite by using the information in the following table:.<image 1> \n\nChoices:\n(A) 14%\n(B) 15%\n(C) 16%\n",
+    "output": "Use CAPM: r = rf + beta*(rm \u2212 rf).\n\nFor SmileWhite: r = 4.5% + 1.15*(14.5% \u2212 4.5%) = 4.5% + 1.15*10% = 4.5% + 11.5% = 16.0%.\n\nAnswer: (C) 16%.",
+    "ground_truth": "C",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 17,
+    "input": "Assume accounts have normal balances, what is the balance of the account? <image 1> Adjustments needed: Physical count of supplies inventory remaining at end of period, $2,150; Taxes payable at end of period, $3,850.\n\nChoices:\n(A) $135,726\n(B) $112,500\n(C) $126,925\n(D) $116,350\n",
+    "output": "Adjusted supplies = 5,000 - (5,000 - 2,150) = 2,150 (supplies used = 2,850). Record supplies expense 2,850 and tax expense 3,850 with taxes payable 3,850.\n\nCompute adjusted trial-balance totals (debits):\nCash 64,575\nAccounts receivable 15,500\nOperating expense 38,000\nSupplies (adjusted) 2,150\nSupplies expense 2,850\nIncome tax expense 3,850\nTotal debits = 64,575 + 15,500 + 38,000 + 2,150 + 2,850 + 3,850 = 126,925\n\nCredits (fees revenue 82,000 + common stock 31,000 + accounts payable 10,075 + taxes payable 3,850) also total 126,925.\n\nAnswer: (C) $126,925.",
+    "ground_truth": "C",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 18,
+    "input": "During the year, a company purchased raw materials of $77,321 and incurred direct labor costs of $125,900. Overhead is applied at the rate of 75% of the direct labor cost. These are the inventory balances: <image 1> Compute the cost of materials used in production.\n\nChoices:\n(A) $72,283\n(B) $73,283\n(C) $74,283\n(D) $75,283\n",
+    "output": "Materials used = Beg. RM + Purchases \u2212 End. RM\n= $15,394 + $77,321 \u2212 $17,432 = $75,283\n\nAnswer: (D) $75,283.",
+    "ground_truth": "D",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 19,
+    "input": "<image 1> Baxter Company has a relevant range of production between 15,000 and 30,000 units. The following cost data represents average variable costs per unit for 25,000 units of production. If 15,000 units are produced, what are the per unit manufacturing overhead costs incurred?\n\nChoices:\n(A) $10\n(B) $11\n(C) $12\n(D) $13\n",
+    "output": "Fixed manufacturing overhead total = $6 \u00d7 25,000 = $150,000.  \nAt 15,000 units fixed overhead per unit = $150,000 \u00f7 15,000 = $10.  \nAdd variable manufacturing overhead $2 per unit \u2192 $10 + $2 = $12.\n\nAnswer: (C) $12.",
+    "ground_truth": "C",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 20,
+    "input": "Consider the following multifactor (APT) model of security returns for a particular stock.<image 1>  If T-bills currently offer a 6% yield, find the expected rate of return on this stock if the market views the stock as fairly priced.\n\nChoices:\n(A) 17.4%\n(B) 18.1%\n(C) 18.5%\n",
+    "output": "Let \u03bb1 and \u03bb2 be the risk premia on F1 and F2. From portfolios A and B:\n\nFor A: 31% = 6% + 1.5\u03bb1 + 2.0\u03bb2 \u2192 0.25 = 1.5\u03bb1 + 2\u03bb2\nFor B: 27% = 6% + 2.2\u03bb1 \u2212 0.2\u03bb2 \u2192 0.21 = 2.2\u03bb1 \u2212 0.2\u03bb2\n\nSolving these gives \u03bb1 = 10% and \u03bb2 = 5%.\n\nThe stock\u2019s betas (from the figure) are \u03b21 = 1.2 and \u03b22 = 0.1, so its expected return = 6% + 1.2(10%) + 0.1(5%) = 6% + 12% + 0.5% = 18.5%.\n\nAnswer: (C) 18.5%.",
+    "ground_truth": "B",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o",
+          "correct": false
+        }
+      ]
+    }
+  }
+]
