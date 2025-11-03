@@ -67,13 +67,14 @@ class EvalDataService {
           print('No cost/latency data for $directory (this is okay): $e');
         }
 
-        // Create new EvalResult with cost/latency data
+        // Create new EvalResult with cost/latency data and directory name
         allResults.add(EvalResult(
           model: evalResult.model,
           timestamp: evalResult.timestamp,
           numSamples: evalResult.numSamples,
           results: evalResult.results,
           costAndLatency: costAndLatency,
+          directory: directory, // Store the directory name for lazy loading datasets
         ));
       } catch (e) {
         print('Error loading $directory/final_results.json: $e');

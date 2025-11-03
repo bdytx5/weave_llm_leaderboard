@@ -4,6 +4,7 @@ class EvalResult {
   final int numSamples;
   final List<DatasetResult> results;
   final CostAndLatency? costAndLatency;
+  final String? directory; // Directory name from models.json (e.g., "gpt-4-mini_fake_20251024_045213")
 
   EvalResult({
     required this.model,
@@ -11,6 +12,7 @@ class EvalResult {
     required this.numSamples,
     required this.results,
     this.costAndLatency,
+    this.directory,
   });
 
   factory EvalResult.fromJson(Map<String, dynamic> json) {

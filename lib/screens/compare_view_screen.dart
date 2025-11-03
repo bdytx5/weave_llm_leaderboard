@@ -374,18 +374,10 @@ class _CompareViewScreenState extends State<CompareViewScreen> {
     final Set<String> allInputs = {};
 
     for (final result in _results) {
-      // Match model name to directory (e.g., "openai/gpt-5-mini" or "gpt-5-mini" matches "gpt-5-mini_20251024_045213")
-      // Extract just the model name part after "/" if it exists
-      final modelName = result.model.contains('/')
-          ? result.model.split('/').last
-          : result.model;
+      // Use the directory field which was populated when loading results
+      final modelDirectory = result.directory;
 
-      final modelDirectory = _resultDirectories.firstWhere(
-        (dir) => dir.toLowerCase().contains(modelName.toLowerCase()),
-        orElse: () => '',
-      );
-
-      if (modelDirectory.isNotEmpty) {
+      if (modelDirectory != null && modelDirectory.isNotEmpty) {
         try {
           final samples = await EvalDataService.loadDatasetSamples(
             modelDirectory,
@@ -401,12 +393,10 @@ class _CompareViewScreenState extends State<CompareViewScreen> {
               allInputs.add(input);
             }
           }
-          print('Loaded ${samples.length} samples for ${result.model}');
+          // Successfully loaded samples
         } catch (e) {
-          print('Error loading samples for ${result.model}: $e');
+          // Failed to load samples for this model
         }
-      } else {
-        print('No directory found for model: ${result.model}');
       }
     }
 
@@ -415,13 +405,6 @@ class _CompareViewScreenState extends State<CompareViewScreen> {
 
     setState(() {});
   }
-
-  static const List<String> _resultDirectories = [
-    'gpt-3-mini_fake_20251024_045213',
-    'gpt-4-mini_fake_20251024_045213',
-    'gpt-5-mini_20251024_045213',
-    'gpt-5-nano_20251030_052520',
-  ];
 
   Widget _buildSampleViewer() {
     if (_selectedChartDataset == null || _sampleData.isEmpty || _sampleInputs.isEmpty) {
