@@ -46,7 +46,15 @@ class _ChartsPageState extends State<ChartsPage> {
             fit: BoxFit.contain,
           ),
         ),
-        title: const Text('W&B Weave LLM Leaderboard'),
+        title: const Text(
+          'W&B Weave LLM Leaderboard',
+          style: TextStyle(
+            fontFamily: 'serif',
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+            letterSpacing: 0.5,
+          ),
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
         // actions: [
