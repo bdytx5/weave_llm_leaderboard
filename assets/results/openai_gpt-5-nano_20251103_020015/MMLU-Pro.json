@@ -1,0 +1,322 @@
+[
+  {
+    "sample_id": 1,
+    "input": "Typical advertising regulatory bodies suggest, for example that adverts must not: encourage _________, cause unnecessary ________ or _____, and must not cause _______ offence.\n\nOptions:\nA. Safe practices, Fear, Jealousy, Trivial\nB. Unsafe practices, Distress, Joy, Trivial\nC. Safe practices, Wants, Jealousy, Trivial\nD. Safe practices, Distress, Fear, Trivial\nE. Unsafe practices, Wants, Jealousy, Serious\nF. Safe practices, Distress, Jealousy, Serious\nG. Safe practices, Wants, Fear, Serious\nH. Unsafe practices, Wants, Fear, Trivial\nI. Unsafe practices, Distress, Fear, Serious\n",
+    "output": "I\n\nReason: Advertising guidelines typically state adverts must not encourage unsafe practices, must not cause unnecessary distress or fear, and must not cause serious offence. Option I matches this wording.",
+    "ground_truth": "I",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 2,
+    "input": "Managers are entrusted to run the company in the best interest of ________. Specifically, they have a duty to act for the benefit of the company, as well as a duty of ________ and of _______.\n\nOptions:\nA. Shareholders, Diligence, Self-interest\nB. Shareholders, Self-interest, Care and Skill\nC. Stakeholders, Care and skill, Self-interest\nD. Stakeholders, Diligence, Care and Skill\nE. Customers, Care and Skill, Diligence\nF. Shareholders, Care and Skill, Diligence\nG. Shareholders, Self-interest, Diligence\nH. Employees, Care and Skill, Diligence\nI. Stakeholders, Self-interest, Diligence\nJ. Stakeholder, Care and Skill, Diligence\n",
+    "output": "F\n\nExplanation:\nManagers (directors) are fiduciaries for shareholders and must act in the best interests of the company, with duties of care (and skill) and of diligence. The option that fits is: Shareholders; Care and Skill; Diligence.",
+    "ground_truth": "F",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 3,
+    "input": "There are two main issues associated with _____ sizing. _______ is a key issue as due to the information policy of the corporation it can be argued that employees have a right to know if they are being made redundant. _______ is a second issue, particularly the ________ package that employees receive when laid off.\n\nOptions:\nA. Down, Autonomy, Remuneration, Benefit\nB. Down, Involvement, Independence, Benefit\nC. Up, Independence, Involvement, Benefit\nD. Down, Privacy, Autonomy, Benefit\nE. Up, Involvement, Autonomy, Compensation\nF. Down, Independence, Autonomy, Compensation\nG. Up, Involvement, Remuneration, Severance\nH. Up, Privacy, Remuneration, Severance\nI. Up, Autonomy, Remuneration, Compensation\nJ. Down, Involvement, Remuneration, Compensation\n",
+    "output": "J\n\nReasoning:\n- The phrase is about downsizing, a common context where two main issues arise.\n- Involvement fits the idea that employees should be informed and have a say due to the information policy.\n- The second issue relates to the compensation received when laid off, i.e., remuneration and the severance/compensation package. Among the options, J best matches this sequence: Down (downsizing), Involvement, Remuneration, Compensation.",
+    "ground_truth": "J",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 4,
+    "input": "_______ locate morality beyond the sphere of rationality in an emotional 'moral impulse' towards others.\n\nOptions:\nA. Ethical egoism\nB. Ethics of duty\nC. Postmodern ethics\nD. Consequentialist ethics\nE. Utilitarian ethics\nF. Deontological ethics\nG. Virtue ethics\nH. Ethics of care\nI. Ethics of rights\nJ. Relativist ethics\n",
+    "output": "H. Ethics of care\n\nReason: The ethics of care grounds morality in relationships and emotional caring (a moral impulse toward others) rather than abstract rational reflection.",
+    "ground_truth": "C",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 5,
+    "input": " Some of key differences between Islamic finance and conventional finance include - prohibition of charging and paying _______, prohibition on ______ and ______ transactions, prohibition of sinful investment and requirement for all financial products to be backed by __________.\n\nOptions:\nA. Interest, Certain, Assured, Both tangible and intangible assets\nB. Interest, Uncertain, Assured, Both tangible and intangible assets\nC. Interest, Uncertain, Speculative, Intangible assets\nD. Interest, Certain, Assured, Tangible assets\nE. Interest, Uncertain, Assured, Intangible assets\nF. Profit, Uncertain, Speculative, Tangible assets\nG. Interest, Uncertain, Speculative, Tangible assets\nH. Interest, Certain, Speculative, Intangible assets\nI. Profit, Certain, Assured, Tangible assets\nJ. Interest, Certain, Speculative, Both tangible and intangible assets\n",
+    "output": "G\n\nReason: \n- Prohibition of charging and paying Interest (riba).\n- Prohibition on Uncertain (gharar) and Speculative (maysir) transactions.\n- Requirement that financial products be backed by Tangible assets (real assets).",
+    "ground_truth": "G",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 6,
+    "input": " Which of the following are the three broad groups of organizational characteristics segmentation criteria?\n\nOptions:\nA. Organizational size, industry type, and geographical location.\nB. Organizational size, industry type, and age of company.\nC. Organizational size, industry type, and customer base.\nD. Organizational size, industry type, and annual revenue.\nE. Organizational size, industry type, and business strategy.\nF. None of the above.\nG. Organizational size, industry type, and gender.\nH. Organizational size, industry type, and number of branches.\nI. Psychographics, purchaser, and behavioural criteria.\nJ. Organizational size, industry type, and number of employees.\n",
+    "output": "Answer: A\n\nReason: In B2B segmentation (firmographics), the three broad organizational characteristics are organizational size, industry type, and geographical location.",
+    "ground_truth": "A",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 7,
+    "input": " Pine and Gilmore (1999) derive four distinct realms of experience, based on two dimensions. What are these dimensions?\n\nOptions:\nA. Customer participation and environmental acquisition.\nB. Environmental acquisition and environmental relationship.\nC. Customer retention and environmental relationship.\nD. Customer participation and environmental relationship.\nE. Customer acquisition and customer retention.\nF. Customer participation and customer relationship.\nG. Customer acquisition and environmental participation.\nH. Environmental participation and customer relationship.\nI. Customer retention and customer relationship.\nJ. Customer acquisition and environmental relationship.\n",
+    "output": "D. Customer participation and environmental relationship.\n\nExplanation: Pine and Gilmore\u2019s four experience realms are based on (1) the level of customer participation (low to high) and (2) the degree of relationship/immersion with the environment (low to high).",
+    "ground_truth": "D",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 8,
+    "input": " Which type of research methods are designed to elicit responses to predetermined, standardized questions from many respondents?\n\nOptions:\nA. Non-probability.\nB. Cross-sectional.\nC. Qualitative.\nD. Ethnographic.\nE. Longitudinal.\nF. Experimental.\nG. Probability.\nH. Observational.\nI. Case Study.\nJ. Quantitative.\n",
+    "output": "J. Quantitative.\n\nReason: This describes structured surveys/questionnaires with predetermined, standardized questions designed to collect comparable data from many respondents, characteristic of quantitative research.",
+    "ground_truth": "J",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 9,
+    "input": "Where the price is set low relative to the competition to gain market share, this strategy is known as:\n\nOptions:\nA. Captive product pricing.\nB. High-low pricing.\nC. Price skimming.\nD. Value added pricing.\nE. Penetration pricing.\nF. Premium pricing.\nG. Cost-plus pricing.\nH. Economy pricing.\nI. Psychological pricing.\nJ. Competitive pricing.\n",
+    "output": "E. Penetration pricing.\n\nReason: Setting prices low relative to competitors to attract customers and gain market share.",
+    "ground_truth": "E",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 10,
+    "input": "Once a train pulls out of a station, or an aeroplane takes off or a film starts, those seats are lost and can never be sold. This is referred to as:\n\nOptions:\nA. Immeasurability.\nB. Impalpability.\nC. Variability.\nD. Non-storability.\nE. Indivisibility.\nF. Perishability.\nG. Non-recoverability.\nH. Inseparability.\nI. Heterogeneity.\nJ. Intangibility.\n",
+    "output": "F. Perishability.\n\nExplanation: In services marketing, perishability refers to the fact that service capacity (like seats on a flight or a cinema) cannot be stored or inventoried; once the time passes or the service is performed, the opportunity is lost forever.",
+    "ground_truth": "F",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 11,
+    "input": "A marketing research firm contracts with clients to conduct a complete marketing research project from data collection, analysis, and reporting. It is a__________ firm.\n\nOptions:\nA. Data collection firm.\nB. Freelance agency.\nC. Data analysis firm.\nD. Survey firm.\nE. Full-service agency.\nF. Tabulation agency.\nG. Marketing agency.\nH. Research firm.\nI. Consultant.\nJ. Field agency.\n",
+    "output": "E. Full-service agency\n\nReason: A firm that conducts the entire marketing research project\u2014from data collection through analysis to reporting\u2014offers a full range of services, i.e., is a full-service agency.",
+    "ground_truth": "E",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 12,
+    "input": "The six dimensions usually considered to constitute the external marketing environment include all of the following except:\n\nOptions:\nA. Political considerations.\nB. Weather conditions\nC. Personal preferences of the marketing team\nD. Economics issues.\nE. Technology trends\nF. Socio-cultural aspects.\nG. Global factors.\nH. Competitive landscape\nI. Industry regulations\nJ. Environmental concerns\n",
+    "output": "C. Personal preferences of the marketing team\n\nReason: The external marketing environment consists of factors outside the firm (political, economic, socio-cultural, technological, environmental, global, competitive, regulatory, etc.). Personal preferences of the internal marketing team are internal, not external, factors.",
+    "ground_truth": "G",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 13,
+    "input": "What is the term for the 'rule of thumb' type of bias in decision making?\n\nOptions:\nA. Framing bias\nB. Availability bias\nC. Representativeness bias\nD. Self-serving bias\nE. Hindsight bias\nF. Over-confidence bias\nG. Confirmation bias\nH. Optimism bias\nI. Anchoring bias\nJ. Heuristics\n",
+    "output": "J. Heuristics\n\nExplanation: Heuristics are mental shortcuts or \u201crules of thumb\u201d people use to make quick judgments. They can lead to systematic biases in decision making.",
+    "ground_truth": "J",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 14,
+    "input": "As what is ensuring that one individual does not carry the burden of a whole work task referred to?\n\nOptions:\nA. Work delegation\nB. Workload balancing\nC. Work distribution\nD. Work specialisation\nE. Work rotation\nF. Work redundancy\nG. Work shift\nH. Work division\nI. Work schedule\nJ. Work design\n",
+    "output": "B. Workload balancing\n\nReason: It refers to distributing tasks and workload evenly among team members so no single individual bears the entire burden of a task.",
+    "ground_truth": "D",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 15,
+    "input": "What theory is built around the principle that 'people make choices regarding how to behave based on values and beliefs'?\n\nOptions:\nA. Social Learning\nB. Contingency\nC. Operant Conditioning\nD. Evolutionary\nE. Classical\nF. Expectancy\nG. Psychoanalytic\nH. Instrumental\nI. Cognitive Dissonance\nJ. Humanistic\n",
+    "output": "F. Expectancy\n\nReason: Expectancy theory states that people choose how to behave based on their beliefs about the outcomes (expectancies and instrumentalities) and the value (valence) they place on those outcomes.",
+    "ground_truth": "F",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 16,
+    "input": "How does lateral communication in an organisation occur?\n\nOptions:\nA. Information is shared only during official meetings.\nB. Information is restricted within a single department.\nC. Information is transferred through external stakeholders.\nD. Information is transferred only through the head of the organisation.\nE. Information is disseminated through public announcements.\nF. Information passes upwards.\nG. Information passes downwards.\nH. Information is a two-way process.\nI. Information passes diagonally between different levels of hierarchy.\nJ. Information passes between different departments and functions.\n",
+    "output": "Correct options: J and H\n\n- J. Information passes between different departments and functions. This describes horizontal (lateral) flow across units.\n- H. Information is a two-way process. Lateral communication typically involves reciprocal exchange between peers.\n\nNotes:\n- A, B, C, D, E, F, G describe other (vertical or external) forms of communication.\n- I describes diagonal communication (cross levels), which is not the same as purely lateral (horizontal) communication.",
+    "ground_truth": "J",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 17,
+    "input": "The stock of the CCC Corporation is currently valued at $12 and is assumed to possess all the properties of geometric Brownian motion. It has an expected annual return of 15%, an annual volatility of 20%, and the annual risk-free is 10%. Using a binomial lattice, determine the price of a call option on CCC stock maturing in 10 monthes time with a strike price of $14 (Let the distance between nodes on your tree be 1 month in length).\n\nOptions:\nA. 50.0\nB. 60.0\nC. 55.0\nD. 44.0\nE. 48.0\nF. 53.0\nG. 42.0\nH. 46.0\nI. 51.0\nJ. 45.0\n",
+    "output": "Reasoning (binomial CRR lattice, 1-month steps)\n\n- Step size: dt = 1/12 year, N = 10 (10 months)\n- Given: S0 = 12, K = 14, r = 10% per year, sigma = 20% per year\n\nBinomial parameters (CRR)\n- u = exp(sigma * sqrt(dt)) = exp(0.2 * sqrt(1/12)) \u2248 exp(0.057735) \u2248 1.05944\n- d = 1/u \u2248 0.94396\n- Risk-neutral prob.: p = (e^{r dt} - d) / (u - d)\n  - e^{r dt} = exp(0.1 * (1/12)) \u2248 exp(0.008333) \u2248 1.008368\n  - p \u2248 (1.008368 - 0.94396) / (1.05944 - 0.94396) \u2248 0.559 (more precisely \u2248 0.559)\n  - q = 1 - p \u2248 0.441\n\nFinal payoffs at maturity (10 steps)\n- For i up moves (i = 0..10): S_T(i) = S0 * u^{2i - N} = 12 * u^{2i - 10}\n- Only i \u2265 7 give positive payoff (S_T(i) > 14)\n  - i = 7: S \u2248 12 * u^4 \u2248 15.11; C_T \u2248 15.11 - 14 \u2248 1.11\n  - i = 8: S \u2248 12 * u^6 \u2248 16.95; C_T \u2248 2.95\n  - i = 9: S \u2248 12 * u^8 \u2248 19.03; C_T \u2248 5.03\n  - i = 10: S \u2248 12 * u^10 \u2248 21.37; C_T \u2248 7.37\n\nOption value (European call)\n- C0 = e^{-r T} * sum_{i=7}^{10} [ C(10,i) p^i q^{10-i} * C_T(i) ]\n  - T = 10/12 years, so e^{-rT} = exp(-0.1 * 10/12) \u2248 exp(-0.083333) \u2248 0.9200\n\nCarrying out the binomial-weighted sum (using p \u2248 0.558\u20130.559; q \u2248 0.441\u20130.442) gives\n- Sum of discounted expected payoff \u2248 0.53 per share\n\nInterpretation\n- The computed call price is about $0.53 per share.\n- In standard option contracts (often quoted per share), this is about $0.53.\n- If you express value for one contract of 100 shares, the price is \u2248 $53.\n\nAnswer: F. 53.0\n\nNotes\n- The drift (15% annual) is not used in risk-neutral pricing; the binomial lattice uses the risk-free rate (10%) and volatility (20%).\n- The 53.0 value corresponds to the typical 100-share contract convention (i.e., \u2248 $53 for 100 shares).",
+    "ground_truth": "F",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 18,
+    "input": "George is seen to place an even-money $100,000 bet on the Bulls to win the NBA Finals. If George has a logarithmic utility-of-wealth function and if his current wealth is $1,000,000, what must he believe is the minimum probability that the Bulls will win?\n\nOptions:\nA. 0.525\nB. 0.800\nC. 0.450\nD. 0.575\nE. 0.750\nF. 0.350\nG. 0.650\nH. 0.300\nI. 0.700\nJ. 0.400\n",
+    "output": "Answer: A (0.525)\n\nReason:\n- Current wealth W0 = 1,000,000.\n- If Bulls win: W1 = 1,100,000; if they lose: W2 = 900,000.\n- Log utility: U = E[ln(W)].\n- Not betting: ln(1,000,000).\n\nBetting gives expected utility:\np ln(1,100,000) + (1-p) ln(900,000) \u2265 ln(1,000,000).\n\nSubtract ln(1,000,000) and use ln(1.1) and ln(0.9):\np ln(1.1) + (1-p) ln(0.9) \u2265 0.\n\nSolve for p:\np [ln(1.1) - ln(0.9)] \u2265 - ln(0.9)\np \u2265 -ln(0.9) / [ln(1.1) - ln(0.9)]\n\u2248 0.1053605 / 0.2006707 \u2248 0.525.\n\nThus the minimum probability is about 0.525.",
+    "ground_truth": "A",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 19,
+    "input": "Boy Alcott and Jon Buxton are partners in a steel company. They share the net income in proportion to their average investments. On January 1, Alcott invested $4,000 and Buxton invested $5,000. On May 1, Alcott invested an additional $2,000 and Buxton invested $1,750. On September 1, Alcott withdrew $500. On November 1, each partner invested an additional $2,000. The net profit for the year was $8,736. Find each partner's share of the profit.\n\nOptions:\nA. Alcott's share: $3,936, Buxton's share: $4,800\nB. Alcott's share: $4,004, Buxton's share: $4,732\nC. Alcott's share: $4,200, Buxton's share: $4,536\nD. Alcott's share: $4,800, Buxton's share: $3,936\nE. Alcott's share: $5,000, Buxton's share: $3,736\nF. Alcott's share: $3,868, Buxton's share: $4,868\nG. Alcott's share: $4,368, Buxton's share: $4,368\nH. Alcott's share: $4,732, Buxton's share: $4,004\nI. Alcott's share: $4,500, Buxton's share: $4,236\nJ. Alcott's share: $5,236, Buxton's share: $3,500\n",
+    "output": "Compute time-weighted (months) capital for each partner.\n\nPeriods:\n- Jan 1\u2013May 1 (4 months): A = 4,000; B = 5,000\n- May 1\u2013Sept 1 (4 months): A = 6,000; B = 6,750\n- Sept 1\u2013Nov 1 (2 months): A = 5,500; B = 6,750\n- Nov 1\u2013Dec 31 (2 months): A = 7,500; B = 8,750\n\nWeighted totals:\n- Alcott: 4\u00d74,000 + 4\u00d76,000 + 2\u00d75,500 + 2\u00d77,500 = 66,000\n- Buxton: 4\u00d75,000 + 4\u00d76,750 + 2\u00d76,750 + 2\u00d78,750 = 78,000\n\nAverage investments (divide by 12 months):\n- Alcott: 66,000 / 12 = 5,500\n- Buxton: 78,000 / 12 = 6,500\n\nProfit-sharing ratio: 5,500 : 6,500 = 11 : 13\n\nTotal profit = 8,736\n- Alcott: 8,736 \u00d7 (11/24) = 4,004\n- Buxton: 8,736 \u00d7 (13/24) = 4,732\n\nAnswer: B. Alcott $4,004; Buxton $4,732.",
+    "ground_truth": "B",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 20,
+    "input": "TheAlforsCompany had a beginning inventory of $30,000, Jan 1, 1974. During the year, purchases amounted to $87,500, net sales to $102,000. Assuming that the gross profit rate is 40% of the net sales, what is the ending inventory using the gross profit method of inventory evaluation?\n\nOptions:\nA. $50,200\nB. $45,100\nC. $60,400\nD. $56,300\nE. $58,800\nF. $54,400\nG. $65,500\nH. $62,900\nI. $48,700\nJ. $52,600\n",
+    "output": "Ending inventory using the gross profit method:\n\n- Gross profit = 0.40 \u00d7 Net sales = 0.40 \u00d7 102,000 = 40,800\n- COGS = Net sales \u2212 Gross profit = 102,000 \u2212 40,800 = 61,200\n- Cost of goods available for sale = Beginning inventory + Purchases = 30,000 + 87,500 = 117,500\n- Ending inventory = COGS subtracted from goods available for sale = 117,500 \u2212 61,200 = 56,300\n\nAnswer: D) 56,300",
+    "ground_truth": "D",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  }
+]

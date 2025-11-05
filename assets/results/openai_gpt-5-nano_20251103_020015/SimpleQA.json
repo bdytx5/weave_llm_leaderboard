@@ -1,0 +1,142 @@
+[
+  {
+    "sample_id": 1,
+    "input": "What year was the municipality of C\u00f3mbita, Boyac\u00e1, Colombia, founded?",
+    "output": "1780. \n\nIf you\u2019d like, I can point you to sources (like the official municipal site or reputable databases) to confirm this exact founding date.",
+    "ground_truth": "1586",
+    "score": false
+  },
+  {
+    "sample_id": 2,
+    "input": "What was the number of recorded injuries in the Weesp train disaster of 1918 in the Netherlands?",
+    "output": "I don\u2019t have the exact figure memorized. Would you like me to look up the precise number of recorded injuries from reliable sources (e.g., historical records, Dutch railway archives, or Wikipedia) and cite them?",
+    "ground_truth": "42 injuries.",
+    "score": false
+  },
+  {
+    "sample_id": 3,
+    "input": "Which village in Ontario was first settled in 1824 by Mr. A. Hurd, and had the Post Office established in 1836, with Mr. J. Leach being the first Postmaster, according to \"Conner & Coltson's Directory of the County of Ontario for 1869-70\"?",
+    "output": "I can look this up, but I don\u2019t have the directory memorized. Would you like me to search the web for Conner & Coltson\u2019s Directory of the County of Ontario for 1869-70 and extract the village name that matches those details? If you have a link or an image of the page, you can share it to speed things up.",
+    "ground_truth": "Prince Albert.",
+    "score": false
+  },
+  {
+    "sample_id": 4,
+    "input": "What month, day, and year did Ciara perform in Tampa for her Jackie Tour?",
+    "output": "I can look that up and give you the exact date. Do you want me to search for Ciara\u2019s Jackie Tour Tampa date now (from sources like her official site, Ticketmaster, or Wikipedia)?",
+    "ground_truth": "May 16, 2015",
+    "score": false
+  },
+  {
+    "sample_id": 5,
+    "input": "In a 1988 paper, which author defined Mammalia phylogenetically as the crown group of mammals\u2014the clade consisting of the most recent common ancestor of living monotremes and therian mammals?",
+    "output": "James A. Gauthier.",
+    "ground_truth": "Timothy Rowe",
+    "score": false
+  },
+  {
+    "sample_id": 6,
+    "input": "What day, month, and year was Nathalie M\u00e9nigon born?",
+    "output": "Could you clarify which Nathalie M\u00e9nigon you mean? There may be more than one person with that name, and I want to be sure I give you the correct birth date (day, month, and year). If you can share the context (profession, nationality, or a source), I\u2019ll provide the exact date. If you\u2019d like me to look it up from a reliable source, let me know and I can guide you to where to find it.",
+    "ground_truth": "28 February 1957",
+    "score": false
+  },
+  {
+    "sample_id": 7,
+    "input": "What was the name of the male victim in the famous 2012 Delhi gang rape and murder, commonly known as the \"Nirbhaya case\"?",
+    "output": "The male victim\u2019s name was not publicly disclosed. Media and authorities did not release his name to protect his privacy. The case is most commonly associated with the female victim, Jyoti Singh, who was given the pseudonym \u201cNirbhaya.\u201d",
+    "ground_truth": "Awindra Pratap Pandey",
+    "score": false
+  },
+  {
+    "sample_id": 8,
+    "input": "Following the 2016 Orlando nightclub shooting, which county in which state was the only county in the United States to refuse to lower its flags to half-staff?",
+    "output": "I\u2019m not sure off the top of my head. Do you want me to look this up and provide the source?",
+    "ground_truth": "Baldwin County in Alabama.",
+    "score": false
+  },
+  {
+    "sample_id": 9,
+    "input": "How old was Aniol Serrasolses when he kayaked for the first time down the largest glacial waterfall ever recorded in Norway?",
+    "output": "I don\u2019t have that specific detail in my training data, and I can\u2019t confirm the exact age without a source. If you\u2019d like, I can look it up and give you the precise age\u2014would you like me to search for the article or video that mentions that descent? If you have a link, you can share it and I\u2019ll extract the age from it.",
+    "ground_truth": "32",
+    "score": false
+  },
+  {
+    "sample_id": 10,
+    "input": "Within plus or minus one minute, when was M\u00fcller substituted in the 2014 Champions League semi-final Real Madrid vs. Bayern match?",
+    "output": "There were two legs in that semi-final. Do you mean:\n- the first leg (April 29, 2014, at Bayern\u2019s stadium) or\n- the second leg (May 1, 2014, at Real Madrid's stadium)?\n\nAnd do you want the minute he was substituted off, or the minute he came on? If you want an exact minute, I can look up the official match report for that leg and give you the precise time (within \u00b11 minute).",
+    "ground_truth": "74",
+    "score": false
+  },
+  {
+    "sample_id": 11,
+    "input": "What did Alison Garrs overdose on in the last episode of Season 2 of Happy Valley?",
+    "output": "I\u2019m not sure I\u2019m recalling the exact character name. Do you mean Alison Garrs (or Garr) from Happy Valley? Could you confirm the spelling and which episode you mean (Season 2 finale)? If you\u2019d like, I can check the exact detail for you.",
+    "ground_truth": "Diazepam",
+    "score": false
+  },
+  {
+    "sample_id": 12,
+    "input": "What was the name of the cricket team Dr. Abu Baker Asvat played for?",
+    "output": "I\u2019m not certain about the exact cricket team name for Dr. Abu Baker Asvat. Do you want me to look it up from reliable sources? If you can share a timeframe or source you\u2019re referencing, that might help, and I can try to locate the precise team.",
+    "ground_truth": "The Crescents",
+    "score": false
+  },
+  {
+    "sample_id": 13,
+    "input": "For how many consecutive terms was the Indian politician Babanrao Shankar Gholap, alias Nana, elected to the Vidhan Sabha?",
+    "output": "Four consecutive terms.",
+    "ground_truth": "5",
+    "score": false
+  },
+  {
+    "sample_id": 14,
+    "input": "In which year did Edward Meyrick first describe Cydalima mysteris?",
+    "output": "I don\u2019t have that year memorized. Would you like me to look it up in taxonomic databases (e.g., GlobIZ or the Biodiversity Heritage Library) to give you the exact year Edward Meyrick first described Cydalima mysteris?",
+    "ground_truth": "1886",
+    "score": false
+  },
+  {
+    "sample_id": 15,
+    "input": "What year was the municipality of Salgar, Antioquia, Colombia, founded?",
+    "output": "I don\u2019t have the exact founding year of Salgar, Antioquia memorized. Would you like me to look it up and give you the precise year? If you have a preferred source (e.g., Wikipedia, the municipality\u2019s site), tell me and I\u2019ll check there.",
+    "ground_truth": "1880",
+    "score": false
+  },
+  {
+    "sample_id": 16,
+    "input": "What was the date, month, and year when the German Defence Minister Peter Struck announced further major changes to the German armed forces? A major part of this announcement was the plan to cut the German fighter fleet from 426 in early 2004 to 265 by 2015.",
+    "output": "I can\u2019t recall the exact date offhand. Would you like me to look up a reliable source and give you the precise day, month, and year?",
+    "ground_truth": "January 13, 2004",
+    "score": false
+  },
+  {
+    "sample_id": 17,
+    "input": "What was the Word of the Decade (2010\u20132019) according to the American Dialect Society?",
+    "output": "They (the singular \u201cthey\u201d).",
+    "ground_truth": "they",
+    "score": true
+  },
+  {
+    "sample_id": 18,
+    "input": "For how many years did John Constable (English landscape painter) work on \"The Opening of Waterloo Bridge\"?",
+    "output": "About ten years.",
+    "ground_truth": "13",
+    "score": false
+  },
+  {
+    "sample_id": 19,
+    "input": "In 2017, what case was Natasha Merle involved in, where she was a member of the petitioner team?",
+    "output": "I\u2019m not finding a clear, reliable record in my current data about a Natasha Merle involved in a 2017 case as a member of the petitioner team. Could you share a bit more context so I can help identify it accurately? For example:\n\n- Which country or court (U.S. Supreme Court, a state supreme court, an appellate court, etc.)?\n- Her affiliation (which law school or organization, if any)?\n- Any part of the case name or topic (civil rights, immigration, criminal, etc.)?\n\nIf you\u2019re able to let me search the web, I can look up the exact case and confirm which case Natasha Merle was part of in 2017.",
+    "ground_truth": "Buck v. Davis",
+    "score": false
+  },
+  {
+    "sample_id": 20,
+    "input": "What is the middle name of Motaz Azaiza, Palestinian journalist?",
+    "output": "I don\u2019t have Motaz Azaiza\u2019s middle name in my training data, and I can\u2019t verify it without looking it up. If you\u2019d like, I can search the web for a reliable source that lists his full name. Would you like me to do that? If you have a link to a bio or article that mentions his full name, you can share it and I\u2019ll confirm.",
+    "ground_truth": "Hilal",
+    "score": false
+  }
+]

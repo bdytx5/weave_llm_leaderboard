@@ -1,0 +1,322 @@
+[
+  {
+    "sample_id": 1,
+    "input": "Typical advertising regulatory bodies suggest, for example that adverts must not: encourage _________, cause unnecessary ________ or _____, and must not cause _______ offence.\n\nOptions:\nA. Safe practices, Fear, Jealousy, Trivial\nB. Unsafe practices, Distress, Joy, Trivial\nC. Safe practices, Wants, Jealousy, Trivial\nD. Safe practices, Distress, Fear, Trivial\nE. Unsafe practices, Wants, Jealousy, Serious\nF. Safe practices, Distress, Jealousy, Serious\nG. Safe practices, Wants, Fear, Serious\nH. Unsafe practices, Wants, Fear, Trivial\nI. Unsafe practices, Distress, Fear, Serious\n",
+    "output": "The correct answer is:\n\n**I. Unsafe practices, Distress, Fear, Serious**\n\nSo the sentence reads:\n\nTypical advertising regulatory bodies suggest, for example, that adverts must not: encourage **unsafe practices**, cause unnecessary **distress** or **fear**, and must not cause **serious** offence.",
+    "ground_truth": "I",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 2,
+    "input": "Managers are entrusted to run the company in the best interest of ________. Specifically, they have a duty to act for the benefit of the company, as well as a duty of ________ and of _______.\n\nOptions:\nA. Shareholders, Diligence, Self-interest\nB. Shareholders, Self-interest, Care and Skill\nC. Stakeholders, Care and skill, Self-interest\nD. Stakeholders, Diligence, Care and Skill\nE. Customers, Care and Skill, Diligence\nF. Shareholders, Care and Skill, Diligence\nG. Shareholders, Self-interest, Diligence\nH. Employees, Care and Skill, Diligence\nI. Stakeholders, Self-interest, Diligence\nJ. Stakeholder, Care and Skill, Diligence\n",
+    "output": "The correct answer is:\n\n**F. Shareholders, Care and Skill, Diligence**\n\nSo, the completed sentence is:\n\n> Managers are entrusted to run the company in the best interest of **shareholders**. Specifically, they have a duty to act for the benefit of the company, as well as a duty of **care and skill** and of **diligence**.",
+    "ground_truth": "F",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 3,
+    "input": "There are two main issues associated with _____ sizing. _______ is a key issue as due to the information policy of the corporation it can be argued that employees have a right to know if they are being made redundant. _______ is a second issue, particularly the ________ package that employees receive when laid off.\n\nOptions:\nA. Down, Autonomy, Remuneration, Benefit\nB. Down, Involvement, Independence, Benefit\nC. Up, Independence, Involvement, Benefit\nD. Down, Privacy, Autonomy, Benefit\nE. Up, Involvement, Autonomy, Compensation\nF. Down, Independence, Autonomy, Compensation\nG. Up, Involvement, Remuneration, Severance\nH. Up, Privacy, Remuneration, Severance\nI. Up, Autonomy, Remuneration, Compensation\nJ. Down, Involvement, Remuneration, Compensation\n",
+    "output": "Let's break down the sentence:\n\n> There are two main issues associated with _____ sizing. _______ is a key issue as due to the information policy of the corporation it can be argued that employees have a right to know if they are being made redundant. _______ is a second issue, particularly the ________ package that employees receive when laid off.\n\nNow, let's analyze:\n\n1. The context is most likely \"down sizing\" (not \"up sizing\") because it deals with **redundancy** and **being laid off**.\n2. The first blank after \"key issue\" relates to communication/information \u2014 employees' right to know about redundancy. \"Involvement\" (option J) fits here, as involvement refers to being included or informed in the process.\n3. The second issue is about \"package employees receive when laid off\" \u2014 that is, compensation or remuneration.\n4. The last blank should be something like \"compensation\" (usually called a \"compensation package\" when laid off).\n\n**Options with \"Down\" (relating to downsizing):**\n- A. Down, Autonomy, Remuneration, Benefit\n- B. Down, Involvement, Independence, Benefit\n- D. Down, Privacy, Autonomy, Benefit\n- F. Down, Independence, Autonomy, Compensation\n- J. Down, Involvement, Remuneration, Compensation\n\nLet's test option J:\n\n> There are two main issues associated with **down** sizing. **Involvement** is a key issue as due to the information policy of the corporation it can be argued that employees have a right to know if they are being made redundant. **Remuneration** is a second issue, particularly the **compensation** package that employees receive when laid off.\n\nThis fits perfectly.\n\n**Final Answer:**\n**J. Down, Involvement, Remuneration, Compensation**",
+    "ground_truth": "J",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 4,
+    "input": "_______ locate morality beyond the sphere of rationality in an emotional 'moral impulse' towards others.\n\nOptions:\nA. Ethical egoism\nB. Ethics of duty\nC. Postmodern ethics\nD. Consequentialist ethics\nE. Utilitarian ethics\nF. Deontological ethics\nG. Virtue ethics\nH. Ethics of care\nI. Ethics of rights\nJ. Relativist ethics\n",
+    "output": "The correct answer is:\n\n**C. Postmodern ethics**\n\n**Explanation:**  \nPostmodern ethics, particularly as articulated by thinkers like Emmanuel Levinas and Zygmunt Bauman, **locate morality beyond the sphere of rationality in an emotional 'moral impulse' towards others**, emphasizing a pre-rational or extra-rational ethical response (such as empathy or responsibility) that arises in human relations, rather than deducing morality from rules or reason.\n\nNone of the other options\u2014like utilitarian, deontological, or virtue ethics\u2014emphasize this \"outside of rationality\" and \"moral impulse\" aspect as central in the same way postmodern ethics does.",
+    "ground_truth": "C",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 5,
+    "input": " Some of key differences between Islamic finance and conventional finance include - prohibition of charging and paying _______, prohibition on ______ and ______ transactions, prohibition of sinful investment and requirement for all financial products to be backed by __________.\n\nOptions:\nA. Interest, Certain, Assured, Both tangible and intangible assets\nB. Interest, Uncertain, Assured, Both tangible and intangible assets\nC. Interest, Uncertain, Speculative, Intangible assets\nD. Interest, Certain, Assured, Tangible assets\nE. Interest, Uncertain, Assured, Intangible assets\nF. Profit, Uncertain, Speculative, Tangible assets\nG. Interest, Uncertain, Speculative, Tangible assets\nH. Interest, Certain, Speculative, Intangible assets\nI. Profit, Certain, Assured, Tangible assets\nJ. Interest, Certain, Speculative, Both tangible and intangible assets\n",
+    "output": "Let's break down the key features of Islamic Finance relevant to the question:\n\n1. **Prohibition of charging and paying _interest_** (known as \"Riba\")  \n2. **Prohibition on _uncertain_ (Gharar) and _speculative_ (Maisir) transactions**  \n3. **Prohibition of sinful investment** (relates to Sharia screening: alcohol, gambling, etc.)  \n4. **Requirement for all products to be backed by _tangible assets_** (not just by paper contracts or intangible rights)\n\nNow, let's check the options carefully:\n\n- The correct blanks should be:  \n  **Interest, Uncertain, Speculative, Tangible assets**\n\nThat's Option G:\n\n**G. Interest, Uncertain, Speculative, Tangible assets**\n\n---\n\n**Final Answer:**  \n**G. Interest, Uncertain, Speculative, Tangible assets**",
+    "ground_truth": "G",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 6,
+    "input": " Which of the following are the three broad groups of organizational characteristics segmentation criteria?\n\nOptions:\nA. Organizational size, industry type, and geographical location.\nB. Organizational size, industry type, and age of company.\nC. Organizational size, industry type, and customer base.\nD. Organizational size, industry type, and annual revenue.\nE. Organizational size, industry type, and business strategy.\nF. None of the above.\nG. Organizational size, industry type, and gender.\nH. Organizational size, industry type, and number of branches.\nI. Psychographics, purchaser, and behavioural criteria.\nJ. Organizational size, industry type, and number of employees.\n",
+    "output": "The correct answer is:\n\n**A. Organizational size, industry type, and geographical location.**\n\nThese are commonly recognized as the three broad groups of organizational characteristics used as segmentation criteria, especially in **business-to-business (B2B) market segmentation**. They allow organizations to segment their markets based on size (small, medium, large), type of industry (manufacturing, service, government, etc.), and where the organization operates (region, country, city, etc.).\n\n**References:**  \n- Kotler, P., & Keller, K. (Marketing Management)  \n- Hutt & Speh (Business Marketing Management)\n\n**Other options** include variables that are specific or overlapping with the above criteria, but A mentions the three broadest and most commonly used groups.",
+    "ground_truth": "A",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 7,
+    "input": " Pine and Gilmore (1999) derive four distinct realms of experience, based on two dimensions. What are these dimensions?\n\nOptions:\nA. Customer participation and environmental acquisition.\nB. Environmental acquisition and environmental relationship.\nC. Customer retention and environmental relationship.\nD. Customer participation and environmental relationship.\nE. Customer acquisition and customer retention.\nF. Customer participation and customer relationship.\nG. Customer acquisition and environmental participation.\nH. Environmental participation and customer relationship.\nI. Customer retention and customer relationship.\nJ. Customer acquisition and environmental relationship.\n",
+    "output": "The correct answer is:\n\n**A. Customer participation and environmental acquisition.**\n\nHowever, to clarify:\n\nAccording to Pine and Gilmore (1999) in their work \"The Experience Economy,\" the two dimensions they identify are:\n- **Customer participation** (ranging from passive to active)\n- **Connection (or environmental relationship)** (ranging from absorption to immersion)\n\nSo, among the given options, the closest correct pairing is:\n\n**D. Customer participation and environmental relationship.**\n\nTherefore, the correct answer is:\n\n**D. Customer participation and environmental relationship.**",
+    "ground_truth": "D",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 8,
+    "input": " Which type of research methods are designed to elicit responses to predetermined, standardized questions from many respondents?\n\nOptions:\nA. Non-probability.\nB. Cross-sectional.\nC. Qualitative.\nD. Ethnographic.\nE. Longitudinal.\nF. Experimental.\nG. Probability.\nH. Observational.\nI. Case Study.\nJ. Quantitative.\n",
+    "output": "The correct answer is:\n\n**J. Quantitative.**\n\nQuantitative research methods are designed to elicit responses to predetermined, standardized questions from many respondents, often using tools such as surveys or structured interviews. This approach allows researchers to collect numerical data and perform statistical analysis.\n\n---\n\n**Explanation of Options:**\n- **A. Non-probability** and **G. Probability** refer to sampling methods, not research methods.\n- **B. Cross-sectional** and **E. Longitudinal** are study designs (when data is collected), not methods of eliciting responses.\n- **C. Qualitative, D. Ethnographic, I. Case Study** focus on open-ended, in-depth data from fewer participants.\n- **F. Experimental** refers to manipulating variables, not the response method per se.\n- **H. Observational** methods involve passive data collection, not predetermined questionnaires.\n\n**Quantitative** is the correct methodological family.",
+    "ground_truth": "J",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 9,
+    "input": "Where the price is set low relative to the competition to gain market share, this strategy is known as:\n\nOptions:\nA. Captive product pricing.\nB. High-low pricing.\nC. Price skimming.\nD. Value added pricing.\nE. Penetration pricing.\nF. Premium pricing.\nG. Cost-plus pricing.\nH. Economy pricing.\nI. Psychological pricing.\nJ. Competitive pricing.\n",
+    "output": "The correct answer is:\n\n**E. Penetration pricing.**\n\n**Explanation:**  \nPenetration pricing is a strategy where the price is set low relative to the competition to quickly gain market share, often used to attract customers to a new product or enter a new market.",
+    "ground_truth": "E",
+    "score": {
+      "correct": true,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": true
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 10,
+    "input": "Once a train pulls out of a station, or an aeroplane takes off or a film starts, those seats are lost and can never be sold. This is referred to as:\n\nOptions:\nA. Immeasurability.\nB. Impalpability.\nC. Variability.\nD. Non-storability.\nE. Indivisibility.\nF. Perishability.\nG. Non-recoverability.\nH. Inseparability.\nI. Heterogeneity.\nJ. Intangibility.\n",
+    "output": "The correct answer is:\n\n**F. Perishability.**\n\n**Explanation:**  \nThe concept being described is **perishability** in services marketing, which means that the service cannot be stored for future use; once the opportunity to deliver the service has passed (e.g., a train seat after departure, a movie seat after the film starts, or an unsold airline seat after takeoff), it is lost forever and cannot be sold in the future. This is a fundamental characteristic of services.",
+    "ground_truth": "F",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 11,
+    "input": "A marketing research firm contracts with clients to conduct a complete marketing research project from data collection, analysis, and reporting. It is a__________ firm.\n\nOptions:\nA. Data collection firm.\nB. Freelance agency.\nC. Data analysis firm.\nD. Survey firm.\nE. Full-service agency.\nF. Tabulation agency.\nG. Marketing agency.\nH. Research firm.\nI. Consultant.\nJ. Field agency.\n",
+    "output": "The correct answer is:\n\n**E. Full-service agency.**\n\nA **full-service agency** handles all aspects of the marketing research process, including data collection, analysis, and reporting, as described in your question.",
+    "ground_truth": "E",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 12,
+    "input": "The six dimensions usually considered to constitute the external marketing environment include all of the following except:\n\nOptions:\nA. Political considerations.\nB. Weather conditions\nC. Personal preferences of the marketing team\nD. Economics issues.\nE. Technology trends\nF. Socio-cultural aspects.\nG. Global factors.\nH. Competitive landscape\nI. Industry regulations\nJ. Environmental concerns\n",
+    "output": "The question asks:  \n**The six dimensions usually considered to constitute the external marketing environment include all of the following except:**\n\nLet's look at the options:\n\n- **A. Political considerations** (YES, valid dimension: \"political/legal\")\n- **B. Weather conditions** (NOT a standard dimension)\n- **C. Personal preferences of the marketing team** (NOT external, this is internal)\n- **D. Economic issues** (YES, valid: \"economic\")\n- **E. Technology trends** (YES, valid: \"technological\")\n- **F. Socio-cultural aspects** (YES, valid: \"social/cultural\")\n- **G. Global factors** (sometimes considered, but not always a \"primary\" among the classic six)\n- **H. Competitive landscape** (YES, \"competitive\")\n- **I. Industry regulations** (covered under political/legal, not always listed separately)\n- **J. Environmental concerns** (more recent, but can be merged with \"political/legal,\" or separated as \"environmental/natural\")\n\n### The classic six dimensions (often called **PESTLE** or **PESTEL**) are:\n1. **Political**\n2. **Economic**\n3. **Social/Cultural**\n4. **Technological**\n5. **Legal**\n6. **Environmental**\n\n**Competitive** is often included in some frameworks (sometimes called the 7th or as part of \"microenvironment\"), but **personal preferences of the marketing team** is not external (that\u2019s internal).\n\n**Weather conditions** is generally not named as a dimension, though specific weather can impact some industries.\n\n**Answer:**\n**C. Personal preferences of the marketing team**\n\nThis is the best answer, since it is definitely **not an external factor** and is not considered one of the six external environmental dimensions in marketing.",
+    "ground_truth": "G",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 13,
+    "input": "What is the term for the 'rule of thumb' type of bias in decision making?\n\nOptions:\nA. Framing bias\nB. Availability bias\nC. Representativeness bias\nD. Self-serving bias\nE. Hindsight bias\nF. Over-confidence bias\nG. Confirmation bias\nH. Optimism bias\nI. Anchoring bias\nJ. Heuristics\n",
+    "output": "The term for the 'rule of thumb' type of bias in decision making is:\n\n**J. Heuristics**\n\n**Explanation:**  \nHeuristics are mental shortcuts or 'rules of thumb' that simplify decision making. While they help people make quick judgments, they can also lead to systematic biases. The other options (A\u2013I) refer to specific types of biases that may arise when using heuristics, but the general term for 'rule of thumb' is **heuristics**.",
+    "ground_truth": "J",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 14,
+    "input": "As what is ensuring that one individual does not carry the burden of a whole work task referred to?\n\nOptions:\nA. Work delegation\nB. Workload balancing\nC. Work distribution\nD. Work specialisation\nE. Work rotation\nF. Work redundancy\nG. Work shift\nH. Work division\nI. Work schedule\nJ. Work design\n",
+    "output": "The correct answer is:  \n**B. Workload balancing**\n\n**Explanation:**  \n\"Ensuring that one individual does not carry the burden of a whole work task\" is most accurately described by **workload balancing**. This refers to the process of distributing work tasks among multiple individuals so that no single person is overwhelmed, and everyone shares responsibilities fairly. \n\nOther options:\n\n- **A. Work delegation**: Assigning tasks from a manager to subordinates.\n- **C. Work distribution**: Similar, but not specific to balancing.\n- **D. Work specialisation**: Focusing individual workers on specific tasks.\n- **E. Work rotation**: Switching jobs/tasks among employees.\n- **F. Work redundancy**: Duplicate roles for backup.\n- **G. Work shift**: Scheduling work at different times.\n- **H. Work division**: Dividing tasks, but not necessarily balancing them.\n- **I. Work schedule**: Planning timing of work.\n- **J. Work design**: Structuring jobs and roles in general.\n\nBut \"**workload balancing**\" specifically describes spreading out the work so one person isn't overloaded.",
+    "ground_truth": "D",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 15,
+    "input": "What theory is built around the principle that 'people make choices regarding how to behave based on values and beliefs'?\n\nOptions:\nA. Social Learning\nB. Contingency\nC. Operant Conditioning\nD. Evolutionary\nE. Classical\nF. Expectancy\nG. Psychoanalytic\nH. Instrumental\nI. Cognitive Dissonance\nJ. Humanistic\n",
+    "output": "The correct answer is: **F. Expectancy**\n\n**Reason:**  \n**Expectancy theory** (often attributed to Victor Vroom) is built around the idea that **people make choices regarding how to behave based on the expected outcomes of their behaviors, which are influenced by their values and beliefs**. Simply put, people choose actions they believe will lead to outcomes they value.\n\nOther options:\n\n- **A. Social Learning:** Focuses on learning through observation.\n- **B. Contingency:** Emphasizes that the best action depends on context.\n- **C. Operant Conditioning/E. Classical:** About learning through reinforcement or association.\n- **D. Evolutionary:** Emphasizes biological adaptation.\n- **G. Psychoanalytic:** Emphasizes unconscious motives.\n- **H. Instrumental:** Often about behavior as a means to an end, but not specifically about values.\n- **I. Cognitive Dissonance:** About discomfort from conflicting beliefs/behaviors, not choice based on values.\n- **J. Humanistic:** Emphasizes personal growth, not specifically about value-based choice.\n\n**Expectancy theory** directly answers the question.",
+    "ground_truth": "F",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 16,
+    "input": "How does lateral communication in an organisation occur?\n\nOptions:\nA. Information is shared only during official meetings.\nB. Information is restricted within a single department.\nC. Information is transferred through external stakeholders.\nD. Information is transferred only through the head of the organisation.\nE. Information is disseminated through public announcements.\nF. Information passes upwards.\nG. Information passes downwards.\nH. Information is a two-way process.\nI. Information passes diagonally between different levels of hierarchy.\nJ. Information passes between different departments and functions.\n",
+    "output": "The correct answer is:\n\n**J. Information passes between different departments and functions.**\n\n**Explanation:**  \nLateral communication (also called horizontal communication) in an organisation refers to the flow of information **between peers, coworkers, or departments at the same organizational level**. This type of communication happens **across different departments and functions**, rather than up (vertical) or down the hierarchy.\n\n**Other options and why they're incorrect:**\n- A, E: These focus on specific channels, not lateral communication.\n- B: Lateral communication is not restricted within a single department.\n- C: Refers to external communication, not internal.\n- D: That is vertical (downward) communication.\n- F: Upward communication.\n- G: Downward communication.\n- H: Describes a process, not a direction.\n- I: Diagonal communication (across levels and departments).\n\n**So, the best description for lateral communication is:**\n\n> **J. Information passes between different departments and functions.**",
+    "ground_truth": "J",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 17,
+    "input": "The stock of the CCC Corporation is currently valued at $12 and is assumed to possess all the properties of geometric Brownian motion. It has an expected annual return of 15%, an annual volatility of 20%, and the annual risk-free is 10%. Using a binomial lattice, determine the price of a call option on CCC stock maturing in 10 monthes time with a strike price of $14 (Let the distance between nodes on your tree be 1 month in length).\n\nOptions:\nA. 50.0\nB. 60.0\nC. 55.0\nD. 44.0\nE. 48.0\nF. 53.0\nG. 42.0\nH. 46.0\nI. 51.0\nJ. 45.0\n",
+    "output": "Let's solve the binomial option pricing problem step by step:\n\n### **Given:**\n- **Current stock price**, \\( S_0 = \\$12 \\)\n- **Expected return (not used in risk-neutral calculation)**, 15%\n- **Annual volatility**, \\( \\sigma = 0.20 \\)\n- **Risk-free rate**, \\( r = 0.10 \\)\n- **Time to maturity**, 10 months = \\( T = \\frac{10}{12} \\) years \\( \\approx 0.8333 \\) years\n- **Strike price**, \\( K = \\$14 \\)\n- **Step size**, \\( \\Delta t = 1 \\) month \\( = \\frac{1}{12} \\) years\n- **Number of steps**, \\( N = 10 \\)\n\nLet's calculate the values for the Cox-Ross-Rubinstein (CRR) binomial model.\n\n---\n\n## **Step 1: Compute \\( u \\), \\( d \\), \\( p \\)**\n\n\\[\n\\Delta t = \\frac{1}{12}\n\\]\n\\[\nu = e^{\\sigma \\sqrt{\\Delta t}}\n\\]\n\\[\nd = e^{-\\sigma \\sqrt{\\Delta t}} = \\frac{1}{u}\n\\]\n\\[\np = \\frac{e^{r \\Delta t} - d}{u - d}\n\\]\n\nLet's calculate:\n\n- \\( \\sqrt{\\Delta t} = \\sqrt{\\frac{1}{12}} \\approx 0.2887 \\)\n- \\( u = e^{0.20 \\times 0.2887} = e^{0.05774} \\approx 1.0594 \\)\n- \\( d = e^{-0.20 \\times 0.2887} = e^{-0.05774} \\approx 0.9438 \\)\n- \\( e^{r \\Delta t} = e^{0.10 \\times \\frac{1}{12}} = e^{0.008333} \\approx 1.00837 \\)\n- \\( p = \\frac{1.00837 - 0.9438}{1.0594 - 0.9438} = \\frac{0.06457}{0.1156} \\approx 0.5588 \\)\n\n---\n\n## **Step 2: Calculate stock prices at expiry (at each node at step 10)**\n\nAt node \\( j \\) (number of up-moves), the price is:\n\\[\nS_{10,j} = S_0 \\cdot u^j \\cdot d^{10-j}\n\\]\n\nFor \\( j = 0 \\) to 10.\n\n---\n\n## **Step 3: Calculate Option Payoff at Expiry**\n\nCall payoff at each node:\n\\[\nC_{10, j} = \\max(S_{10,j} - K, 0)\n\\]\n\n---\n\n## **Step 4: Work Backwards**\n\nAt each node, the price is:\n\\[\nC_{n, j} = e^{-r \\Delta t} [p C_{n+1, j+1} + (1-p) C_{n+1, j}]\n\\]\n\nDo this until you reach \\( n=0 \\).\n\n---\n\n## **Step 5: Calculate the Terminal Stock Prices and Option Payoff**\n\nLet\u2019s compute \\( S_{10, j} \\):\n\nFirst, precompute \\( u = 1.0594 \\), \\( d = 0.9438 \\).\n\nAt j up-moves:\n\\[\nS_{10,j} = 12 \\times 1.0594^{j} \\times 0.9438^{10-j}\n\\]\n\nLet\u2019s compute for \\( j = 0 \\) and \\( j = 10 \\):\n\n- \\( j=0 \\): all downs.\n  \\[\n  S_{10,0} = 12 \\times 0.9438^{10} \\approx 12 \\times 0.5057 \\approx 6.07\n  \\]\n- \\( j=10 \\): all ups.\n  \\[\n  S_{10,10} = 12 \\times 1.0594^{10} \\approx 12 \\times 1.7728 \\approx 21.27\n  \\]\n\nIn between:\n\nGenerally:\n\\[\nS_{10,j} = 12 \\times (1.0594/0.9438)^j \\times 0.9438^{10}\n= 12 \\times (1.1226)^j \\times 0.5057\n= 6.07 \\times (1.1226)^j\n\\]\n\nSo for \\( j = 0 \\) to \\( 10 \\):\n\n| j | \\( S_{10,j} \\)           |\n|---|--------------------------|\n| 0 | 6.07                     |\n| 1 | 6.81                     |\n| 2 | 7.64                     |\n| 3 | 8.57                     |\n| 4 | 9.63                     |\n| 5 | 10.81                    |\n| 6 | 12.14                    |\n| 7 | 13.63                    |\n| 8 | 15.30                    |\n| 9 | 17.19                    |\n|10 | 19.32                    |\n\nNow, the **payoff** \\( C_{10, j} = \\max(S_{10, j} - 14, 0) \\):\n\n| j | \\( S_{10, j} \\) | Payoff      |\n|---|-------------|--------------|\n| 0 | 6.07        | 0            |\n| 1 | 6.81        | 0            |\n| 2 | 7.64        | 0            |\n| 3 | 8.57        | 0            |\n| 4 | 9.63        | 0            |\n| 5 | 10.81       | 0            |\n| 6 | 12.14       | 0            |\n| 7 | 13.63       | 0            |\n| 8 | 15.30       | 1.30         |\n| 9 | 17.19       | 3.19         |\n|10 | 19.32       | 5.32         |\n\n---\n\n## **Step 6: Work Backwards**\n\nNow, let's use the binomial formula:\n\nThe price of the option is:\n\\[\nC_0 = e^{-r T} \\sum_{j=0}^{10} \\binom{10}{j} p^j (1-p)^{10-j} C_{10, j}\n\\]\n\nPlug in:\n\n- \\( e^{-0.10 \\times 0.8333} = e^{-0.08333} \\approx 0.9200 \\)\n\nPayoff for \\( j = 8, 9, 10 \\):\n\n\\[\nC_0 = 0.9200 \\times \\sum_{j=8}^{10} \\binom{10}{j} p^j (1-p)^{10-j} \\times (\\text{Payoff}_j)\n\\]\n\n- \\( p = 0.5588 \\)\n- \\( 1 - p = 0.4412 \\)\n\n**Calculate each term:**\n\n#### **Binomial Terms:**\n\n\\[\n\\binom{10}{8} = 45,\\quad \\binom{10}{9} = 10,\\quad \\binom{10}{10} = 1\n\\]\n\n#### **Probabilities:**\n\n\\[\np^8 (1-p)^2 = (0.5588)^8 \\times (0.4412)^2 \\\\\n\\]\n\\[\np^9 (1-p)^1 = (0.5588)^9 \\times (0.4412)^1 \\\\\n\\]\n\\[\np^{10} (1-p)^0 = (0.5588)^{10} \\\\\n\\]\n\n#### **Numerical values:**\n\nLet's calculate them:\n\n1. \\( (0.5588)^8 \\):\n   - \\( \\ln(0.5588) \\approx -0.582 \\)\n   - \\( -0.582 \\times 8 = -4.656 \\)\n   - \\( e^{-4.656} \\approx 0.00953 \\)\n\n2. \\( (0.4412)^2 = 0.1947 \\)\n   - Total: \\( 0.00953 \\times 0.1947 = 0.001855 \\)\n\nTerm \\( j=8 \\): \\( 45 \\times 0.001855 = 0.08345 \\)\n\n   - Multiply by payoff: \\( 0.08345 \\times 1.30 = 0.1085 \\)\n\n2. \\( (0.5588)^9 = 0.00953 \\times 0.5588 \\approx 0.005325 \\)\n   - \\( (0.4412)^1 = 0.4412 \\)\n   - Total: \\( 0.005325 \\times 0.4412 = 0.002348 \\)\n   - \\( \\binom{10}{9} = 10 \\)\n   - \\( 10 \\times 0.002348 = 0.02348 \\)\n   - Multiply by payoff \\( 0.02348 \\times 3.19 = 0.07493 \\)\n\n3. \\( (0.5588)^{10} = 0.005325 \\times 0.5588 \\approx 0.002975 \\)\n   - \\( \\binom{10}{10} = 1 \\)\n   - Multiply by payoff: \\( 0.002975 \\times 5.32 = 0.01582 \\)\n\nSum up:\n\n\\[\n\\text{Total (before discount):} = 0.1085 + 0.07493 + 0.01582 = 0.1992\n\\]\nDiscount at \\( 0.92 \\):\n\\[\n0.1992 \\times 0.92 \\approx 0.1833\n\\]\n\nSo **option price is about $0.18**, which is much lower than any of the provided options.\n\n---\n\n## **Problem!**\n\nGiven that all provided answers are in the 40s and 50s, it seems there's **confusion about the question**, or perhaps the question is testing something else.\n\nLet's check for an error:\n\n### **Check units:**\n\nIs the *current stock price* $12, or is it $120? Because $50-$60 on a $12 stock is nonsensical for a call.\n\nAlso, is **annual volatility 20%** actually 20/USD per year? Unlikely.\n\nBut, let's be systematic.\n\nFor a European call option on a non-dividend stock, the **binomial model typically gives a small value for out-of-the-money options** (here $S_0 = 12$, $K = 14$).\n\nLet's try Black-Scholes for comparison:\n\n### **Black-Scholes:**\n\n\\[\nd_1 = \\frac{\\ln(S/K) + (r + 0.5 \\sigma^2) T}{\\sigma \\sqrt{T}}\n\\]\n\\[\nd_1 = \\frac{\\ln(12/14) + (0.10 + 0.5 \\times 0.20^2) \\times 0.8333}{0.20 \\sqrt{0.8333}}\n\\]\n\\[\n\\ln(12/14) = -0.15415\n\\]\n\\[\n(0.10 + 0.5 \\times 0.04) = 0.12\n\\]\n\\[\n0.12 \\times 0.8333 = 0.1\n\\]\n\\[\nNumerator = -0.15415 + 0.1 = -0.05415\n\\]\n\\[\nDenominator = 0.20 \\times 0.9129 = 0.18258\n\\]\n\\[\nd_1 = -0.05415 / 0.18258 = -0.2967\n\\]\n\\[\nd_2 = d_1 - 0.20 \\times 0.9129 = -0.2967 - 0.18258 = -0.4793\n\\]\n\\[\nN(d_1) \\approx 0.3859\n\\]\n\\[\nN(d_2) \\approx 0.3155\n\\]\n\\[\nC = S_0 N(d_1) - K e^{-r T} N(d_2)\n\\]\n\\[\nK e^{-r T} = 14 \\times e^{-0.10 \\times 0.8333} = 14 \\times 0.9200 = 12.88\n\\]\n\\[\nC = 12 \\times 0.3859 - 12.88 \\times 0.3155\n= 4.63 - 4.06 = 0.57\n\\]\n\nAgain, option price is less than $1.\n\n### **Conclusion:**\n\nUnless there is a data error in the question (i.e., the current stock price is much higher, perhaps $120 or $140), **the correct price must be much less than any of the options provided.**\n\n---\n\n## **Final Answer**\n\nGiven the data, the binomial and Black-Scholes calculation both return the option price around $0.20\u20130.57.  \n**None of the provided answers is correct.**\n\n**If you wish to check calculations with $S_0 = 120$, the price would be much higher and match those options.**  \nBut *with $S_0 = 12$ as stated*, **the price is about $0.20\u20130.60**.\n\n---\n\n**Therefore, the correct answer is NOT among the provided options.**\n\nIf this is a typo and the stock price is $120, the option would be \"deep in the money,\" with an intrinsic value of $120 - $14 = $106; then you might have to select the closest from the provided options. But with $12, none matches.  \n**If you need the price for $S_0 = 120$, let me know and I'll recalculate.**",
+    "ground_truth": "F",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 18,
+    "input": "George is seen to place an even-money $100,000 bet on the Bulls to win the NBA Finals. If George has a logarithmic utility-of-wealth function and if his current wealth is $1,000,000, what must he believe is the minimum probability that the Bulls will win?\n\nOptions:\nA. 0.525\nB. 0.800\nC. 0.450\nD. 0.575\nE. 0.750\nF. 0.350\nG. 0.650\nH. 0.300\nI. 0.700\nJ. 0.400\n",
+    "output": "**Given:**\n\n- George has wealth \\( W = \\$1{,}000{,}000 \\)\n- Bets \\$100,000 at even money (i.e., double-or-nothing) on the Bulls\n- Utility function: \\( U(x) = \\ln(x) \\)\n- Wants minimum probability \\( p \\) such that the bet is optimal (i.e., **expected utility increases**)\n\n---\n\n### Step 1: **Outcomes**\n\n- **If Bulls win:** \\( W_{win} = \\$1{,}000{,}000 + \\$100{,}000 = \\$1{,}100{,}000 \\)\n- **If Bulls lose:** \\( W_{lose} = \\$1{,}000{,}000 - \\$100{,}000 = \\$900{,}000 \\)\n\n---\n\n### Step 2: **Expected Utility Calculation**\n\nLet \\( p = \\) probability Bulls win.\n\n\\[\n\\text{Expected Utility (EU)} = p \\cdot \\ln(1{,}100{,}000) + (1-p) \\cdot \\ln(900{,}000)\n\\]\n\\[\n\\text{EU (no bet)} = \\ln(1{,}000{,}000)\n\\]\n\nGeorge should be willing to **bet if**:\n\\[\n\\text{Expected Utility} \\geq \\text{Utility with no bet}\n\\]\n\nPlug in:\n\\[\np \\cdot \\ln(1{,}100{,}000) + (1-p) \\cdot \\ln(900{,}000) \\geq \\ln(1{,}000{,}000)\n\\]\n\n---\n\n### Step 3: **Solving for \\( p \\)**\n\n\\[\np \\ln(1{,}100{,}000) + (1-p) \\ln(900{,}000) = \\ln(1{,}000{,}000)\n\\]\n\n\\[\np \\ln(1{,}100{,}000) + \\ln(900{,}000) - p \\ln(900{,}000) = \\ln(1{,}000{,}000)\n\\]\n\n\\[\np [\\ln(1{,}100{,}000) - \\ln(900{,}000)] = \\ln(1{,}000{,}000) - \\ln(900{,}000)\n\\]\n\n\\[\np = \\frac{\\ln(1{,}000{,}000) - \\ln(900{,}000)}{\\ln(1{,}100{,}000) - \\ln(900{,}000)}\n\\]\n\n---\n\n### Step 4: **Plug in Numbers**\n\nLet's use \\( \\ln(1,000,000) = 13.8155 \\)\n\n\\[\n\\ln(900,000) = \\ln(9 \\times 10^5) = \\ln(9) + \\ln(10^5) = 2.1972 + 11.5129 = 13.7101\n\\]\n\\[\n\\ln(1,100,000) = \\ln(11 \\times 10^5) = \\ln(11) + \\ln(10^5) = 2.3979 + 11.5129 = 13.9108\n\\]\n\nSo:\n\\[\np = \\frac{13.8155 - 13.7101}{13.9108 - 13.7101} = \\frac{0.1054}{0.2007} \\approx 0.525\n\\]\n\n---\n\n### Step 5: **Find the Matching Option**\n\n**A. 0.525** is the answer.\n\n---\n\n## **Final Answer:**\n**A. 0.525** is the minimum probability George must believe for the bet to be optimal according to his logarithmic utility.",
+    "ground_truth": "A",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 19,
+    "input": "Boy Alcott and Jon Buxton are partners in a steel company. They share the net income in proportion to their average investments. On January 1, Alcott invested $4,000 and Buxton invested $5,000. On May 1, Alcott invested an additional $2,000 and Buxton invested $1,750. On September 1, Alcott withdrew $500. On November 1, each partner invested an additional $2,000. The net profit for the year was $8,736. Find each partner's share of the profit.\n\nOptions:\nA. Alcott's share: $3,936, Buxton's share: $4,800\nB. Alcott's share: $4,004, Buxton's share: $4,732\nC. Alcott's share: $4,200, Buxton's share: $4,536\nD. Alcott's share: $4,800, Buxton's share: $3,936\nE. Alcott's share: $5,000, Buxton's share: $3,736\nF. Alcott's share: $3,868, Buxton's share: $4,868\nG. Alcott's share: $4,368, Buxton's share: $4,368\nH. Alcott's share: $4,732, Buxton's share: $4,004\nI. Alcott's share: $4,500, Buxton's share: $4,236\nJ. Alcott's share: $5,236, Buxton's share: $3,500\n",
+    "output": "Let's break down the **average investment** for both Alcott and Buxton and then split the profit according to their average investments.\n\n### 1. **Track the Investment Timeline for Each Partner**\n\n#### **Alcott:**\n- Jan 1: $4,000\n- May 1: +$2,000 (new total: $6,000)\n- Sept 1: -$500 (new total: $5,500)\n- Nov 1: +$2,000 (new total: $7,500)\n\n#### **Buxton:**\n- Jan 1: $5,000\n- May 1: +$1,750 (new total: $6,750)\n- Nov 1: +$2,000 (new total: $8,750)\n\n### 2. **Compute Average Investment (Weighted Average)**\n\n- **January 1\u2013April 30**: 4 months (1/3 year)\n- **May 1\u2013August 31**: 4 months (1/3 year)\n- **September 1\u2013October 31**: 2 months (1/6 year)\n- **November 1\u2013December 31**: 2 months (1/6 year)\n\n#### **Alcott:**\n- **$4,000** for 4 months: $4,000 \u00d7 4 = $16,000\n- **$6,000** for 4 months: $6,000 \u00d7 4 = $24,000\n- **$5,500** for 2 months: $5,500 \u00d7 2 = $11,000\n- **$7,500** for 2 months: $7,500 \u00d7 2 = $15,000\n- **Total \"investment-months\"** = $16,000 + $24,000 + $11,000 + $15,000 = $66,000\n\n#### **Buxton:**\n- **$5,000** for 4 months: $5,000 \u00d7 4 = $20,000\n- **$6,750** for 6 months: $6,750 \u00d7 6 = $40,500  (May 1 to Oct 31 is 6 months)\n- **$8,750** for 2 months: $8,750 \u00d7 2 = $17,500  (Nov and Dec)\n- **Total \"investment-months\"** = $20,000 + $40,500 + $17,500 = $78,000\n\n#### **But to average, divide by 12:**\n- **Alcott average investment:** $66,000 / 12 = $5,500\n- **Buxton average investment:** $78,000 / 12 = $6,500\n\n### 3. **Profit-Sharing Ratio**\n\n- **Alcott : Buxton = $5,500 : $6,500**\n- Divide by 500: **Alcott : Buxton = 11 : 13**\n\n### 4. **Split the Profit**\n\n- **Total profit:** $8,736\n\n- **Alcott's share:** \\( \\frac{11}{24} \\times 8,736 = 4,004 \\)\n- **Buxton's share:** \\( \\frac{13}{24} \\times 8,736 = 4,732 \\)\n\n---\n\n## **Final Answers:**\n\n> **B. Alcott's share: $4,004, Buxton's share: $4,732**",
+    "ground_truth": "B",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": 20,
+    "input": "TheAlforsCompany had a beginning inventory of $30,000, Jan 1, 1974. During the year, purchases amounted to $87,500, net sales to $102,000. Assuming that the gross profit rate is 40% of the net sales, what is the ending inventory using the gross profit method of inventory evaluation?\n\nOptions:\nA. $50,200\nB. $45,100\nC. $60,400\nD. $56,300\nE. $58,800\nF. $54,400\nG. $65,500\nH. $62,900\nI. $48,700\nJ. $52,600\n",
+    "output": "Let's break down the problem using the **gross profit method**.\n\n**Given:**\n- Beginning Inventory: $30,000\n- Purchases: $87,500\n- Net Sales: $102,000\n- Gross Profit Rate: 40% of Net Sales\n\n---\n\n### Step 1: Calculate Cost of Goods Sold (COGS)\n\nGross profit = Gross profit rate \u00d7 Net sales  \nGross profit = 40% \u00d7 $102,000 = **$40,800**\n\nCOGS = Net sales - Gross profit  \nCOGS = $102,000 - $40,800 = **$61,200**\n\n---\n\n### Step 2: Find Cost of Goods Available for Sale\n\nBeginning inventory + Purchases  \n= $30,000 + $87,500 = **$117,500**\n\n---\n\n### Step 3: Compute Ending Inventory\n\nEnding Inventory = Cost of Goods Available for Sale - COGS  \nEnding Inventory = $117,500 - $61,200 = **$56,300**\n\n---\n\n### Final Answer\n\n**D. $56,300**",
+    "ground_truth": "D",
+    "score": {
+      "correct": false,
+      "mode": "majority",
+      "votes": [
+        {
+          "model": "gpt-4o-mini",
+          "correct": false
+        }
+      ]
+    }
+  }
+]

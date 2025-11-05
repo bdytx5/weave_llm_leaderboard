@@ -62,10 +62,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/results/models.json
-    - assets/results/gpt-4-mini_fake_20251024_045213/
-    - assets/results/gpt-3-mini_fake_20251024_045213/
+    - assets/results/openai_gpt-4.1_20251103_015714/
+    - assets/results/openai_gpt-5-nano_20251103_020015/
     - assets/results/gpt-5-mini_20251024_045213/
-    - assets/results/gpt-5-nano_20251030_052520/
     - assets/images/logo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see

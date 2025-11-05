@@ -176,31 +176,8 @@ class CategoryCharts extends StatelessWidget {
                     ),
                     titlesData: FlTitlesData(
                       show: true,
-                      bottomTitles: AxisTitles(
-                        sideTitles: SideTitles(
-                          showTitles: true,
-                          getTitlesWidget: (value, meta) {
-                            if (value.toInt() >= sortedEntries.length) {
-                              return const SizedBox.shrink();
-                            }
-                            final modelName = sortedEntries[value.toInt()].key;
-                            // Show abbreviated model name
-                            final displayName = modelName.length > 12
-                                ? '${modelName.substring(0, 10)}...'
-                                : modelName;
-                            return Padding(
-                              padding: const EdgeInsets.only(top: 8),
-                              child: Text(
-                                displayName,
-                                style: const TextStyle(
-                                  color: Colors.white70,
-                                  fontSize: 10,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            );
-                          },
-                        ),
+                      bottomTitles: const AxisTitles(
+                        sideTitles: SideTitles(showTitles: false),
                       ),
                       leftTitles: AxisTitles(
                         sideTitles: SideTitles(
@@ -265,6 +242,35 @@ class CategoryCharts extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 12),
+              ...sortedEntries.asMap().entries.map((entry) {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 4),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                          color: modelColors[entry.key % modelColors.length],
+                          borderRadius: BorderRadius.circular(2),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          entry.value.key,
+                          style: const TextStyle(
+                            fontSize: 12,
+                            color: Colors.white70,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              }),
             ],
           ),
         ),
@@ -351,31 +357,8 @@ class CategoryCharts extends StatelessWidget {
                     ),
                     titlesData: FlTitlesData(
                       show: true,
-                      bottomTitles: AxisTitles(
-                        sideTitles: SideTitles(
-                          showTitles: true,
-                          getTitlesWidget: (value, meta) {
-                            if (value.toInt() >= sortedEntries.length) {
-                              return const SizedBox.shrink();
-                            }
-                            final modelName = sortedEntries[value.toInt()].key;
-                            // Show abbreviated model name
-                            final displayName = modelName.length > 12
-                                ? '${modelName.substring(0, 10)}...'
-                                : modelName;
-                            return Padding(
-                              padding: const EdgeInsets.only(top: 8),
-                              child: Text(
-                                displayName,
-                                style: const TextStyle(
-                                  color: Colors.white70,
-                                  fontSize: 10,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            );
-                          },
-                        ),
+                      bottomTitles: const AxisTitles(
+                        sideTitles: SideTitles(showTitles: false),
                       ),
                       leftTitles: AxisTitles(
                         sideTitles: SideTitles(
@@ -440,6 +423,35 @@ class CategoryCharts extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 12),
+              ...sortedEntries.asMap().entries.map((entry) {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 4),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                          color: modelColors[entry.key % modelColors.length],
+                          borderRadius: BorderRadius.circular(2),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          entry.value.key,
+                          style: const TextStyle(
+                            fontSize: 12,
+                            color: Colors.white70,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              }),
             ],
           ),
         ),

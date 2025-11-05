@@ -1,0 +1,142 @@
+[
+  {
+    "sample_id": 1,
+    "input": "Please generate a sentence:\n1) with exactly 12 words;\n2) with the 4th, 8th, 11th words to be '321.70', 'one-meter', 'finish' respectively.",
+    "output": "Runners achieved a 321.70 pace before the one-meter sprint toward finish line.",
+    "ground_truth": "Sam Scarano recorded 321.70 points on the one-meter board to finish 13th.",
+    "score": true
+  },
+  {
+    "sample_id": 2,
+    "input": "Please generate a sentence:\n1) with exactly 16 words;\n2) with the 4th, 8th, 11th words to be 'me', 'there', 'go' respectively.",
+    "output": "Approach life with me as a guide there to learn go boldly through storms and grow.",
+    "ground_truth": "\"They told me if i went there, it would go smooth and get me better.",
+    "score": true
+  },
+  {
+    "sample_id": 3,
+    "input": "Please generate a sentence:\n1) with exactly 19 words;\n2) with the 4th, 8th, 11th words to be 'suspect', 'home', 'hospital' respectively.",
+    "output": "The detective notices suspect activity around the home of a hospital patient who refused care yesterday, implying hidden danger.",
+    "ground_truth": "She began to suspect when she got home from the hospital and rolled over on the floor in pain.",
+    "score": true
+  },
+  {
+    "sample_id": 4,
+    "input": "Please generate a sentence:\n1) with exactly 16 words;\n2) with the 4th, 8th, 11th words to be 'nearly', 'whom', 'simply' respectively.",
+    "output": "During difficult years, nearly every decision tests whom we trust, simply revealing inner resilience and clarity.",
+    "ground_truth": "(Outside of the nearly one-quarter of respondents whom we believe simply won\u2019t admit it.)",
+    "score": true
+  },
+  {
+    "sample_id": 5,
+    "input": "Please generate a paragraph:\n1) with exactly 7 sentences;\n2) not containing the word 'there';\n3) not containing the word 'this';\n4) not containing the word 'is'.",
+    "output": "On a quiet morning, birds sing softly above a calm lake. A gentle breeze carries scents of pine and rain across the path. A traveler follows a winding road, guided by distant bells. Sunlight spills over green hills, painting warm colors on distant roofs. Hushed footsteps mark the rhythm as steps fall in time with breathing. Even in shadows, hope glows softly within every traveler. Nightfall comes gently, wrapping lands in velvet quiet and stars.",
+    "ground_truth": "He was a modest success in the swing era. He worked well with Mario Lanza in two recording sessions at Republic Studios in Hollywood, including a famous version of Granada. Ray Sinatra conducted Mario Lanza's 1950 Be My Love, the singer's first single to sell a million copies. Sinatra would conduct many of Lanza's future non-operatic recording and radio show songs. Ray Sinatra was bandleader for Lanza on an NBC radio show in 1951 that pushed Lanza's expected earnings up to $750,000 for the year. In 1954, Sinatra led the orchestra for the Ziegfeld Follies at Sands Hotel and Casino, Las Vegas, with choreographer Bob Gilbert. For many years he was bandleader at the Tropicana Las Vegas.",
+    "score": true
+  },
+  {
+    "sample_id": 6,
+    "input": "Please generate a paragraph:\n1) with exactly 3 sentences;\n2) not containing the word 'there';\n3) not containing the word 'this';\n4) not containing the word 'is'.",
+    "output": "A quiet morning greeted the village with soft light and gentle birds. People traded stories at the market while carts rolled by and laughter drifted. A cool breeze carried the scent of fresh herbs and flowers, bringing calm to every heart.",
+    "ground_truth": "In April 2001, Ruffo was sighted in Duncan, Oklahoma, apparently visiting several community banks in an attempt to open an account so he could receive US$250 million of wire transfers from Nigeria. But when authorities went to capture him in Duncan, Ruffo had already left town. Later that year, his wife Linda filed for divorce, citing spousal abandonment, which was granted.",
+    "score": true
+  },
+  {
+    "sample_id": 7,
+    "input": "Please generate a paragraph:\n1) with exactly 4 sentences;\n2) not containing the word 'there';\n3) not containing the word 'this';\n4) not containing the word 'is'.",
+    "output": "A quiet dawn spreads over the harbor, painting calm tones along the water. Golden gulls glide on a gentle breeze above wooden masts. A lone fisherman moves quietly, threading lines past ropes and nets. Soft light warms painted walls as morning commuters begin their rounds.",
+    "ground_truth": "The Nike Hercules was deployed starting in June 1958. First deployed to Chicago, 393 Hercules ground systems were manufactured. By 1960 ARADCOM had 88 Hercules batteries and 174 Ajax batteries, defending 23 zones across 30 states. Peak deployment was in 1963 with 134 Hercules batteries not including the US Army Hercules batteries deployed in Germany, Greece, Greenland, Italy, Korea, Okinawa, Taiwan, and Turkey.",
+    "score": true
+  },
+  {
+    "sample_id": 8,
+    "input": "Please generate a paragraph:\n1) with exactly 4 sentences;\n2) not containing the word 'there';\n3) not containing the word 'of';\n4) not containing the word 'and'.",
+    "output": "Morning light shines on quiet streets. Bird songs rise as skies glow pink. A lone poet writes about memory. Dusk settles over calm hills.",
+    "ground_truth": "Denver was decommissioned on 14 August 2014 at Joint Base Pearl Harbor-Hickam in Hawaii. She had been the oldest active duty ship in the US Navy behind . Upon Denver's decommissioning,  became the Navy's second oldest ship. The US government has offered to sell the ship to Malaysia to replace KD Sri Inderapura which was destroyed by fire in an accident in 2009.",
+    "score": true
+  },
+  {
+    "sample_id": 9,
+    "input": "Please generate a paragraph:\n1) with exactly 9 sentences;\n2) not containing the word 'be';\n3) not containing the word 'this';\n4) not containing the word 'is'.",
+    "output": "Morning light touched the park softly. A gentle breeze carried the scent of pine and rain. People moved with calm pace, coffee cups in hand. A sparrow hopped along a low stone wall, chirping. Children traced chalk circles on the sidewalk while a dog trotted nearby. Leaves shimmered, turning yellow, copper, and red as clouds drifted. An old man sat near a bench, watching pigeons drift down from the eaves. A distant train hummed, then faded into the morning hush. Quiet warmth spread through every corner, turning routine into memory.",
+    "ground_truth": "The Miwok Native American tribe settled the area around the Cosumnes River Preserve many centuries ago. They survived up through the 1900s with a 1910 census counting 670 Miwok Native Americans left. According to a 1770 estimate, there were approximately 9000 Miwok present.[7] Population density for the Miwok tribe was about 10 persons per square mile which may have been the most out of any California tribe.[8] The entire Miwok tribe consisted of 28 small groups which could range from 300 to 475 people. The Miwok people ate a diet consisting of acorns, various types of other seeds, deer, and fish. The local Miwok people practiced burning and other management practices to shape the land to create more opportunity for food. Through these methods of enhancing floodplains in the area, fish species may have had lower mortality rates and increased growth.[9] After the mid 1700s, the Miwok way of life started to change with the arrival of the Spanish.",
+    "score": true
+  },
+  {
+    "sample_id": 10,
+    "input": "Please generate a paragraph:\n1) with exactly 3 sentences;\n2) not containing the word 'be';\n3) not containing the word 'this';\n4) not containing the word 'and'.",
+    "output": "Soft dawn light spills over the hills, inviting quiet thoughts. A small river runs slow, reflecting orange clouds above. Hope grows in quiet hearts, as paths unfold toward distant shores.",
+    "ground_truth": "The singing quail's breeding season appears to span from February to October. Broods of two to four have been recorded in Yucat\u00e1n. Little else is known about its breeding phenology.",
+    "score": true
+  },
+  {
+    "sample_id": 11,
+    "input": "Please generate a paragraph:\n1) with exactly 5 sentences;\n2) not containing the word 'there';\n3) not containing the word 'this';\n4) not containing the word 'is'.",
+    "output": "Bright dawn colors painted the skyline as birds sang softly. A gentle breeze carried the scent of coffee from a nearby cafe. People walked along the park path, sharing small smiles and quiet stories. The river reflected clouds like mirrors, inviting curious minds to wander. Sunset brought warmth and a calm glow that lingered until night.",
+    "ground_truth": "Burnett was born in Llwynypia in the Rhondda Valley.  He studied Physics at Jesus College, Oxford obtaining a BA degree in 1975 then a DPhil degree in 1979.  He held academic positions in Physics at the University of Colorado, Imperial College and the University of Oxford before taking up the role of vice chancellor at the University of Sheffield in 2007. During his time at the University of Oxford he was appointed Chairman of Physics and then Head of the Division of Mathematical, Physical and Life Sciences.  His research includes the study of Bose\u2013Einstein condensates.",
+    "score": true
+  },
+  {
+    "sample_id": 12,
+    "input": "Please generate a paragraph:\n1) with exactly 3 sentences;\n2) not containing the word 'there';\n3) not containing the word 'this';\n4) not containing the word 'is'.",
+    "output": "Moonlight washed over the harbor as a gentle wind carried distant laughter. A lone boat drifted past glowing buoys, and memories stirred in quiet hearts. At dawn, colors began to bloom, and every wave whispered promises for a brighter day.",
+    "ground_truth": "German forces crossed the Seine on 9 June, cutting off the 51st (Highland) Division north of the river, two days after 52nd (Lowland) Division had begun to land and the assembly of the division was changed to Rennes in Brittany; the 157th (Highland Light Infantry) Brigade which arrived first, was directed to Beaumont near Le Mans, the rest of the division to follow on. The 1st Canadian Infantry Brigade of the 1st Canadian Infantry Division began its arrival at Brest on 11 June and was sent to Sabl\u00e9-sur-Sarthe, on the assumption that two fresh divisions would be enough to allow the Tenth Army and attached British troops to retreat through them and take up positions prepared around the Brest peninsula. That day, the Anglo-French Supreme War Council met at Briare and General Charles de Gaulle (Minister of War) was sent to Rennes to survey progress on the redoubt; on 12 June, De Gaulle reported that Quimper would be a favourable place for the government to retreat to, since it would be easy to take ship to England or Africa, since the prospect of maintaining a redoubt in Brittany was non-existent.",
+    "score": true
+  },
+  {
+    "sample_id": 13,
+    "input": "Please generate a paragraph:\n1) with exactly 5 sentences;\n2) not containing the word 'there';\n3) not containing the word 'this';\n4) not containing the word 'is'.",
+    "output": "Bright dawn paints the skyline, and curious minds greet the new day. A gentle breeze carries the scent of pine and fresh rain. Neighbors wave from porches as cups clink softly. Plans unfold slowly, guiding eager hands toward small wins. Joy grows when stories bloom under quiet stars at night.",
+    "ground_truth": "Born in Junction City, Kansas, Mary was the third of five daughters of Bertrand Rockwell (1844-1930), a captain of the Army and successful grain merchant and banker, and Julia Marshall Snyder (1850-1947), a vital woman who was the first historian for the parish known today as Grace and Holy Trinity Cathedral of the Episcopal Diocese of West Missouri, in Kansas City, Missouri. In 1906, the Rockwell family moved to Kansas City. Mary Rockwell married Inghram D. Hook (1883-1973), an attorney, in 1921. The couple adopted two boys, Eugene and Edward (Dick). Mary died on her 101st birthday.",
+    "score": true
+  },
+  {
+    "sample_id": 14,
+    "input": "Please generate a paragraph:\n1) with exactly 3 sentences;\n2) not containing the word 'be';\n3) not containing the word 'this';\n4) not containing the word 'is'.",
+    "output": "Rain drums softly on the roof as night settles over the quiet town. Neighbors drift along the streets, sharing smiles and small plans. A cool breeze rolls through, inviting reflection and deeper thoughts.",
+    "ground_truth": "The railway was incorporated March 31, 1853 and received a charter to build railway lines from Halifax to Pictou by way of Truro, as well as from Halifax to Victoria Beach, Nova Scotia on the Annapolis Basin opposite Digby by way of Windsor. The company also received a charter to build from Truro to the border with New Brunswick. The railway was a key project of the visionary Nova Scotian leader Joseph Howe who felt a government built railway led by Nova Scotia was necessary after the failure of the Intercolonial Railway talks and several fruitless private proposals.",
+    "score": true
+  },
+  {
+    "sample_id": 15,
+    "input": "Please generate a paragraph:\n1) with exactly 3 sentences;\n2) not containing the word 'be';\n3) not containing the word 'to';\n4) not containing the word 'and'.",
+    "output": "Gentle winds drift through a quiet park, leaf colors shifting under a pale sky. A lone rider glides past old benches, sunlight glinting on bronze plaques. Night settles softly, stars awaken, calm fills every corner.",
+    "ground_truth": "Hollyfield School is a co-educational academy school located in Surbiton, in the Royal Borough of Kingston upon Thames, London, England. There are approximately 1,120 students on roll, with 220 in the sixth form. School uniform is compulsory at Hollyfield for all pupils except the sixth form.",
+    "score": true
+  },
+  {
+    "sample_id": 16,
+    "input": "Please generate a sentence with exactly 119 characters. Include whitespace into your character count.",
+    "output": "In the quiet library, a single candle flickered as rain, whispered outside, and stories waited patiently for listeners.",
+    "ground_truth": "And just as in America, the blend of races here, together with the fruitful, healthy fields, has procreated robust men.",
+    "score": true
+  },
+  {
+    "sample_id": 17,
+    "input": "Please generate a sentence with exactly 89 characters. Include whitespace into your character count.",
+    "output": "The  quiet library glowed softly as rain tapped the windows and dreams wandered homeward.",
+    "ground_truth": "but so well set that, whoever beheld her was drawn and taken up by it, every part of him.",
+    "score": true
+  },
+  {
+    "sample_id": 18,
+    "input": "Please generate a sentence with exactly 108 characters. Include whitespace into your character count.",
+    "output": "The quiet library hummed softly as rain traced a rhythm against the windows, and souls listened, hopeful!!!.",
+    "ground_truth": "'You bring all zis on yourself.. You shall haf food to-night; I am not hard, but you shall be tied up still.",
+    "score": true
+  },
+  {
+    "sample_id": 19,
+    "input": "Please generate a sentence:\n1) with exactly 18 words;\n2) with the 4th, 8th, 11th words to be 'to', 'that', 'and' respectively.",
+    "output": "Gentle dawn broke to reveal a winding that carried distant and hopeful whispers among ancient trees, inviting journeys.",
+    "ground_truth": "It connects directly to the body functions that control glands and other bodily processes that chemically influence behavior.",
+    "score": true
+  },
+  {
+    "sample_id": 20,
+    "input": "Please generate a sentence:\n1) with exactly 11 words;\n2) with the 4th, 8th, 11th words to be 'and', 'Creation', 'U.S' respectively.",
+    "output": "Scholars discuss progress and questions about the Creation of the U.S",
+    "ground_truth": " Footnote 2 - Gentlemanly and Honorable Profession:  The Creation of the U.S.",
+    "score": true
+  }
+]

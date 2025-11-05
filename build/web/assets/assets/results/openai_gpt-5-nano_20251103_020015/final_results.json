@@ -1,0 +1,97 @@
+{
+  "model": "openai/gpt-5-nano",
+  "timestamp": "2025-11-03T07:48:02.910111",
+  "num_samples": 20,
+  "results": [
+    {
+      "dataset": "AIME2024",
+      "total_samples": 20,
+      "correct": 16,
+      "accuracy": 0.8
+    },
+    {
+      "dataset": "AIME2025",
+      "total_samples": 20,
+      "correct": 17,
+      "accuracy": 0.85
+    },
+    {
+      "dataset": "HMMTFeb2024",
+      "total_samples": 20,
+      "correct": 11,
+      "accuracy": 0.55
+    },
+    {
+      "dataset": "HMMTFeb2025",
+      "total_samples": 20,
+      "correct": 13,
+      "accuracy": 0.65
+    },
+    {
+      "dataset": "CMIMC2025",
+      "total_samples": 20,
+      "correct": 13,
+      "accuracy": 0.65
+    },
+    {
+      "dataset": "BRUMO2025",
+      "total_samples": 20,
+      "correct": 18,
+      "accuracy": 0.9
+    },
+    {
+      "dataset": "MMMU",
+      "total_samples": 20,
+      "correct": 14,
+      "accuracy": 0.7
+    },
+    {
+      "dataset": "MMMU-Pro",
+      "total_samples": 20,
+      "correct": 14,
+      "accuracy": 0.7
+    },
+    {
+      "dataset": "CharXiv",
+      "total_samples": 20,
+      "correct": 17,
+      "accuracy": 0.85
+    },
+    {
+      "dataset": "GPQA-Diamond",
+      "total_samples": 20,
+      "correct": 13,
+      "accuracy": 0.65
+    },
+    {
+      "dataset": "HLE",
+      "total_samples": 20,
+      "correct": 4,
+      "accuracy": 0.2
+    },
+    {
+      "dataset": "MMLU-Pro",
+      "total_samples": 20,
+      "correct": 6,
+      "accuracy": 0.3
+    },
+    {
+      "dataset": "SimpleQA",
+      "total_samples": 20,
+      "correct": 1,
+      "accuracy": 0.05
+    },
+    {
+      "dataset": "COLLIE",
+      "total_samples": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    {
+      "dataset": "CodeContests",
+      "total_samples": 20,
+      "correct": 1,
+      "accuracy": 0.05
+    }
+  ]
+}

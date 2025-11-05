@@ -1,0 +1,16 @@
+{
+  "model": "openai/gpt-4.1",
+  "ttft_s": 0.9099200000000002,
+  "stream_toks_per_s": 44.148,
+  "e2e_toks_per_s": 31.351999999999997,
+  "wall_s": 4.24132,
+  "prompt_tokens": 41.8,
+  "completion_tokens": 139.0,
+  "total_tokens": 180.8,
+  "prompt_cost_usd": 8.36e-05,
+  "completion_cost_usd": 0.0011120000000000001,
+  "total_cost_usd": 0.0011956000000000002,
+  "prompt_cost_per_1m": 2.0,
+  "completion_cost_per_1m": 8.0,
+  "num_runs": 5
+}
