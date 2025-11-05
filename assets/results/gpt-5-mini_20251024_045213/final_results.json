@@ -1,5 +1,5 @@
 {
-  "model": "gpt-5-mini",
+  "model": "openai/gpt-5-mini",
   "timestamp": "2025-10-24T09:39:58.776943",
   "num_samples": 20,
   "results": [
