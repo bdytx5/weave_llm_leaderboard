@@ -1,0 +1,142 @@
+[
+  {
+    "sample_id": 1,
+    "input": "What year was the municipality of C\u00f3mbita, Boyac\u00e1, Colombia, founded?",
+    "output": "The municipality of **C\u00f3mbita**, located in the department of Boyac\u00e1, Colombia, was founded in the year **1586**.",
+    "ground_truth": "1586",
+    "score": true
+  },
+  {
+    "sample_id": 2,
+    "input": "What was the number of recorded injuries in the Weesp train disaster of 1918 in the Netherlands?",
+    "output": "The number of recorded injuries in the Weesp train disaster of 1918 in the Netherlands was **42**.",
+    "ground_truth": "42 injuries.",
+    "score": true
+  },
+  {
+    "sample_id": 3,
+    "input": "Which village in Ontario was first settled in 1824 by Mr. A. Hurd, and had the Post Office established in 1836, with Mr. J. Leach being the first Postmaster, according to \"Conner & Coltson's Directory of the County of Ontario for 1869-70\"?",
+    "output": "According to \"Conner & Coltson's Directory of the County of Ontario for 1869-70\", the village in Ontario that was first settled in 1824 by Mr. A. Hurd, and had the Post Office established in 1836 with Mr. J. Leach as the first Postmaster is **Wellington** (specifically **Wellington, Ontario** on Prince Edward County, or more relevant here, **Greenbank**, which matches details in some editions, but based on the description in Conner & Coltson's Directory, the village described is **Wellington**).\n\n**Supporting details:**\n- In \"Conner & Coltson's Directory of the County of Ontario for 1869-70\", the following entry appears:\n\n  > \"Wellington\u2014This village was first settled in 1824, by Mr. A. Hurd; Post Office was established in 1836, Mr. J. Leach, first Postmaster...\"\n\nLet me know if you need information on where to view this directory or more historical details about Wellington!",
+    "ground_truth": "Prince Albert.",
+    "score": false
+  },
+  {
+    "sample_id": 4,
+    "input": "What month, day, and year did Ciara perform in Tampa for her Jackie Tour?",
+    "output": "Ciara performed in **Tampa, Florida** for her Jackie Tour on **May 15, 2015**.",
+    "ground_truth": "May 16, 2015",
+    "score": false
+  },
+  {
+    "sample_id": 5,
+    "input": "In a 1988 paper, which author defined Mammalia phylogenetically as the crown group of mammals\u2014the clade consisting of the most recent common ancestor of living monotremes and therian mammals?",
+    "output": "The author you are referring to is **Timothy Rowe**. In his 1988 paper, Rowe defined **Mammalia** phylogenetically as the crown group including the most recent common ancestor of living monotremes and therian mammals (marsupials and placentals) and all of its descendants.\n\n**Reference:**\n- Rowe, T. (1988). Definition, diagnosis, and origin of Mammalia. *Journal of Vertebrate Paleontology*, 8(3), 241-264.\n\nFrom Rowe (1988, p. 245):  \n> \"Mammalia Linnaeus, 1758: the crown-clade stemming from the most recent common ancestor of living monotremes and therian mammals.\"\n\nThis definition established the crown group concept for Mammalia as used commonly in modern phylogenetics.",
+    "ground_truth": "Timothy Rowe",
+    "score": true
+  },
+  {
+    "sample_id": 6,
+    "input": "What day, month, and year was Nathalie M\u00e9nigon born?",
+    "output": "Nathalie M\u00e9nigon was born on 28 February 1957.",
+    "ground_truth": "28 February 1957",
+    "score": true
+  },
+  {
+    "sample_id": 7,
+    "input": "What was the name of the male victim in the famous 2012 Delhi gang rape and murder, commonly known as the \"Nirbhaya case\"?",
+    "output": "The name of the male victim in the 2012 Delhi gang rape and murder case, commonly known as the \"Nirbhaya case,\" was **Awindra Pratap Pandey**.",
+    "ground_truth": "Awindra Pratap Pandey",
+    "score": true
+  },
+  {
+    "sample_id": 8,
+    "input": "Following the 2016 Orlando nightclub shooting, which county in which state was the only county in the United States to refuse to lower its flags to half-staff?",
+    "output": "Following the 2016 Orlando nightclub shooting (Pulse nightclub), **Brevard County** in **Florida** was the only county in the United States to refuse to lower its flags to half-staff.\n\nThe Brevard County Clerk of Courts, **Scott Ellis**, specifically refused to lower the flag at the Brevard County Government Center in Viera, Florida. Ellis stated that he believed orders to lower the flag should not be made by the president for such events, but rather should be reserved for the death of government officials or members of the military.\n\n**References:**\n- [USA Today: One Florida county official refuses to fly flag at half-staff for Orlando victims (June 14, 2016)](https://www.usatoday.com/story/news/politics/onpolitics/2016/06/14/one-florida-county-official-refuses-fly-flag-half-staff-orlando-victims/85860712/)\n- [NBC News: Florida County\u2019s Clerk Refuses to Lower Flag for Orlando Victims (June 16, 2016)](https://www.nbcnews.com/news/us-news/florida-county-s-clerk-refuses-lower-flag-orlando-victims-n593681)",
+    "ground_truth": "Baldwin County in Alabama.",
+    "score": false
+  },
+  {
+    "sample_id": 9,
+    "input": "How old was Aniol Serrasolses when he kayaked for the first time down the largest glacial waterfall ever recorded in Norway?",
+    "output": "Aniol Serrasolses was **28 years old** when he kayaked for the first time down the largest glacial waterfall ever recorded in Norway.\n\nThis happened in 2019 at the Rjoandefossen waterfall, which is over 240 meters tall. Serrasolses was born on March 15, 1991, making him 28 at the time of the historic descent.",
+    "ground_truth": "32",
+    "score": false
+  },
+  {
+    "sample_id": 10,
+    "input": "Within plus or minus one minute, when was M\u00fcller substituted in the 2014 Champions League semi-final Real Madrid vs. Bayern match?",
+    "output": "Thomas M\u00fcller was substituted **in the 72nd minute** (specifically, at 71:58) in the 2014 UEFA Champions League semi-final second leg between Bayern Munich and Real Madrid on April 29, 2014. This falls within your requested plus or minus one minute range.",
+    "ground_truth": "74",
+    "score": true
+  },
+  {
+    "sample_id": 11,
+    "input": "What did Alison Garrs overdose on in the last episode of Season 2 of Happy Valley?",
+    "output": "In the last episode of Season 2 of **Happy Valley**, Alison Garrs overdoses on **heroin**. She does this as a suicide attempt after confessing to killing her son, Daryl.",
+    "ground_truth": "Diazepam",
+    "score": false
+  },
+  {
+    "sample_id": 12,
+    "input": "What was the name of the cricket team Dr. Abu Baker Asvat played for?",
+    "output": "Dr. Abu Baker Asvat played cricket for the **Sacraments Cricket Club**.",
+    "ground_truth": "The Crescents",
+    "score": false
+  },
+  {
+    "sample_id": 13,
+    "input": "For how many consecutive terms was the Indian politician Babanrao Shankar Gholap, alias Nana, elected to the Vidhan Sabha?",
+    "output": "Babanrao Shankar Gholap, also known as Nana, was elected to the Maharashtra Vidhan Sabha (Legislative Assembly) for **five consecutive terms**.",
+    "ground_truth": "5",
+    "score": true
+  },
+  {
+    "sample_id": 14,
+    "input": "In which year did Edward Meyrick first describe Cydalima mysteris?",
+    "output": "Edward Meyrick first described **Cydalima mysteris** in **1935**.",
+    "ground_truth": "1886",
+    "score": false
+  },
+  {
+    "sample_id": 15,
+    "input": "What year was the municipality of Salgar, Antioquia, Colombia, founded?",
+    "output": "The municipality of **Salgar**, located in the department of Antioquia, Colombia, was **founded in 1830**.",
+    "ground_truth": "1880",
+    "score": false
+  },
+  {
+    "sample_id": 16,
+    "input": "What was the date, month, and year when the German Defence Minister Peter Struck announced further major changes to the German armed forces? A major part of this announcement was the plan to cut the German fighter fleet from 426 in early 2004 to 265 by 2015.",
+    "output": "German Defence Minister **Peter Struck** announced further major changes to the German armed forces\u2014including the plan to cut the fighter fleet from 426 in early 2004 to 265 by 2015\u2014on **18 December 2004**.",
+    "ground_truth": "January 13, 2004",
+    "score": false
+  },
+  {
+    "sample_id": 17,
+    "input": "What was the Word of the Decade (2010\u20132019) according to the American Dialect Society?",
+    "output": "The **Word of the Decade (2010\u20132019)** according to the **American Dialect Society** was **\"they\"** (specifically, the singular \"they\" pronoun).\n\nThis was announced at the Society's annual meeting in January 2020. \"They\" was recognized for its growing use as a pronoun for nonbinary people and its importance in discussions around gender and inclusivity during the 2010s.",
+    "ground_truth": "they",
+    "score": true
+  },
+  {
+    "sample_id": 18,
+    "input": "For how many years did John Constable (English landscape painter) work on \"The Opening of Waterloo Bridge\"?",
+    "output": "John Constable worked on \"The Opening of Waterloo Bridge\" for **13 years**. He began the painting in **1819** and completed it in **1832**.",
+    "ground_truth": "13",
+    "score": false
+  },
+  {
+    "sample_id": 19,
+    "input": "In 2017, what case was Natasha Merle involved in, where she was a member of the petitioner team?",
+    "output": "In 2017, **Natasha Merle** was involved as a member of the petitioner team in the case **Buck v. Davis** before the United States Supreme Court.\n\n**Buck v. Davis (2017)** addressed racial bias during sentencing in a capital case. Natasha Merle, working as counsel at the NAACP Legal Defense and Educational Fund (LDF), was part of the team representing Duane Buck, the petitioner. The Supreme Court ruled in Buck's favor, finding his sentencing was tainted by unconstitutional racial bias.",
+    "ground_truth": "Buck v. Davis",
+    "score": true
+  },
+  {
+    "sample_id": 20,
+    "input": "What is the middle name of Motaz Azaiza, Palestinian journalist?",
+    "output": "The middle name of Motaz Azaiza, the Palestinian photojournalist, is **Mohammed**. His full name is **Motaz Mohammed Azaiza**.",
+    "ground_truth": "Hilal",
+    "score": false
+  }
+]
