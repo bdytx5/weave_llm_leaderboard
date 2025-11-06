@@ -37,7 +37,12 @@ class _ChartsPageState extends State<ChartsPage> {
     // final brandB = const Color(0xFFEEAEEE); // lilac
     // final brandC = const Color(0xFF7FB3FF); // blue
 
-    return Scaffold(
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, _) {
+        // Prevent browser back navigation from swipe gestures
+      },
+      child: Scaffold(
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -140,6 +145,7 @@ class _ChartsPageState extends State<ChartsPage> {
       //           ),
       //         ],
       //       ),
+      ),
     );
   }
 

@@ -84,58 +84,58 @@ class _BenchmarksTableScreenState extends State<BenchmarksTableScreen> {
       );
     }
 
-    return Column(
-      children: [
-        // Category performance charts or individual dataset charts
-        CategoryCharts(
-          categoryAverages: _getFilteredCategoryAverages(),
-          selectedModels: _selectedModels,
-          selectedDatasets: _selectedDatasets,
-          tableData: _getFilteredTableData(),
-        ),
-        // Filter button and Compare button row
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-          child: Row(
-            children: [
-              OutlinedButton.icon(
-                onPressed: _showFilterDialog,
-                icon: const Icon(Icons.filter_list, size: 18),
-                label: const Text('Filters'),
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: Colors.white70,
-                  side: const BorderSide(color: Colors.white24),
-                ),
-              ),
-              if (_hasActiveFilters()) ...[
-                const SizedBox(width: 8),
-                OutlinedButton.icon(
-                  onPressed: _resetFilters,
-                  icon: const Icon(Icons.clear, size: 18),
-                  label: const Text('Reset'),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: const Color(0xFFFF9AA2),
-                    side: const BorderSide(color: Color(0xFFFF9AA2)),
-                  ),
-                ),
-              ],
-              if (_selectedModels.isNotEmpty) ...[
-                const SizedBox(width: 8),
-                ElevatedButton.icon(
-                  onPressed: _navigateToCompare,
-                  icon: const Icon(Icons.visibility),
-                  label: Text(_selectedModels.length > 1 ? 'Compare' : 'View'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF7FB3FF),
-                    foregroundColor: Colors.black,
-                  ),
-                ),
-              ],
-            ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          // Category performance charts or individual dataset charts
+          CategoryCharts(
+            categoryAverages: _getFilteredCategoryAverages(),
+            selectedModels: _selectedModels,
+            selectedDatasets: _selectedDatasets,
+            tableData: _getFilteredTableData(),
           ),
-        ),
-        Expanded(
-          child: Listener(
+          // Filter button and Compare button row
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Row(
+              children: [
+                OutlinedButton.icon(
+                  onPressed: _showFilterDialog,
+                  icon: const Icon(Icons.filter_list, size: 18),
+                  label: const Text('Filters'),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.white70,
+                    side: const BorderSide(color: Colors.white24),
+                  ),
+                ),
+                if (_hasActiveFilters()) ...[
+                  const SizedBox(width: 8),
+                  OutlinedButton.icon(
+                    onPressed: _resetFilters,
+                    icon: const Icon(Icons.clear, size: 18),
+                    label: const Text('Reset'),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: const Color(0xFFFF9AA2),
+                      side: const BorderSide(color: Color(0xFFFF9AA2)),
+                    ),
+                  ),
+                ],
+                if (_selectedModels.isNotEmpty) ...[
+                  const SizedBox(width: 8),
+                  ElevatedButton.icon(
+                    onPressed: _navigateToCompare,
+                    icon: const Icon(Icons.visibility),
+                    label: Text(_selectedModels.length > 1 ? 'Compare' : 'View'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF7FB3FF),
+                      foregroundColor: Colors.black,
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+          Listener(
             onPointerSignal: (event) {
               // Prevent horizontal scroll from triggering browser navigation
             },
@@ -144,6 +144,7 @@ class _BenchmarksTableScreenState extends State<BenchmarksTableScreen> {
                 dragDevices: {
                   PointerDeviceKind.touch,
                   PointerDeviceKind.mouse,
+                  PointerDeviceKind.trackpad,
                 },
                 scrollbars: true,
                 overscroll: false,
@@ -151,24 +152,21 @@ class _BenchmarksTableScreenState extends State<BenchmarksTableScreen> {
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 physics: const ClampingScrollPhysics(),
-                child: SingleChildScrollView(
-                  physics: const ClampingScrollPhysics(),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Card(
-                      elevation: 0,
-                      child: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: _buildTable(),
-                      ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Card(
+                    elevation: 0,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: _buildTable(),
                     ),
                   ),
                 ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
